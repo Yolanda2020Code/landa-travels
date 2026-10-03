@@ -7,6 +7,7 @@ import adminRouter from "./admin";
 import recruitmentRouter from "./recruitment";
 import advisorRouter from "./advisor";
 import travelContextRouter from "./travel-context";
+import privateRecruitmentFilesRouter from "./private-recruitment-files";
 
 const router: IRouter = Router();
 
@@ -16,6 +17,7 @@ router.use(recommendationsRouter);
 router.use(travellerRouter);
 router.use(adminRouter);
 router.use(recruitmentRouter);
+router.use(privateRecruitmentFilesRouter);
 router.use(advisorRouter);
 router.use(travelContextRouter);
 
