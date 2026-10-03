@@ -22,7 +22,7 @@ export function createApp(clerkCredentials: ClerkCredentials | null = getConfigu
           return {
             id: req.id,
             method: req.method,
-            url: req.url?.split("?")[0],
+            url: req.url?.split("?")[0]?.replace(/\/recruitment\/files\/[^/]+/g, "/recruitment/files/[REDACTED]"),
           };
         },
         res(res) {
