@@ -119,6 +119,8 @@ def aggregate():
         all_rows.extend(rows)
         fold_metrics.append({"fold": i, "n": len(rows), "accuracy": report["accuracy"],
                              "weighted_f1": report["weighted avg"]["f1-score"],
+                             "macro_precision": report["macro avg"]["precision"],
+                             "macro_recall": report["macro avg"]["recall"],
                              "macro_f1": report["macro avg"]["f1-score"]})
     assert len(true) == manifest["eligible_examples"]
     labels = sorted(set(true) | set(predicted))
@@ -132,13 +134,15 @@ def aggregate():
         "held_out_predictions": len(true), "correct": sum(a == b for a, b in zip(true, predicted)),
         "pooled_out_of_fold_accuracy": accuracy_score(true, predicted),
         "pooled_weighted_f1": full["weighted avg"]["f1-score"],
+        "pooled_macro_precision": full["macro avg"]["precision"],
+        "pooled_macro_recall": full["macro avg"]["recall"],
         "pooled_macro_f1": full["macro avg"]["f1-score"],
         "mean_fold_accuracy": float(np.mean([x["accuracy"] for x in fold_metrics])),
         "std_fold_accuracy_population": float(np.std([x["accuracy"] for x in fold_metrics])),
         "fold_metrics": fold_metrics, "pooled_classification_report": full,
         "confusion_matrix_labels": labels,
         "confusion_matrix": confusion_matrix(true, predicted, labels=labels).tolist(),
-        "scope": "New fold-trained NLU models, not the deployed archive. Utterance-level splits; closely related templates may cross folds. Native entity reports are per-extractor, not merged-span scores.",
+        "scope": "New fold-trained NLU models, not the deployed archive. Native Rasa undoes FallbackClassifier selection for classifier-intent scoring; these scores do not measure fallback-dialogue recovery. Utterance-level splits; closely related templates may cross folds. Native entity reports are per-extractor, not merged-span scores.",
     }
     write_json(OUT / "summary.json", summary)
     # Use Rasa's evaluation rendering for an aggregate confusion matrix, not a

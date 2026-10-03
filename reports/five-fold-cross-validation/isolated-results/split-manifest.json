@@ -1,0 +1,75 @@
+{
+  "folds": 5,
+  "split_seed": 42,
+  "original_intent_counts": {
+    "greet": 15,
+    "goodbye": 15,
+    "plan_trip": 24,
+    "guided_continue": 13,
+    "choose_location_mode": 20,
+    "current_location": 16,
+    "remove_stopover": 15,
+    "request_recommendations": 17,
+    "ask_carbon_method": 22,
+    "request_handover": 21,
+    "confirm_review": 15,
+    "deny": 19,
+    "cancel": 19,
+    "restart_trip": 15,
+    "out_of_scope": 31,
+    "prompt_injection": 19,
+    "nonsense": 27,
+    "provider_outage": 23,
+    "nlu_fallback": 14,
+    "inform": 104,
+    "correct_information": 32
+  },
+  "excluded_intents_below_five": {},
+  "original_examples": 496,
+  "eligible_examples": 496,
+  "eligible_intents": 21,
+  "split_method": "Rasa native generate_folds / sklearn StratifiedKFold with numpy seed 42. No grouped paraphrase deduplication.",
+  "training_configuration": "Unchanged pinned public config: DIET 100 epochs, ResponseSelector 100 epochs.",
+  "records": [
+    {
+      "fold": 1,
+      "train_examples": 396,
+      "test_examples": 100,
+      "identical_texts_shared_across_train_test": [],
+      "train_sha256": "da8b02697bbe11f23fd230bd93ec3de14c689dd1d3c55eb15f22a5be1b8a64a5",
+      "test_sha256": "554671376e3eaa0066844c2f536968f969a461524c7a25744359b1f36b822a28"
+    },
+    {
+      "fold": 2,
+      "train_examples": 397,
+      "test_examples": 99,
+      "identical_texts_shared_across_train_test": [],
+      "train_sha256": "64eeacd2ee9d7107994ab049d6a454379b4d66b4252c4df15802763e8b008906",
+      "test_sha256": "7926d93ab313de880351f66dfe54cb54c30444facf23c109ef87ee97e71eafb5"
+    },
+    {
+      "fold": 3,
+      "train_examples": 397,
+      "test_examples": 99,
+      "identical_texts_shared_across_train_test": [],
+      "train_sha256": "195786e9fdab1bb8f16c452e3f214fdc31dd437e4fc8c900f2d05410619727d5",
+      "test_sha256": "fb6b40f6245edf90c584333cf5c90f72ebb14ccc7e48f21fa78048d1c8c91f6a"
+    },
+    {
+      "fold": 4,
+      "train_examples": 397,
+      "test_examples": 99,
+      "identical_texts_shared_across_train_test": [],
+      "train_sha256": "926907b615f2edd97966279e4724049bf13c832e7c4e4e6aef0ebb2c6696ff70",
+      "test_sha256": "ad64b2298d5220968dcefeb43cc5ac67d6a0a0ca8acccba0aed737290368f9c1"
+    },
+    {
+      "fold": 5,
+      "train_examples": 397,
+      "test_examples": 99,
+      "identical_texts_shared_across_train_test": [],
+      "train_sha256": "7e7d51fb0d3900ea69c37a246d65b622cc0de96605b13f1103e2eb227a67ea1e",
+      "test_sha256": "afc0ac97383b7ba32dc39933f133c9bd2db0eb2bad97f41b8d6c4a2a9be2f4c3"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "source_revision": "bbe39be9be5a50cd8ab48c2976201ff3b8d73806",
+  "started_at_utc": "2026-10-03T21:52:37.759752+00:00",
+  "command": [
+    "rasa",
+    "test",
+    "nlu",
+    "--cross-validation",
+    "--folds",
+    "5",
+    "--nlu",
+    "data/nlu.yml",
+    "--config",
+    "config.yml",
+    "--domain",
+    "domain.yml",
+    "--out",
+    "/home/runner/workspace/reports/five-fold-cross-validation/native-results"
+  ],
+  "working_directory": "reports/five-fold-cross-validation/source/rasa-bot",
+  "source_files": [
+    {
+      "path": "config.yml",
+      "sha256": "a08bfb71a6c4a7574297432541891707777dab839c38a1a3b69e80cf521dd517",
+      "bytes": 1072
+    },
+    {
+      "path": "domain.yml",
+      "sha256": "f60645e77e3968bc1539410adc331747a54af4db2ea6b2e1ee8aa7e01dc3d1d6",
+      "bytes": 9790
+    },
+    {
+      "path": "data/nlu.yml",
+      "sha256": "420f7341847f0ee70ed30a53b1ab0e00989d693042f5882bbc3385f6eaf5bd70",
+      "bytes": 25223
+    },
+    {
+      "path": "travel_nlu/__init__.py",
+      "sha256": "5a5ea051383749dacaf68321bb2ba287ad143d3e5dd2cfb3a8e5b06a9630c8e8",
+      "bytes": 68
+    },
+    {
+      "path": "travel_nlu/entity_extractor.py",
+      "sha256": "3129c7afe0baa2d3ce8fdd9da332cb2f0e53338911be389b11a92de1678251bb",
+      "bytes": 2206
+    },
+    {
+      "path": "travel_nlu/entity_rules.py",
+      "sha256": "8d1678d04a0cea1474a64c5333c0d3d703491ceaf391efeda3af57e42aa0c712",
+      "bytes": 11523
+    },
+    {
+      "path": "travel_nlu/value_normalisation.py",
+      "sha256": "f5b3e32f373c9ed7ca36c8caf9b8471fae7212702aeb1bf2e51d8ad20a9e9b03",
+      "bytes": 3708
+    }
+  ],
+  "state": "failed",
+  "scope": "Five newly trained native cross-validation NLU models; not evaluation or replacement of the deployed full-data archive.",
+  "split_scope": "Native Rasa stratified shuffled utterance splits; no explicit seed or group deduplication. Held-out regression datasets are excluded.",
+  "resource_guard": "Stop CV if the container uses over 7.2 GiB or evaluation parent exceeds 3.0 GiB RSS. Do not stop serving services.",
+  "resource_stopped": true,
+  "exit_code": -15,
+  "finished_at_utc": "2026-10-03T22:00:54.369774+00:00",
+  "outputs": [
+    "native-cross-validation.log",
+    "run-status.json"
+  ]
+}

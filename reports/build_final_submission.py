@@ -3,11 +3,13 @@ import json
 import re
 import textwrap
 from functools import lru_cache
+from copy import deepcopy
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 from docx import Document
 from docx.shared import Inches, Pt
+from docx.enum.text import WD_TAB_ALIGNMENT, WD_TAB_LEADER
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 
@@ -193,9 +195,20 @@ def picture_before(anchor, filename, caption, width=6.35):
 
 def add_table_before(doc, anchor, headers, rows):
     t = doc.add_table(rows=1, cols=len(headers))
-    t.style = "Table Grid"
+    # The uploaded report omits Word's built-in Table Grid definition.
+    # Explicit OOXML borders keep this portable without changing its styles.
+    borders = OxmlElement("w:tblBorders")
+    for edge in ["top", "left", "bottom", "right", "insideH", "insideV"]:
+        border = OxmlElement("w:" + edge)
+        for key, value in [("val", "single"), ("sz", "4"), ("color", "7BA590")]:
+            border.set(qn("w:" + key), value)
+        borders.append(border)
+    t._tbl.tblPr.append(borders)
     for c, value in zip(t.rows[0].cells, headers):
         c.text = value
+        shading = OxmlElement("w:shd")
+        shading.set(qn("w:fill"), "E3EEE7")
+        c._tc.get_or_add_tcPr().append(shading)
     t.rows[0]._tr.get_or_add_trPr().append(OxmlElement("w:tblHeader"))
     for row in rows:
         for c, text in zip(t.add_row().cells, row):
@@ -227,9 +240,11 @@ def main(source_docx):
     # Retain the user's document, original images and academic front matter.
     replace(86,
         "Tables 2–3 translate the brief into observable acceptance criteria, implementation boundaries and evidence status. "
-        "Figures R1–R2 expose their traceability: a passing code test is not proof of usability, legal compliance or "
+        "Figures R0–R2 expose their traceability: a passing code test is not proof of usability, legal compliance or "
         "environmental benefit. Environmental integrity is an explicit quality requirement.")
     # Expand evidence/status wording without adding new unsupported functionality.
+    d.tables[1].rows[0].cells[3].text = "Verification / evidence boundary"
+    d.tables[2].rows[0].cells[3].text = "Evidence / limitation"
     for i, row in enumerate(d.tables[1].rows[1:]):
         fr = FR[i]
         row.cells[2].text = fr[3]
@@ -298,18 +313,21 @@ def main(source_docx):
         "command was memory-stopped; Table CV1 reports the completed alternative, not a successful run of that command.")
     para_before(anchor, "Table CV1. Five-fold held-out intent metrics for newly trained models.")
     rows = [
-        [r["fold"], r["n"], f'{100*r["accuracy"]:.2f}%', f'{r["macro_f1"]:.4f}', f'{r["weighted_f1"]:.4f}']
+        [r["fold"], r["n"], f'{100*r["accuracy"]:.2f}%', f'{r["macro_precision"]:.4f}',
+         f'{r["macro_recall"]:.4f}', f'{r["macro_f1"]:.4f}', f'{r["weighted_f1"]:.4f}']
         for r in cv["fold_metrics"]
     ]
     rows.append(["Pooled", cv["test_examples"], f'{100*cv["pooled_out_of_fold_accuracy"]:.2f}%',
+                 f'{cv["pooled_macro_precision"]:.4f}', f'{cv["pooled_macro_recall"]:.4f}',
                  f'{cv["pooled_macro_f1"]:.4f}', f'{cv["pooled_weighted_f1"]:.4f}'])
-    add_table_before(d, anchor, ["Fold", "Test n", "Accuracy", "Macro F1", "Weighted F1"], rows)
+    add_table_before(d, anchor, ["Fold", "Test n", "Accuracy", "Macro P", "Macro R", "Macro F1", "Weighted F1"], rows)
     para_before(anchor,
         f'Pooled accuracy was {cv["correct"]}/{cv["test_examples"]}; mean fold accuracy was '
         f'{100*cv["mean_fold_accuracy"]:.2f}% with population SD {100*cv["std_fold_accuracy_population"]:.2f} '
         "percentage points (not a confidence interval). Figure CV1 pools one held-out prediction per example. "
         "Exact text did not overlap train/test within folds, but related templates may cross folds. "
-        "Native per-extractor entity scores are not the merged-span F1 in Table 6.")
+        "Native Rasa reverses FallbackClassifier selection for classifier-intent scoring, so this is not a measure of "
+        "fallback-dialogue recovery. Per-extractor entity scores are not the merged-span F1 in Table 6.")
     matrix_files = list((CV / "pooled-intent-results").glob("*confusion_matrix*.png"))
     assert len(matrix_files) == 1, matrix_files
     picture_before(anchor, matrix_files[0],
@@ -339,7 +357,7 @@ def main(source_docx):
 
     # Append an honest, immediately usable study protocol instead of fabricated sessions.
     d.add_page_break()
-    d.add_heading("Appendix C. Real-user study protocol and evidence status", level=1)
+    d.add_paragraph("Appendix C. Real-user study protocol and evidence status", style=original[64].style)
     d.add_paragraph(
         "Status: prepared, not conducted. No participant responses, timings, quotations or Likert results are claimed. "
         "Recruit 3–5 consenting adults who did not develop the system; use anonymous IDs and fictional trip details. "
@@ -387,7 +405,7 @@ def main(source_docx):
         "Report each item's valid n, median/range and N/A count after real sessions. No significance or general-population "
         "claim is justified by 3–5 convenience-sample participants. Keep proxy and participant scores separate.")
 
-    d.add_heading("Appendix D. Cross-validation reproducibility and source sync", level=1)
+    d.add_paragraph("Appendix D. Cross-validation reproducibility and source sync", style=original[64].style)
     d.add_paragraph(
         "The original command and failed raw log are retained in reports/five-fold-cross-validation/. "
         "The completed process-isolated runner uses Rasa generate_folds and separate native train/test processes. "
@@ -419,15 +437,52 @@ def main(source_docx):
     for p in original[30:63]:
         if p.text:
             p._element.getparent().remove(p._element)
-    toc_anchor = original[64]
-    toc = para_before(toc_anchor)
-    field = OxmlElement("w:fldSimple")
-    field.set(qn("w:instr"), 'TOC \\o "1-2" \\h \\z \\u')
-    toc._p.append(field)
+    toc_anchor = original[63]  # Before the front-matter/main-text section break.
+    toc_pages = OUT / "toc-pages.json"
+    if toc_pages.exists():
+        pages = json.loads(toc_pages.read_text())
+        headings = [
+            p for p in d.paragraphs
+            if p.style and re.sub(r"\s", "", p.style.name.lower()) in {"heading1", "heading2"}
+        ]
+        for heading in headings:
+            assert heading.text in pages, "Missing TOC page: " + heading.text
+            toc = para_before(toc_anchor, heading.text + "\t" + str(pages[heading.text]))
+            toc.paragraph_format.space_after = Pt(0)
+            toc.paragraph_format.line_spacing = 1.0
+            if re.sub(r"\s", "", heading.style.name.lower()) == "heading2":
+                toc.paragraph_format.left_indent = Inches(.16)
+            toc.paragraph_format.tab_stops.add_tab_stop(Inches(6.35), WD_TAB_ALIGNMENT.RIGHT, WD_TAB_LEADER.DOTS)
+            for r in toc.runs:
+                r.font.name = "Times New Roman"
+                r.font.size = Pt(10)
+    else:
+        toc = para_before(toc_anchor)
+        field = OxmlElement("w:fldSimple")
+        field.set(qn("w:instr"), 'TOC \\o "1-2" \\h \\z \\u')
+        toc._p.append(field)
     settings = d.settings.element
     update = OxmlElement("w:updateFields")
     update.set(qn("w:val"), "true")
     settings.append(update)
+
+    # Keep the new visuals within one coherent figure/table sequence.
+    for p in d.paragraphs:
+        text = p.text
+        changed = re.sub(r"\bFigure (\d+)\b",
+                         lambda m: "Figure " + str(int(m.group(1)) + (3 if int(m.group(1)) <= 22 else 4)),
+                         text)
+        for old, new in [
+            ("Figures R0–R2", "Figures 1–3"),
+            ("Figure R0", "Figure 1"), ("Figure R1", "Figure 2"), ("Figure R2", "Figure 3"),
+            ("Figure CV1", "Figure 26"), ("Table CV1", "Table 8"),
+        ]:
+            changed = changed.replace(old, new)
+        if changed != text:
+            old_format = deepcopy(p.runs[0]._r.rPr) if p.runs and p.runs[0]._r.rPr is not None else None
+            p.text = changed
+            if old_format is not None:
+                p.runs[0]._r.insert(0, old_format)
 
     # Report the actual narrative count, rather than retaining the old 2,998.
     narrative = []

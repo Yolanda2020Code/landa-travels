@@ -16,6 +16,11 @@ Do not count only the last YAML block for each intent.
 
 ## Commands (repository root, Linux / Python 3.10 / Rasa 3.6.21)
 
+Evaluation uses the application's existing Rasa/spaCy/scikit-learn stack.
+Report utilities additionally require `python-docx` and `Pillow`; optional PDF
+rendering/layout verification uses LibreOffice and PyMuPDF. They are offline
+authoring dependencies, not new application runtime requirements.
+
 ```sh
 # Original native attempt: downloads pinned source, then invokes the requested
 # command. This attempt was stopped by the memory guard in the assessment run.
@@ -50,6 +55,8 @@ standard deviation over five fold scores is not a confidence interval.
 
 Entity JSON outputs are native per-extractor evaluations. They are not the
 deployed-model merged exact-span F1 measurements and must not replace those.
+Native Rasa reverses FallbackClassifier selection for classifier-intent
+evaluation; this is not a measurement of fallback-dialogue recovery.
 No exact text crosses a fold's train/test split in this manifest, but related
 templates can occur across folds; this is not grouped paraphrase-independent
 evaluation. Training remains stochastic beyond the recorded split seed.

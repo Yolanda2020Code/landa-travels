@@ -1,0 +1,291 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - plan_trip
+  - guided_continue
+  - inform
+  - correct_information
+  - cancel
+  - restart_trip
+  - choose_location_mode
+  - current_location
+  - remove_stopover
+  - request_recommendations
+  - ask_carbon_method
+  - request_handover
+  - confirm_review
+  - deny
+  - out_of_scope
+  - prompt_injection
+  - nonsense
+  - provider_outage
+  - nlu_fallback
+  - ask_guided_help
+  - ask_clarification
+  - ask_destination_ideas
+  - ask_transport_comparison
+  - ask_vegan_hotels
+  - ask_carbon_footprint
+  - ask_eco_travel
+  - resume_trip
+
+entities:
+  - origin
+  - destination
+  - stopover
+  - travel_dates
+  - travelers
+  - budget
+  - transport_preference
+  - accessibility_need
+  - sustainability_level
+  - accommodation_need
+  - activity_preference
+  - location
+  - location_mode
+  - review_confirmation
+
+slots:
+  consecutive_denials:
+    type: float
+    influence_conversation: false
+    initial_value: 0
+    mappings:
+      - type: from_intent
+        intent:
+          - inform
+          - plan_trip
+          - guided_continue
+          - correct_information
+        value: 0
+      - type: custom
+  destination_ambiguity:
+    type: bool
+    influence_conversation: false
+    initial_value: false
+    mappings:
+      - type: custom
+  origin:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: origin
+        not_intent: &travel_question_intents
+          - ask_guided_help
+          - ask_clarification
+          - ask_destination_ideas
+          - ask_transport_comparison
+          - ask_vegan_hotels
+          - ask_carbon_footprint
+          - ask_eco_travel
+          - ask_carbon_method
+  destination:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: destination
+        not_intent: *travel_question_intents
+  stopovers:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: stopover
+        not_intent: *travel_question_intents
+  travel_dates:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: travel_dates
+        not_intent: *travel_question_intents
+  travelers:
+    type: float
+    min_value: 1
+    max_value: 20
+    mappings:
+      - type: from_entity
+        entity: travelers
+        not_intent: *travel_question_intents
+  budget:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: budget
+        not_intent: *travel_question_intents
+  transport_preference:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: transport_preference
+        not_intent: *travel_question_intents
+  accessibility_need:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: accessibility_need
+        not_intent: *travel_question_intents
+  sustainability_level:
+    type: categorical
+    values: [climate-first, balanced, comfort-first]
+    mappings:
+      - type: from_entity
+        entity: sustainability_level
+        not_intent: *travel_question_intents
+  accommodation_need:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: accommodation_need
+        not_intent: *travel_question_intents
+  activity_preferences:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: activity_preference
+  location:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: location
+  location_consent:
+    type: bool
+    influence_conversation: false
+    mappings:
+      - type: custom
+  location_mode:
+    type: categorical
+    values: [gps, manual, none]
+    mappings:
+      - type: from_entity
+        entity: location_mode
+  review_confirmation:
+    type: bool
+    mappings:
+      - type: from_entity
+        entity: review_confirmation
+      - type: from_intent
+        intent: confirm_review
+        value: true
+      - type: from_intent
+        intent: deny
+        value: false
+  recommendation_results:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: custom
+  handover_id:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+forms:
+  trip_form:
+    required_slots:
+      - origin
+      - destination
+      - travel_dates
+      - travelers
+      - budget
+      - transport_preference
+      - accessibility_need
+      - sustainability_level
+      - accommodation_need
+      - activity_preferences
+      - location_mode
+
+responses:
+  utter_resume_trip:
+    - text: "Welcome back — I'm Landa, your AI travel-planning assistant. Your saved trip details are still here; I haven't reset them or started another search. You can continue the guided questions, correct a detail, or ask for an advisor. Carbon figures are estimates, not guarantees."
+      buttons:
+        - title: Continue guided planning
+          payload: /guided_continue
+  utter_greet:
+    - text: "Hello — I'm Landa, your AI travel-planning assistant, not a human advisor. I'll ask one question at a time; you can also type several details together. Carbon figures are estimates, not guarantees. Location sharing is optional. Avoid sensitive details or an exact home address. You can request an advisor anytime."
+  utter_ask_origin:
+    - text: "Where will you travel from? Please give a city or region, not an exact address."
+  utter_ask_destination:
+    - text: "Where would you like to go? You can include a city, region, or country."
+  utter_ask_travel_dates:
+    - text: "When are you planning to travel? Approximate dates are fine."
+  utter_ask_travelers:
+    - text: "How many travellers are going (1–20)?"
+  utter_ask_budget:
+    - text: "What total budget and currency should I work within?"
+  utter_ask_transport_preference:
+    - text: "Which transport do you prefer or need (rail, coach, flight, or flexible)?"
+  utter_ask_accessibility_need:
+    - text: "Do you have accessibility or assistance needs, or should I record none?"
+  utter_ask_sustainability_level:
+    - text: "How should I balance climate impact, price, and convenience: climate-first, balanced, or comfort-first?"
+  utter_ask_accommodation_need:
+    - text: "What accommodation do you need (for example accessible, budget, hotel, hostel, or none)?"
+  utter_ask_activity_preferences:
+    - text: "What kinds of activities would you enjoy?"
+  utter_ask_location_mode:
+    - text: "Would you like to use approximate device location, enter a city manually, or skip location sharing?"
+  utter_location_choice:
+    - text: "You may enter an approximate location manually, use device location with permission, or choose none. Precise GPS coordinates are not retained."
+  utter_ask_approximate_location:
+    - text: "Please enter an approximate city or area only. I will not store exact addresses or GPS coordinates."
+  utter_review_correction:
+    - text: "No search was started. Tell me the detail to correct, or say 'remove stopover'; your other details remain unchanged."
+  utter_review_summary:
+    - text: "I have recorded your route, dates, traveller count, budget, transport, accessibility, sustainability and accommodation preferences. Please confirm these details before I search."
+  utter_ask_review_confirmation:
+    - text: "Please review the details above. Should I search for options?"
+  utter_carbon_method:
+    - text: "Carbon values are planning estimates based on distance, mode, occupancy and published factors. Where configured and available, Climatiq estimates are requested per transport mode; unavailable or failed requests use explicitly labelled demo factors. Prices and availability are not live, and offsets are not equivalent to avoiding emissions."
+  utter_cancelled:
+    - text: "I cancelled this plan and cleared its travel details. Nothing has been booked."
+  utter_restarted:
+    - text: "Starting a new plan. What would you like to arrange?"
+  utter_goodbye:
+    - text: "You're welcome! Your trip details are unchanged, and nothing has been booked. Safe travels — you can continue planning whenever you like."
+  utter_out_of_scope:
+    - text: "I can help with sustainable trip planning, transport, accommodation and carbon methods. I cannot provide unrelated advice or make bookings."
+  utter_prompt_injection:
+    - text: "I can’t follow instructions to reveal private data, system prompts, or credentials. I can still help plan your trip safely."
+  utter_nonsense:
+    - text: "I could not treat that as a travel detail. Please provide a city, dates, traveller count, or say cancel."
+  utter_provider_outage:
+    - text: "A live travel provider is unavailable. I will not invent live prices or availability; you can retry later or use clearly labelled indicative demo comparisons."
+  utter_clarify:
+    - text: "I’m not certain what you meant. Say plan a trip, correct a detail, explain carbon estimates, speak to an advisor, or cancel."
+      buttons:
+        - title: "Continue planning"
+          payload: "/plan_trip"
+        - title: "Explain carbon estimates"
+          payload: "/ask_carbon_method"
+        - title: "Speak to a human"
+          payload: "/request_handover"
+        - title: "Cancel this plan"
+          payload: "/cancel"
+  utter_ask_rephrase:
+    - text: "Sorry, I still did not follow. Could you say that a different way? You can also ask for a human advisor or cancel."
+
+actions:
+  - action_find_sustainable_options
+  - action_human_handover
+  - validate_trip_form
+  - action_apply_guided_input
+  - action_handle_location_consent
+  - action_review_summary
+  - action_review_denial
+  - action_remove_stopover
+  - action_cancel_trip
+  - action_restart_trip
+  - action_validate_review
+  - action_ask_destination
+  - action_ask_transport_preference
+  - action_ask_activity_preferences
+  - action_ask_location_mode
+  - action_answer_travel_question
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false

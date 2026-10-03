@@ -39,13 +39,14 @@ def main():
         "100 epochs and ResponseSelector 100 epochs; native logs show which components trained. "
         "Held-out regression datasets are not used as training or CV input.")
     d.add_heading("Intent classification results", 1)
-    t = d.add_table(rows=1, cols=5)
+    t = d.add_table(rows=1, cols=7)
     t.style = "Light Shading Accent 1"
-    headers = ["Fold", "Test examples", "Accuracy", "Macro F1", "Weighted F1"]
+    headers = ["Fold", "Test n", "Accuracy", "Macro P", "Macro R", "Macro F1", "Weighted F1"]
     for c, h in zip(t.rows[0].cells, headers):
         c.text = h
     for r in summary["fold_metrics"]:
         row = [str(r["fold"]), str(r["n"]), percent(r["accuracy"]),
+               f"{r['macro_precision']:.4f}", f"{r['macro_recall']:.4f}",
                f"{r['macro_f1']:.4f}", f"{r['weighted_f1']:.4f}"]
         for c, value in zip(t.add_row().cells, row):
             c.text = value
@@ -66,6 +67,8 @@ def main():
         "These scores concern five newly trained NLU models, not the deployed full-data archive. They do not replace "
         "the report's 40/48 held-out intent result, merged-span entity metrics, Core stories or real-user study. "
         "Native entity outputs remain per-extractor; do not label their values as merged-span F1. "
+        "Native Rasa reverses FallbackClassifier selection for classifier-intent scoring; this is not a measurement "
+        "of fallback-dialogue recovery. "
         "No exact training/test text overlap was found in the fold manifest, but related templates/paraphrases may occur "
         "across folds. Model training is stochastic beyond the recorded split seed.")
     d.add_heading("Paragraph to adapt for Section 6.2", 1)
@@ -86,7 +89,7 @@ def main():
         "Keep tables/matrix captions labelled as cross-validation, distinct from the held-out model results.")
     d.save(BASE / "Landa-CV-Summary.docx")
     with (BASE / "Landa-CV-Fold-Metrics.csv").open("w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=["fold", "n", "accuracy", "macro_f1", "weighted_f1"])
+        writer = csv.DictWriter(f, fieldnames=["fold", "n", "accuracy", "macro_precision", "macro_recall", "macro_f1", "weighted_f1"])
         writer.writeheader()
         writer.writerows(summary["fold_metrics"])
     checksums = []
