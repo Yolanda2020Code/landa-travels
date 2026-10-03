@@ -437,7 +437,7 @@ def main(source_docx):
     for p in original[30:63]:
         if p.text:
             p._element.getparent().remove(p._element)
-    toc_anchor = original[63]  # Before the front-matter/main-text section break.
+    toc_anchor = original[62]  # Before the explicit page break and section break.
     toc_pages = OUT / "toc-pages.json"
     if toc_pages.exists():
         pages = json.loads(toc_pages.read_text())
