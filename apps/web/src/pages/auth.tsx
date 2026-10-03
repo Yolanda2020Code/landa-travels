@@ -1,5 +1,6 @@
 import { SignIn, SignUp } from "@clerk/react";
 import { clerkAuthEnabled } from "@/lib/clerk-config";
+import { isEmbeddedWindow } from "@/lib/auth-navigation";
 
 const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
 
@@ -16,6 +17,31 @@ function AuthUnavailable() {
   );
 }
 
+function EmbeddedAuth({ mode }: { mode: "sign-in" | "sign-up" }) {
+  const url = `${window.location.origin}${basePath}/${mode}`;
+  return (
+    <section className="rounded-2xl border border-border bg-card p-6 text-center">
+      <h1 className="font-serif text-2xl font-bold">Open secure account access</h1>
+      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+        This preview is embedded in another website. Open Landa Travels directly
+        to sign in securely and avoid blocked Google sign-in windows.
+      </p>
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-5 inline-flex min-h-12 items-center justify-center rounded-xl bg-primary px-6 py-3 font-semibold text-primary-foreground"
+      >
+        {mode === "sign-in" ? "Open secure sign-in" : "Open secure sign-up"}
+      </a>
+      <p className="mt-4 break-words text-sm text-muted-foreground">
+        If an in-app browser shows a blank window, open this link in Safari or Chrome:
+        {" "}<a href={url} target="_blank" rel="noopener noreferrer" className="underline">{url}</a>
+      </p>
+    </section>
+  );
+}
+
 export function SignInPage() {
   return (
     <div className="flex-1 flex flex-col items-center justify-center min-h-[calc(100dvh-80px)] bg-background relative overflow-hidden p-4">
@@ -24,7 +50,9 @@ export function SignInPage() {
       <div className="relative z-10 w-full max-w-md">
         <p className="mb-4 text-center text-sm text-muted-foreground">Sign in to save your plan, resume a saved trip, or request a demo booking. Planning itself is open to everyone.</p>
         {clerkAuthEnabled
-          ? <SignIn routing="path" path={`${basePath}/sign-in`} signUpUrl={`${basePath}/sign-up`} />
+          ? isEmbeddedWindow(typeof window === "undefined" ? undefined : window)
+            ? <EmbeddedAuth mode="sign-in" />
+            : <SignIn oauthFlow="redirect" routing="path" path={`${basePath}/sign-in`} signUpUrl={`${basePath}/sign-up`} />
           : <AuthUnavailable />}
       </div>
     </div>
@@ -38,7 +66,9 @@ export function SignUpPage() {
       <div className="relative z-10 w-full max-w-md">
         <p className="mb-4 text-center text-sm text-muted-foreground">Create an account when you’re ready to save, resume, or request a demo booking.</p>
         {clerkAuthEnabled
-          ? <SignUp routing="path" path={`${basePath}/sign-up`} signInUrl={`${basePath}/sign-in`} />
+          ? isEmbeddedWindow(typeof window === "undefined" ? undefined : window)
+            ? <EmbeddedAuth mode="sign-up" />
+            : <SignUp oauthFlow="redirect" routing="path" path={`${basePath}/sign-up`} signInUrl={`${basePath}/sign-in`} />
           : <AuthUnavailable />}
       </div>
     </div>
