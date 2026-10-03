@@ -200,6 +200,28 @@ requires PostgreSQL. Sign-in requires configured authentication, live providers
 require the relevant permissions, and private uploads require a configured
 storage adapter. These dependencies are not replaced by fabricated results.
 
+## Independent hosted sign-in and staff permissions
+
+Configure a matching key pair from your own Clerk application as
+`CLERK_PUBLISHABLE_KEY` and `CLERK_SECRET_KEY`. Development keys are suitable for
+controlled assessment on a host-provided domain, not a production identity
+deployment. Authentication connects directly to that application's frontend
+API by default. Leave `CLERK_PROXY_URL` empty unless you explicitly configure a
+supported authentication proxy; an empty runtime value disables inherited
+build-time proxy settings.
+
+Set `PUBLIC_APP_URL` to the verified external HTTPS application URL.
+Set `CLERK_ROLES_FROM_BACKEND=true` to authorize staff against Clerk's trusted
+public metadata without customizing session-token claims. Assign staff public
+metadata as `{"role":"advisor"}` or `{"role":"admin"}` in your own identity
+application. Ordinary accounts remain travellers. Client-editable unsafe
+metadata never grants staff access.
+
+Recruitment access is independent of staff roles: the signed-in account must
+have a verified email matching `RECRUITMENT_OWNER_EMAIL`, or
+`RECRUITMENT_EMAIL` when no separate owner address is configured. Its protected
+page is `/admin/applications`. No privileged assessment password is committed.
+
 ## Data attribution
 
 Map context is derived from OpenStreetMap contributors and retains attribution
