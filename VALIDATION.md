@@ -9,7 +9,7 @@ Source tests passed:
 | Suite | Passed | Failed |
 | --- | ---: | ---: |
 | API | 132 | 0 |
-| Frontend | 18 | 0 |
+| Frontend | 22 | 0 |
 | Python | 102 | 0 |
 
 Validation used Node.js 24.13.0, Python 3.10.19, pnpm 10.26.1 and uv 0.9.5.
@@ -170,3 +170,13 @@ verification, not live supplier fulfilment or verified external-email delivery.
 After verification, the four synthetic identity accounts, their saved trips
 and profile records, three owned conversations, and 265 native tracker events
 were removed. The private temporary credentials fixture was deleted.
+
+## Mobile embedded sign-in correction
+
+An iPhone report showed an embedded sign-in page followed by an `about:blank`
+window. The Hugging Face frame permits popups but does not permit navigation
+of its top-level parent. Account pages now present an explicit direct-app link
+when framed, and standalone Google sign-in/sign-up use same-tab OAuth redirects.
+Four frame-detection regression tests passed, alongside frontend type checking
+and a production build. This does not claim completion of a real Google-account
+login on a physical iPhone.
