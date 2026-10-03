@@ -11,6 +11,20 @@ export function getClerkProxyHost(req: { headers: IncomingHttpHeaders }): string
   return raw?.split(",")[0]?.trim() || req.headers.host?.trim() || undefined;
 }
 
+export function getClerkProxyUrl(req: { headers: IncomingHttpHeaders }): string {
+  const configured = process.env.PUBLIC_APP_URL?.trim();
+  if (configured) {
+    const origin = new URL(configured);
+    if (origin.protocol !== "https:" && !["localhost", "127.0.0.1"].includes(origin.hostname)) {
+      throw new Error("The public authentication origin must use HTTPS.");
+    }
+    return `${origin.origin}${CLERK_PROXY_PATH}`;
+  }
+  const raw = req.headers["x-forwarded-proto"];
+  const protocol = (Array.isArray(raw) ? raw[0] : raw)?.split(",")[0]?.trim() === "http" ? "http" : "https";
+  return `${protocol}://${getClerkProxyHost(req) || ""}${CLERK_PROXY_PATH}`;
+}
+
 export function clerkProxyMiddleware(): RequestHandler {
   const secretKey = process.env.CLERK_SECRET_KEY;
   if (process.env.NODE_ENV !== "production" || !secretKey) {
@@ -23,9 +37,7 @@ export function clerkProxyMiddleware(): RequestHandler {
     pathRewrite: (path: string) => path.replace(new RegExp(`^${CLERK_PROXY_PATH}`), ""),
     on: {
       proxyReq: (proxyReq, req) => {
-        const protocol = req.headers["x-forwarded-proto"] || "https";
-        const host = getClerkProxyHost(req) || "";
-        proxyReq.setHeader("Clerk-Proxy-Url", `${protocol}://${host}${CLERK_PROXY_PATH}`);
+        proxyReq.setHeader("Clerk-Proxy-Url", getClerkProxyUrl(req));
         proxyReq.setHeader("Clerk-Secret-Key", secretKey);
         const forwarded = req.headers["x-forwarded-for"];
         const clientIp = (Array.isArray(forwarded) ? forwarded[0] : forwarded)?.split(",")[0]?.trim() || req.socket.remoteAddress;
