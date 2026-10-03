@@ -57,8 +57,8 @@ anonymous-planning controls and explicit sign-in-unavailable notice.
 This is a hosted startup and anonymous greeting smoke check, not a complete
 guided-trip browser test, authenticated save/resume test, new NLU evaluation,
 provider fulfilment test, or private-upload test. Account authentication,
-provider credentials, and an external private-upload signing service are not
-configured on this Space. The native Rasa tracker remains in memory.
+provider credentials, and private-upload storage were not configured during
+that initial startup check. Further hosted configuration is recorded below.
 
 Runtime logs include dependency deprecation and global-config permission
 warnings; they did not prevent readiness or the smoke checks. This is not a
@@ -73,3 +73,31 @@ fully deployment-verified installation.
 PostgreSQL is required for the API. Authentication, provider access and upload
 storage each require their own configuration. See README.md for prerequisites
 and assessment commands. Never substitute private production data or keys.
+
+## Further hosted configuration
+
+The exported application now includes native private Hugging Face bucket
+storage, method-bound expiring file capabilities, single-use upload sessions,
+file size/signature validation, and retention deletion through the existing
+recruitment service. Capability URLs are redacted from API logs and excluded
+from web-server access logs. File bytes are not stored in Git or PostgreSQL.
+
+A synthetic file was uploaded, inspected, downloaded with exact byte equality,
+and deleted successfully from the private bucket. Type checks passed, together
+with 127 API tests and 15 frontend tests. Python NLU tests were not rerun for
+this storage-only change.
+
+Duffel place lookup, Climatiq factor search, routing, and email-domain APIs
+accepted the existing credentials (HTTP 200). Credentials are configured as
+private Space settings. These checks are not flight purchasing, live hotel
+inventory, or email-delivery evidence. Flight credentials remain test-mode;
+the hotel provider's account access limit has not changed.
+
+A separate PostgreSQL database is configured for the native Rasa tracker to
+avoid mixing its independently owned event tables into the application ORM
+schema.
+
+Independent external-host authentication is still required. Existing managed
+authentication keys cannot be used as an independent hosted tenant. No
+authenticated sign-in, saved-trip, or recruitment-owner browser flow is claimed
+until a separate authentication application is configured and tested.
