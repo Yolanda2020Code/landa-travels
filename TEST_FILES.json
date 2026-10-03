@@ -1,5 +1,6 @@
 [
   "apps/api/src/app.routes.test.ts",
+  "apps/api/src/lib/private-upload-token.test.ts",
   "apps/api/src/middlewares/clerkAuthConfig.test.ts",
   "apps/api/src/middlewares/requireAdmin.test.ts",
   "apps/api/src/middlewares/requireRecruitmentOwner.test.ts",
@@ -37,6 +38,7 @@
   "rasa-bot/tests/test_actions.py",
   "rasa-bot/tests/test_entity_rules.py",
   "rasa-bot/tests/test_fallback_calibration.py",
+  "rasa-bot/tests/test_hosted_endpoints.py",
   "rasa-bot/tests/test_nlu.yml",
   "rasa-bot/tests/test_stories.yml",
   "rasa-bot/tests/test_travel_questions.py",
