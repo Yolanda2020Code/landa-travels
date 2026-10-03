@@ -97,6 +97,26 @@ A separate PostgreSQL database is configured for the native Rasa tracker to
 avoid mixing its independently owned event tables into the application ORM
 schema.
 
+The final hosted runtime reached RUNNING with a native tracker event table and
+persisted events in its separate database. Website/API checks returned 200;
+the private Rasa path remained 404. Anonymous owner access returned 401,
+unsigned private-file access returned 403, and anonymous bucket access
+returned 401.
+
+An initial browser recruitment test exposed an SDK-cache permission failure.
+It was reproduced under a read-only home directory and corrected by using a
+per-operation temporary SDK cache. A subsequent live HTTP flow confirmed:
+upload-session creation 201, signed file PUT 204, application submission 201,
+repeat PUT rejection 410, and rejection of GET with a PUT capability 403.
+Synthetic records and file objects from these checks were deleted.
+The unchanged browser submission flow was not rerun after this server-only
+fix; authenticated owner download still requires the external auth setup.
+
+Three additional standalone hosted-endpoint regression checks passed.
+Secret-bearing tracker endpoints are rendered into an owner-only temporary
+JSON file at startup. This avoids duplicate constructor arguments and literal
+nested environment placeholders in the pinned Rasa version.
+
 Independent external-host authentication is still required. Existing managed
 authentication keys cannot be used as an independent hosted tenant. No
 authenticated sign-in, saved-trip, or recruitment-owner browser flow is claimed
