@@ -7,6 +7,7 @@ export OMP_NUM_THREADS="${OMP_NUM_THREADS:-2}"
 export MALLOC_ARENA_MAX="${MALLOC_ARENA_MAX:-2}"
 
 cleanup() {
+  rm -f "${GENERATED_ENDPOINTS_FILE:-}"
   kill "${NGINX_PID:-}" "${ACTION_PID:-}" "${RASA_PID:-}" "${API_PID:-}" 2>/dev/null || true
   wait "${NGINX_PID:-}" "${ACTION_PID:-}" "${RASA_PID:-}" "${API_PID:-}" 2>/dev/null || true
 }
@@ -61,7 +62,8 @@ if [[ "${TRACKER_CONFIGURED}" -eq 1 ]]; then
     fi
   done
   export RASA_ACTION_SERVER_URL=http://127.0.0.1:5055/webhook
-  ENDPOINTS_FILE=endpoints.production.yml
+  GENERATED_ENDPOINTS_FILE="$(python /app/deployment/render-tracker-endpoints.py)"
+  ENDPOINTS_FILE="${GENERATED_ENDPOINTS_FILE}"
   printf 'Starting Rasa with the configured external PostgreSQL tracker.\n'
 else
   printf 'Starting Rasa with its in-memory tracker; conversations will not persist across restarts.\n'
