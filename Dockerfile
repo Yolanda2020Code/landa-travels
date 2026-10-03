@@ -35,6 +35,7 @@ COPY rasa-bot /app/rasa-bot
 # Use the evaluated archive; do not silently retrain a different model.
 COPY deployment/assemble-model.py /app/deployment/assemble-model.py
 COPY deployment/hf-private-storage.py /app/deployment/hf-private-storage.py
+COPY deployment/render-tracker-endpoints.py /app/deployment/render-tracker-endpoints.py
 RUN python /app/deployment/assemble-model.py
 COPY --from=web-build /workspace/apps/web/dist/public /usr/share/nginx/html
 COPY --from=web-build /workspace/apps/api/dist /app/api
