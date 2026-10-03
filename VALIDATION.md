@@ -8,8 +8,8 @@ Source tests passed:
 
 | Suite | Passed | Failed |
 | --- | ---: | ---: |
-| API | 125 | 0 |
-| Frontend | 15 | 0 |
+| API | 132 | 0 |
+| Frontend | 18 | 0 |
 | Python | 102 | 0 |
 
 Validation used Node.js 24.13.0, Python 3.10.19, pnpm 10.26.1 and uv 0.9.5.
@@ -117,7 +117,56 @@ Secret-bearing tracker endpoints are rendered into an owner-only temporary
 JSON file at startup. This avoids duplicate constructor arguments and literal
 nested environment placeholders in the pinned Rasa version.
 
-Independent external-host authentication is still required. Existing managed
-authentication keys cannot be used as an independent hosted tenant. No
-authenticated sign-in, saved-trip, or recruitment-owner browser flow is claimed
-until a separate authentication application is configured and tested.
+An independently owned Clerk application is now configured on the external
+host, without changing the original application's accounts or database.
+The supplied key pair was checked for format, independent ownership, backend
+API access, and matching session-token issuer/frontend domain.
+
+A synthetic traveller completed browser sign-in. An inherited authentication
+proxy subsequently caused token-renewal failures; the standalone frontend now
+uses its own Clerk frontend API directly unless a proxy is explicitly
+configured. A canonical HTTPS public origin is enforced for optional proxy
+use, and forwarded HTTPS is preserved by the web server.
+
+Live authenticated HTTP checks confirmed traveller denial of both staff
+endpoints (403), advisor inbox access (200) with administrator denial (403),
+and administrator access to both staff endpoints (200). Recruitment access
+remained forbidden (403) for all synthetic accounts that did not match the
+verified owner email. Administrator overview also exposed a PostgreSQL
+reserved-alias error; its corrected query was executed against the external
+database and the live endpoint returned 200 with metrics.
+
+Guided future dates were accepted with an authenticated live HTTP request
+(200). These endpoint checks alone are not authenticated browser save/resume
+evidence or an actual recruitment-owner download check.
+
+## Final authenticated browser verification
+
+The direct identity connection passed in a fresh browser context. Forced
+session-token renewal returned HTTP 200. A synthetic traveller completed the
+guided Berlin–Paris trip for 15–18 November 2026, one adult, EUR 1,000, rail,
+eco-hotel, and balanced sustainability. Assistant updates returned 200 and
+trip creation returned 201.
+
+The saved trip survived reload and sign-out/sign-in. Resuming it restored its
+route, dates, traveller count, budget, and preferences. A second traveller's
+trip list was empty and direct navigation to the first traveller's trip did
+not disclose its details.
+
+An additional authenticated HTTP check confirmed that the owner's trip list
+included the saved test itinerary and the second traveller's list excluded it
+(both list requests returned 200).
+
+Browser role checks passed: the advisor opened the advisor inbox but was
+redirected away from Quality Control; the administrator opened Quality
+Control with loaded telemetry; the ordinary traveller was redirected away
+from both staff pages; anonymous staff navigation ended at sign-in without
+protected content. Private conversation rows were not opened.
+
+The selected rail package explicitly reported `required_inventory_unavailable`.
+No booking, payment, or outbound email was made. This is assessment-flow
+verification, not live supplier fulfilment or verified external-email delivery.
+
+After verification, the four synthetic identity accounts, their saved trips
+and profile records, three owned conversations, and 265 native tracker events
+were removed. The private temporary credentials fixture was deleted.
