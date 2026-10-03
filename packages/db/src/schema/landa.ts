@@ -184,6 +184,7 @@ export const recruitmentApplicationsTable = pgTable("recruitment_applications", 
 export const recruitmentUploadsTable = pgTable("recruitment_uploads", {
   id: serial("id").primaryKey(),
   objectPath: text("object_path").notNull().unique(),
+  uploadedAt: timestamp("uploaded_at", { withTimezone: true }),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   expiresAt: timestamp("expires_at", { withTimezone: true }).notNull().default(sql`now() + interval '24 hours'`),
 });
