@@ -92,11 +92,20 @@ transferred from an existing authentication environment.
 ### Deployment limitations
 
 - A successful source build is not a successful live Space deployment.
-- Private recruitment uploads require a signing service configured through
+- Private recruitment uploads can use a private, non-versioned Hugging Face
+  storage bucket. Set RECRUITMENT_STORAGE_BACKEND=huggingface,
+  HF_PRIVATE_UPLOAD_BUCKET, HF_STORAGE_TOKEN, PRIVATE_UPLOAD_SIGNING_KEY
+  (at least 32 random characters), and PUBLIC_APP_URL. The Docker image includes
+  the storage helper. Only the server accesses the bucket credential; the
+  browser receives method-bound, 15-minute capability URLs. Uploads are
+  limited to 5 MB, one-use, and checked for supported file signatures.
+  Download links are issued only through the existing recruitment-owner route.
+  File bytes stay in the private bucket, not Git or PostgreSQL.
+- Alternatively, private recruitment uploads use a signing service through
   `OBJECT_STORAGE_SIGNING_URL` and `PRIVATE_OBJECT_DIR`. The service accepts
   POST requests with `bucket_name`, `object_name`, `method` and `expires_at`,
   returning a `signed_url`. No signing service is supplied by this image.
-  Configure a trusted private service before offering CV uploads; missing
+  Configure one of these private storage backends before offering CV uploads; missing
   storage fails explicitly rather than pretending an upload succeeded.
 - The default Rasa tracker is in memory. Configure the complete
   `RASA_TRACKER_DB_*` set for native conversation persistence across restarts.
