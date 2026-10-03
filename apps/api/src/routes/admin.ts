@@ -65,7 +65,7 @@ router.get("/admin/chatbot/overview", requireAdmin, async (req, res) => {
     select source, count(distinct session_id)::int sessions from filtered group by source order by source`);
   const dailyRows = await db.execute(sql`
     with filtered as (select e.* from chatbot_events e where true ${date})
-    select date_trunc('day', occurred_at)::date day, count(distinct session_id)::int sessions,
+    select date_trunc('day', occurred_at)::date as "day", count(distinct session_id)::int sessions,
       count(distinct session_id) filter (where event_type = 'completion')::int completions,
       count(distinct session_id) filter (where event_type in ('fallback','error'))::int fallbacks
     from filtered group by 1 order by 1`);
