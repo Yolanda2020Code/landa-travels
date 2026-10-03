@@ -2,16 +2,20 @@
   "product": "Landa Travels",
   "model_sha256": "954da34118ed358fb80d8a2c60bca9081f78d2a6209c6dc8a6980482fa44b320",
   "model_contents_unchanged": true,
-  "docker_build_verified": false,
+  "docker_build_verified": true,
   "public_deployment_verified": false,
+  "hosted_startup_smoke_verified": true,
+  "hosted_private_upload_submission_verified": true,
+  "hosted_authentication_verified": false,
   "source_build_verified": true,
   "test_suite_verified": true,
   "frozen_javascript_install_verified": true,
   "python_lock_consistency_verified": true,
   "tests": {
-    "api_passed": 125,
+    "api_passed": 127,
     "frontend_passed": 15,
     "python_passed": 102,
+    "hosted_endpoint_regression_passed": 3,
     "failed": 0
   },
   "validation_environment": {
