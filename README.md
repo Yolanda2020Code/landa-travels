@@ -222,6 +222,14 @@ have a verified email matching `RECRUITMENT_OWNER_EMAIL`, or
 `RECRUITMENT_EMAIL` when no separate owner address is configured. Its protected
 page is `/admin/applications`. No privileged assessment password is committed.
 
+### Signing in on phones and embedded previews
+
+Open the application's direct `.hf.space` URL in Safari or Chrome for account
+access. Embedded previews show an explicit link to open secure sign-in outside
+the frame. Google authentication uses a same-tab redirect instead of an
+automatic popup. In-app browsers can restrict Google authentication; if one
+shows a blank window, open the direct application link in your normal browser.
+
 ## Data attribution
 
 Map context is derived from OpenStreetMap contributors and retains attribution
