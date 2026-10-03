@@ -17,7 +17,7 @@
   "python_lock_consistency_verified": true,
   "tests": {
     "api_passed": 132,
-    "frontend_passed": 18,
+    "frontend_passed": 22,
     "python_passed": 102,
     "hosted_endpoint_regression_passed": 3,
     "failed": 0
