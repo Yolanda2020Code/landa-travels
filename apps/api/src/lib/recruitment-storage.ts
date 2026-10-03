@@ -1,4 +1,5 @@
 import { randomUUID } from "node:crypto";
+import { usingHfPrivateStorage, privateFileUrl, inspectHfUpload, bucketOperation } from "./hf-private-storage";
 
 const SIGNING_URL = process.env.OBJECT_STORAGE_SIGNING_URL;
 const PREFIX = "/objects/recruitment/";
@@ -44,6 +45,10 @@ function fullPathFromObjectPath(objectPath: string) {
 export async function createRecruitmentUpload(fileName: string) {
   const safeName = fileName.normalize("NFKC").replace(/[^a-zA-Z0-9._-]/g, "-").slice(-120);
   const relative = `recruitment/${randomUUID()}/${safeName}`;
+  if (usingHfPrivateStorage()) {
+    return { uploadUrl: privateFileUrl(`/objects/${relative}`, "PUT"),
+      objectPath: `/objects/${relative}`, expiresInSeconds: 900 };
+  }
   const fullPath = `${privateDirectory()}/${relative}`;
   return {
     uploadUrl: await signedUrl(fullPath, "PUT"),
@@ -53,6 +58,7 @@ export async function createRecruitmentUpload(fileName: string) {
 }
 
 export async function inspectRecruitmentUpload(objectPath: string) {
+  if (usingHfPrivateStorage()) return inspectHfUpload(objectPath);
   const url = await signedUrl(fullPathFromObjectPath(objectPath), "HEAD");
   const response = await fetch(url, { method: "HEAD", signal: AbortSignal.timeout(30_000) });
   if (!response.ok) return null;
@@ -63,10 +69,15 @@ export async function inspectRecruitmentUpload(objectPath: string) {
 }
 
 export async function createRecruitmentDownload(objectPath: string) {
+  if (usingHfPrivateStorage()) return privateFileUrl(objectPath, "GET");
   return signedUrl(fullPathFromObjectPath(objectPath), "GET");
 }
 
 export async function deleteRecruitmentUpload(objectPath: string) {
+  if (usingHfPrivateStorage()) {
+    await bucketOperation("delete", objectPath);
+    return;
+  }
   const url = await signedUrl(fullPathFromObjectPath(objectPath), "DELETE");
   const response = await fetch(url, { method: "DELETE", signal: AbortSignal.timeout(30_000) });
   if (!response.ok && response.status !== 404) {
