@@ -10,6 +10,10 @@ from pathlib import Path
 
 os.environ["HF_HUB_DISABLE_PROGRESS_BARS"] = "1"
 os.environ["HF_HUB_DISABLE_TELEMETRY"] = "1"
+sdk_cache = tempfile.TemporaryDirectory(prefix="private-storage-sdk-")
+os.environ["HF_HOME"] = sdk_cache.name
+os.environ["HF_HUB_CACHE"] = str(Path(sdk_cache.name) / "hub")
+os.environ["HF_XET_CACHE"] = str(Path(sdk_cache.name) / "xet")
 from huggingface_hub import HfApi
 from huggingface_hub.errors import HfHubHTTPError
 
@@ -61,3 +65,5 @@ if __name__ == "__main__":
         # Never print tokens, file contents, provider URLs, or exception details.
         print('{"error":"Private storage operation failed"}')
         sys.exit(1)
+    finally:
+        sdk_cache.cleanup()
