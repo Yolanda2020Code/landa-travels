@@ -1,0 +1,19 @@
+{
+  "name": "@workspace/scripts",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "hello": "tsx ./src/hello.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "import-chatbot-evaluations": "tsx ./src/import-chatbot-evaluations.ts"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@workspace/db": "workspace:*",
+    "tsx": "catalog:"
+  },
+  "dependencies": {
+    "drizzle-orm": "catalog:"
+  }
+}

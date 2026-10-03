@@ -1,0 +1,36 @@
+name: Build and test
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  source-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          lfs: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: corepack enable && corepack prepare pnpm@10.26.1 --activate
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run build
+      - run: pnpm test
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: python deployment/assemble-model.py
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.9.5"
+      - run: uv sync --locked
+      - run: uv run python -m pytest rasa-bot/tests -q
+      - run: uv run --directory rasa-bot rasa data validate
+      - run: docker build --tag landa-travels:assessment .

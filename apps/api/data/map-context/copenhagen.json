@@ -1,0 +1,562 @@
+{
+  "schemaVersion": 1,
+  "destination": {
+    "slug": "copenhagen",
+    "label": "København, Københavns Kommune, Region Hovedstaden, 1357, Danmark",
+    "latitude": 55.6867243,
+    "longitude": 12.5700724,
+    "osmObjectId": "node/13707878",
+    "sourceUrl": "https://www.openstreetmap.org/node/13707878",
+    "checkedAt": "2026-09-30T11:06:09Z"
+  },
+  "checkedAt": "2026-09-30T11:06:09Z",
+  "records": [
+    {
+      "category": "hotel",
+      "name": "Cabinn City",
+      "latitude": 55.670591,
+      "longitude": 12.5708,
+      "osmObjectId": "node/25498524",
+      "sourceUrl": "https://www.openstreetmap.org/node/25498524",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Cab-Inn",
+      "latitude": 55.679562,
+      "longitude": 12.550399,
+      "osmObjectId": "node/277055805",
+      "sourceUrl": "https://www.openstreetmap.org/node/277055805",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Cab-Inn Scandinavia",
+      "latitude": 55.680815,
+      "longitude": 12.555523,
+      "osmObjectId": "node/277055819",
+      "sourceUrl": "https://www.openstreetmap.org/node/277055819",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Scandic Front",
+      "latitude": 55.681321,
+      "longitude": 12.593295,
+      "osmObjectId": "node/279567568",
+      "sourceUrl": "https://www.openstreetmap.org/node/279567568",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "hotel",
+      "name": "The Square",
+      "latitude": 55.676157,
+      "longitude": 12.566973,
+      "osmObjectId": "node/279691844",
+      "sourceUrl": "https://www.openstreetmap.org/node/279691844",
+      "checkedAt": "2026-09-30T11:06:09Z",
+      "wikipedia": "da:The Square (hotel)"
+    },
+    {
+      "category": "hotel",
+      "name": "Copenhagen Strand",
+      "latitude": 55.67723,
+      "longitude": 12.590152,
+      "osmObjectId": "node/279692554",
+      "sourceUrl": "https://www.openstreetmap.org/node/279692554",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Copenhagen Island",
+      "latitude": 55.663368,
+      "longitude": 12.563268,
+      "osmObjectId": "node/279711047",
+      "sourceUrl": "https://www.openstreetmap.org/node/279711047",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Comfort Hotel Vesterbro",
+      "latitude": 55.672863,
+      "longitude": 12.559136,
+      "osmObjectId": "node/280530672",
+      "sourceUrl": "https://www.openstreetmap.org/node/280530672",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Ibsens Hotel",
+      "latitude": 55.684652,
+      "longitude": 12.566266,
+      "osmObjectId": "node/281062214",
+      "sourceUrl": "https://www.openstreetmap.org/node/281062214",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "hotel",
+      "name": "DGI-byens Hotel",
+      "latitude": 55.668914,
+      "longitude": 12.564094,
+      "osmObjectId": "node/281254296",
+      "sourceUrl": "https://www.openstreetmap.org/node/281254296",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Savoy",
+      "latitude": 55.67258,
+      "longitude": 12.55635,
+      "osmObjectId": "node/281254689",
+      "sourceUrl": "https://www.openstreetmap.org/node/281254689",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Sankt Annæ",
+      "latitude": 55.681236,
+      "longitude": 12.591753,
+      "osmObjectId": "node/282272245",
+      "sourceUrl": "https://www.openstreetmap.org/node/282272245",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Phoenix Copenhagen",
+      "latitude": 55.68294,
+      "longitude": 12.58893,
+      "osmObjectId": "node/282272266",
+      "sourceUrl": "https://www.openstreetmap.org/node/282272266",
+      "checkedAt": "2026-09-30T11:06:09Z",
+      "wikipedia": "da:Hotel Phoenix Copenhagen"
+    },
+    {
+      "category": "hotel",
+      "name": "Petra",
+      "latitude": 55.684538,
+      "longitude": 12.583433,
+      "osmObjectId": "node/282272639",
+      "sourceUrl": "https://www.openstreetmap.org/node/282272639",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Rossini",
+      "latitude": 55.664135,
+      "longitude": 12.518579,
+      "osmObjectId": "node/286302883",
+      "sourceUrl": "https://www.openstreetmap.org/node/286302883",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Ansgar",
+      "latitude": 55.670819,
+      "longitude": 12.563744,
+      "osmObjectId": "node/298795705",
+      "sourceUrl": "https://www.openstreetmap.org/node/298795705",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Løven",
+      "latitude": 55.672698,
+      "longitude": 12.556934,
+      "osmObjectId": "node/298795715",
+      "sourceUrl": "https://www.openstreetmap.org/node/298795715",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Tiffany",
+      "latitude": 55.670893,
+      "longitude": 12.563164,
+      "osmObjectId": "node/298795733",
+      "sourceUrl": "https://www.openstreetmap.org/node/298795733",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Go Hotel Saga",
+      "latitude": 55.671577,
+      "longitude": 12.56245,
+      "osmObjectId": "node/298795772",
+      "sourceUrl": "https://www.openstreetmap.org/node/298795772",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Du Nord",
+      "latitude": 55.672073,
+      "longitude": 12.56196,
+      "osmObjectId": "node/298796069",
+      "sourceUrl": "https://www.openstreetmap.org/node/298796069",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Teatermuseet",
+      "latitude": 55.674782,
+      "longitude": 12.578629,
+      "osmObjectId": "node/283581117",
+      "sourceUrl": "https://www.openstreetmap.org/node/283581117",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Brumleby",
+      "latitude": 55.701093,
+      "longitude": 12.575234,
+      "osmObjectId": "node/496535337",
+      "sourceUrl": "https://www.openstreetmap.org/node/496535337",
+      "checkedAt": "2026-09-30T11:06:09Z",
+      "wikipedia": "da:Brumleby"
+    },
+    {
+      "category": "attraction",
+      "name": "Nyboder Mindestuer",
+      "latitude": 55.687371,
+      "longitude": 12.588053,
+      "osmObjectId": "node/496564342",
+      "sourceUrl": "https://www.openstreetmap.org/node/496564342",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Ripley's Believe It or Not",
+      "latitude": 55.676324,
+      "longitude": 12.56995,
+      "osmObjectId": "node/687303281",
+      "sourceUrl": "https://www.openstreetmap.org/node/687303281",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Dansk Jødisk Museum",
+      "latitude": 55.674365,
+      "longitude": 12.582303,
+      "osmObjectId": "node/738986844",
+      "sourceUrl": "https://www.openstreetmap.org/node/738986844",
+      "checkedAt": "2026-09-30T11:06:09Z",
+      "wikipedia": "da:Dansk Jødisk Museum"
+    },
+    {
+      "category": "attraction",
+      "name": "Medicinsk Museion",
+      "latitude": 55.685958,
+      "longitude": 12.591896,
+      "osmObjectId": "node/894315602",
+      "sourceUrl": "https://www.openstreetmap.org/node/894315602",
+      "checkedAt": "2026-09-30T11:06:09Z",
+      "wikipedia": "da:Medicinsk Museion"
+    },
+    {
+      "category": "attraction",
+      "name": "Spejdermuseet",
+      "latitude": 55.675214,
+      "longitude": 12.602337,
+      "osmObjectId": "node/1224762659",
+      "sourceUrl": "https://www.openstreetmap.org/node/1224762659",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Davids Samling",
+      "latitude": 55.68428,
+      "longitude": 12.582385,
+      "osmObjectId": "node/1291394245",
+      "sourceUrl": "https://www.openstreetmap.org/node/1291394245",
+      "checkedAt": "2026-09-30T11:06:09Z",
+      "wikipedia": "da:Davids Samling"
+    },
+    {
+      "category": "attraction",
+      "name": "Politimuseet",
+      "latitude": 55.690031,
+      "longitude": 12.560847,
+      "osmObjectId": "node/1517820296",
+      "sourceUrl": "https://www.openstreetmap.org/node/1517820296",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Overgaden",
+      "latitude": 55.672468,
+      "longitude": 12.590195,
+      "osmObjectId": "node/2473702013",
+      "sourceUrl": "https://www.openstreetmap.org/node/2473702013",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Væggen",
+      "latitude": 55.676296,
+      "longitude": 12.564063,
+      "osmObjectId": "node/2712714149",
+      "sourceUrl": "https://www.openstreetmap.org/node/2712714149",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Jónshús",
+      "latitude": 55.68921,
+      "longitude": 12.58231,
+      "osmObjectId": "node/3404320834",
+      "sourceUrl": "https://www.openstreetmap.org/node/3404320834",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Musikmuseet",
+      "latitude": 55.682313,
+      "longitude": 12.552377,
+      "osmObjectId": "node/3404321018",
+      "sourceUrl": "https://www.openstreetmap.org/node/3404321018",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Barbie Museum",
+      "latitude": 55.697266,
+      "longitude": 12.52557,
+      "osmObjectId": "node/3491726139",
+      "sourceUrl": "https://www.openstreetmap.org/node/3491726139",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Guinness World Records",
+      "latitude": 55.680168,
+      "longitude": 12.583846,
+      "osmObjectId": "node/3554343005",
+      "sourceUrl": "https://www.openstreetmap.org/node/3554343005",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Batteriet Sixtus",
+      "latitude": 55.689251,
+      "longitude": 12.606387,
+      "osmObjectId": "node/3757202369",
+      "sourceUrl": "https://www.openstreetmap.org/node/3757202369",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Bispebjerg",
+      "latitude": 55.70621,
+      "longitude": 12.541402,
+      "osmObjectId": "node/24960728",
+      "sourceUrl": "https://www.openstreetmap.org/node/24960728",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Sjælør",
+      "latitude": 55.651521,
+      "longitude": 12.526712,
+      "osmObjectId": "node/286886199",
+      "sourceUrl": "https://www.openstreetmap.org/node/286886199",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Sydhavn",
+      "latitude": 55.654884,
+      "longitude": 12.537608,
+      "osmObjectId": "node/286886246",
+      "sourceUrl": "https://www.openstreetmap.org/node/286886246",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Knippelsbro",
+      "latitude": 55.674181,
+      "longitude": 12.587022,
+      "osmObjectId": "node/491519338",
+      "sourceUrl": "https://www.openstreetmap.org/node/491519338",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Det Kongelige Bibliotek",
+      "latitude": 55.672233,
+      "longitude": 12.58071,
+      "osmObjectId": "node/491519345",
+      "sourceUrl": "https://www.openstreetmap.org/node/491519345",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Nyhavn",
+      "latitude": 55.679134,
+      "longitude": 12.594316,
+      "osmObjectId": "node/540156178",
+      "sourceUrl": "https://www.openstreetmap.org/node/540156178",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Operaen",
+      "latitude": 55.681511,
+      "longitude": 12.599062,
+      "osmObjectId": "node/540156305",
+      "sourceUrl": "https://www.openstreetmap.org/node/540156305",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Vesterport",
+      "latitude": 55.675817,
+      "longitude": 12.56241,
+      "osmObjectId": "node/593753668",
+      "sourceUrl": "https://www.openstreetmap.org/node/593753668",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Dybbølsbro",
+      "latitude": 55.665098,
+      "longitude": 12.55959,
+      "osmObjectId": "node/593765406",
+      "sourceUrl": "https://www.openstreetmap.org/node/593765406",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Ryparken",
+      "latitude": 55.715484,
+      "longitude": 12.559691,
+      "osmObjectId": "node/593869905",
+      "sourceUrl": "https://www.openstreetmap.org/node/593869905",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Svanemøllen",
+      "latitude": 55.715534,
+      "longitude": 12.578825,
+      "osmObjectId": "node/595293336",
+      "sourceUrl": "https://www.openstreetmap.org/node/595293336",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Nordhavn",
+      "latitude": 55.704972,
+      "longitude": 12.591012,
+      "osmObjectId": "node/595296652",
+      "sourceUrl": "https://www.openstreetmap.org/node/595296652",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Hellerup",
+      "latitude": 55.730591,
+      "longitude": 12.566911,
+      "osmObjectId": "node/598201521",
+      "sourceUrl": "https://www.openstreetmap.org/node/598201521",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Nørrebro",
+      "latitude": 55.700681,
+      "longitude": 12.537804,
+      "osmObjectId": "node/610619173",
+      "sourceUrl": "https://www.openstreetmap.org/node/610619173",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Fuglebakken",
+      "latitude": 55.695307,
+      "longitude": 12.52668,
+      "osmObjectId": "node/611297799",
+      "sourceUrl": "https://www.openstreetmap.org/node/611297799",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Flintholm",
+      "latitude": 55.685543,
+      "longitude": 12.498866,
+      "osmObjectId": "node/611305003",
+      "sourceUrl": "https://www.openstreetmap.org/node/611305003",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Grøndal",
+      "latitude": 55.690533,
+      "longitude": 12.515305,
+      "osmObjectId": "node/611305065",
+      "sourceUrl": "https://www.openstreetmap.org/node/611305065",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "KB Hallen",
+      "latitude": 55.677814,
+      "longitude": 12.492339,
+      "osmObjectId": "node/611318230",
+      "sourceUrl": "https://www.openstreetmap.org/node/611318230",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Emdrup",
+      "latitude": 55.720729,
+      "longitude": 12.541055,
+      "osmObjectId": "node/659992474",
+      "sourceUrl": "https://www.openstreetmap.org/node/659992474",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Nordre Toldbod",
+      "latitude": 55.688172,
+      "longitude": 12.599632,
+      "osmObjectId": "node/840936177",
+      "sourceUrl": "https://www.openstreetmap.org/node/840936177",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Langgade",
+      "latitude": 55.667395,
+      "longitude": 12.504087,
+      "osmObjectId": "node/1036553606",
+      "sourceUrl": "https://www.openstreetmap.org/node/1036553606",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Peter Bangs Vej",
+      "latitude": 55.678033,
+      "longitude": 12.503641,
+      "osmObjectId": "node/1040169361",
+      "sourceUrl": "https://www.openstreetmap.org/node/1040169361",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Lindevang",
+      "latitude": 55.683449,
+      "longitude": 12.513186,
+      "osmObjectId": "node/1271230723",
+      "sourceUrl": "https://www.openstreetmap.org/node/1271230723",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    },
+    {
+      "category": "transit",
+      "name": "Terminal Go Nordic Cruiseline",
+      "latitude": 55.701516,
+      "longitude": 12.595011,
+      "osmObjectId": "node/1608112353",
+      "sourceUrl": "https://www.openstreetmap.org/node/1608112353",
+      "checkedAt": "2026-09-30T11:06:09Z"
+    }
+  ],
+  "attribution": "© OpenStreetMap contributors"
+}

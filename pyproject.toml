@@ -1,0 +1,22 @@
+[project]
+name = "landa-travels-rasa"
+version = "1.0.0"
+description = "Conversational trip planning and grounded travel entity extraction"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+    "en-core-web-md",
+    "rasa==3.6.21",
+    "rasa-sdk==3.6.2",
+    "requests==2.32.5",
+    "spacy==3.7.5",
+]
+
+[dependency-groups]
+dev = ["pytest==8.3.4"]
+
+[tool.pytest.ini_options]
+pythonpath = ["rasa-bot"]
+testpaths = ["rasa-bot/tests"]
+
+[tool.uv.sources]
+en-core-web-md = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.7.1/en_core_web_md-3.7.1-py3-none-any.whl" }

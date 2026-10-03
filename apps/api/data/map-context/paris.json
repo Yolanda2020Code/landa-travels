@@ -1,0 +1,613 @@
+{
+  "schemaVersion": 1,
+  "destination": {
+    "slug": "paris",
+    "label": "Paris, Île-de-France, France métropolitaine, France",
+    "latitude": 48.8588897,
+    "longitude": 2.320041,
+    "osmObjectId": "relation/7444",
+    "sourceUrl": "https://www.openstreetmap.org/relation/7444",
+    "checkedAt": "2026-09-30T11:01:51Z"
+  },
+  "checkedAt": "2026-09-30T11:01:51Z",
+  "records": [
+    {
+      "category": "hotel",
+      "name": "Ibis",
+      "latitude": 48.840306,
+      "longitude": 2.315578,
+      "osmObjectId": "node/224711659",
+      "sourceUrl": "https://www.openstreetmap.org/node/224711659",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hôtel Saint-Honoré",
+      "latitude": 48.861182,
+      "longitude": 2.343612,
+      "osmObjectId": "node/247435032",
+      "sourceUrl": "https://www.openstreetmap.org/node/247435032",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hôtel Montpensier",
+      "latitude": 48.864359,
+      "longitude": 2.336264,
+      "osmObjectId": "node/247435275",
+      "sourceUrl": "https://www.openstreetmap.org/node/247435275",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hôtel Louvre Bon Enfants",
+      "latitude": 48.86291,
+      "longitude": 2.338179,
+      "osmObjectId": "node/247436637",
+      "sourceUrl": "https://www.openstreetmap.org/node/247436637",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hôtel Costes",
+      "latitude": 48.866283,
+      "longitude": 2.328009,
+      "osmObjectId": "node/247437972",
+      "sourceUrl": "https://www.openstreetmap.org/node/247437972",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Résidence les Boulevards",
+      "latitude": 48.869687,
+      "longitude": 2.348697,
+      "osmObjectId": "node/251001754",
+      "sourceUrl": "https://www.openstreetmap.org/node/251001754",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hôtel Marie",
+      "latitude": 48.869573,
+      "longitude": 2.348676,
+      "osmObjectId": "node/251001755",
+      "sourceUrl": "https://www.openstreetmap.org/node/251001755",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hôtel du Loiret",
+      "latitude": 48.85692,
+      "longitude": 2.355293,
+      "osmObjectId": "node/251127867",
+      "sourceUrl": "https://www.openstreetmap.org/node/251127867",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Charles V",
+      "latitude": 48.853487,
+      "longitude": 2.361835,
+      "osmObjectId": "node/251127869",
+      "sourceUrl": "https://www.openstreetmap.org/node/251127869",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hôtel de la Place des Vosges",
+      "latitude": 48.854426,
+      "longitude": 2.365242,
+      "osmObjectId": "node/251130907",
+      "sourceUrl": "https://www.openstreetmap.org/node/251130907",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hôtel Port-Royal",
+      "latitude": 48.837126,
+      "longitude": 2.350581,
+      "osmObjectId": "node/251531804",
+      "sourceUrl": "https://www.openstreetmap.org/node/251531804",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Le Clos Medicis",
+      "latitude": 48.848284,
+      "longitude": 2.340576,
+      "osmObjectId": "node/251733867",
+      "sourceUrl": "https://www.openstreetmap.org/node/251733867",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "hotel",
+      "name": "L'Hôtel",
+      "latitude": 48.856342,
+      "longitude": 2.33524,
+      "osmObjectId": "node/251733871",
+      "sourceUrl": "https://www.openstreetmap.org/node/251733871",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Victoria Palace Hôtel",
+      "latitude": 48.845774,
+      "longitude": 2.324341,
+      "osmObjectId": "node/251733872",
+      "sourceUrl": "https://www.openstreetmap.org/node/251733872",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Le Petit Chomel",
+      "latitude": 48.851934,
+      "longitude": 2.325367,
+      "osmObjectId": "node/251758241",
+      "sourceUrl": "https://www.openstreetmap.org/node/251758241",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Signature",
+      "latitude": 48.852151,
+      "longitude": 2.326091,
+      "osmObjectId": "node/251758242",
+      "sourceUrl": "https://www.openstreetmap.org/node/251758242",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hôtel du Champ de Mars",
+      "latitude": 48.856397,
+      "longitude": 2.306076,
+      "osmObjectId": "node/251758243",
+      "sourceUrl": "https://www.openstreetmap.org/node/251758243",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hôtel Saint-Dominique",
+      "latitude": 48.859929,
+      "longitude": 2.308788,
+      "osmObjectId": "node/251758244",
+      "sourceUrl": "https://www.openstreetmap.org/node/251758244",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hôtel Duquesne Eiffel",
+      "latitude": 48.852644,
+      "longitude": 2.309046,
+      "osmObjectId": "node/251758245",
+      "sourceUrl": "https://www.openstreetmap.org/node/251758245",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hôtel de la Tulipe",
+      "latitude": 48.859984,
+      "longitude": 2.306282,
+      "osmObjectId": "node/251758246",
+      "sourceUrl": "https://www.openstreetmap.org/node/251758246",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Musée de l'Armée",
+      "latitude": 48.857037,
+      "longitude": 2.311878,
+      "osmObjectId": "node/130102845",
+      "sourceUrl": "https://www.openstreetmap.org/node/130102845",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Musée de l'Armée (Paris)"
+    },
+    {
+      "category": "attraction",
+      "name": "Point zéro des Routes de France",
+      "latitude": 48.853401,
+      "longitude": 2.348788,
+      "osmObjectId": "node/191031796",
+      "sourceUrl": "https://www.openstreetmap.org/node/191031796",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Point zéro des routes de France"
+    },
+    {
+      "category": "attraction",
+      "name": "Musée des Arts Décoratifs",
+      "latitude": 48.863169,
+      "longitude": 2.332951,
+      "osmObjectId": "node/247584452",
+      "sourceUrl": "https://www.openstreetmap.org/node/247584452",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Musée des Arts décoratifs de Paris"
+    },
+    {
+      "category": "attraction",
+      "name": "Musée des Arts et Métiers",
+      "latitude": 48.866098,
+      "longitude": 2.355414,
+      "osmObjectId": "node/247618453",
+      "sourceUrl": "https://www.openstreetmap.org/node/247618453",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Musée des arts et métiers"
+    },
+    {
+      "category": "attraction",
+      "name": "Musée national Gustave Moreau",
+      "latitude": 48.877896,
+      "longitude": 2.334547,
+      "osmObjectId": "node/251318666",
+      "sourceUrl": "https://www.openstreetmap.org/node/251318666",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Musée Gustave-Moreau"
+    },
+    {
+      "category": "attraction",
+      "name": "Musée Grévin",
+      "latitude": 48.871837,
+      "longitude": 2.342097,
+      "osmObjectId": "node/251851363",
+      "sourceUrl": "https://www.openstreetmap.org/node/251851363",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Musée Grévin"
+    },
+    {
+      "category": "attraction",
+      "name": "Musée Edith Piaf",
+      "latitude": 48.866237,
+      "longitude": 2.381737,
+      "osmObjectId": "node/252211317",
+      "sourceUrl": "https://www.openstreetmap.org/node/252211317",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Musée Édith-Piaf"
+    },
+    {
+      "category": "attraction",
+      "name": "Espace Dali",
+      "latitude": 48.88648,
+      "longitude": 2.339902,
+      "osmObjectId": "node/252970813",
+      "sourceUrl": "https://www.openstreetmap.org/node/252970813",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Espace Dalí"
+    },
+    {
+      "category": "attraction",
+      "name": "Maison de Victor Hugo",
+      "latitude": 48.854799,
+      "longitude": 2.366136,
+      "osmObjectId": "node/254033221",
+      "sourceUrl": "https://www.openstreetmap.org/node/254033221",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Maison de Victor Hugo"
+    },
+    {
+      "category": "attraction",
+      "name": "Vedettes de Paris",
+      "latitude": 48.858863,
+      "longitude": 2.291854,
+      "osmObjectId": "node/299730585",
+      "sourceUrl": "https://www.openstreetmap.org/node/299730585",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Maison européenne de la Photographie",
+      "latitude": 48.85512,
+      "longitude": 2.358956,
+      "osmObjectId": "node/323911913",
+      "sourceUrl": "https://www.openstreetmap.org/node/323911913",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Maison européenne de la photographie"
+    },
+    {
+      "category": "attraction",
+      "name": "Robinier du square René Viviani",
+      "latitude": 48.852191,
+      "longitude": 2.347287,
+      "osmObjectId": "node/326372977",
+      "sourceUrl": "https://www.openstreetmap.org/node/326372977",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Robinier du square René-Viviani"
+    },
+    {
+      "category": "attraction",
+      "name": "Folie Titon",
+      "latitude": 48.850527,
+      "longitude": 2.385844,
+      "osmObjectId": "node/428054194",
+      "sourceUrl": "https://www.openstreetmap.org/node/428054194",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Folie Titon"
+    },
+    {
+      "category": "attraction",
+      "name": "Catacombes de Paris",
+      "latitude": 48.833744,
+      "longitude": 2.332292,
+      "osmObjectId": "node/493870538",
+      "sourceUrl": "https://www.openstreetmap.org/node/493870538",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Catacombes de Paris"
+    },
+    {
+      "category": "attraction",
+      "name": "Fontaine Cuvier",
+      "latitude": 48.843996,
+      "longitude": 2.355031,
+      "osmObjectId": "node/530585154",
+      "sourceUrl": "https://www.openstreetmap.org/node/530585154",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Fontaine Cuvier"
+    },
+    {
+      "category": "attraction",
+      "name": "Le Petit Bouillon Pharamond",
+      "latitude": 48.863006,
+      "longitude": 2.348511,
+      "osmObjectId": "node/681283199",
+      "sourceUrl": "https://www.openstreetmap.org/node/681283199",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Pharamond (restaurant)"
+    },
+    {
+      "category": "attraction",
+      "name": "Fontaine Médicis",
+      "latitude": 48.848059,
+      "longitude": 2.339294,
+      "osmObjectId": "node/782601793",
+      "sourceUrl": "https://www.openstreetmap.org/node/782601793",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Fontaine Médicis"
+    },
+    {
+      "category": "transit",
+      "name": "Notre-Dame",
+      "latitude": 48.851834,
+      "longitude": 2.350056,
+      "osmObjectId": "node/21662099",
+      "sourceUrl": "https://www.openstreetmap.org/node/21662099",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "transit",
+      "name": "Gare de Lyon",
+      "latitude": 48.844683,
+      "longitude": 2.373774,
+      "osmObjectId": "node/26824135",
+      "sourceUrl": "https://www.openstreetmap.org/node/26824135",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Paris-Gare-de-Lyon"
+    },
+    {
+      "category": "transit",
+      "name": "Clichy - Levallois",
+      "latitude": 48.897588,
+      "longitude": 2.297351,
+      "osmObjectId": "node/27233126",
+      "sourceUrl": "https://www.openstreetmap.org/node/27233126",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Gare de Clichy - Levallois"
+    },
+    {
+      "category": "transit",
+      "name": "Les Sablons",
+      "latitude": 48.880936,
+      "longitude": 2.272228,
+      "osmObjectId": "node/27362238",
+      "sourceUrl": "https://www.openstreetmap.org/node/27362238",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Les Sablons (métro de Paris)"
+    },
+    {
+      "category": "transit",
+      "name": "Franklin D. Roosevelt",
+      "latitude": 48.869034,
+      "longitude": 2.309927,
+      "osmObjectId": "node/27362251",
+      "sourceUrl": "https://www.openstreetmap.org/node/27362251",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Franklin D. Roosevelt (métro de Paris)"
+    },
+    {
+      "category": "transit",
+      "name": "Concorde",
+      "latitude": 48.866199,
+      "longitude": 2.324417,
+      "osmObjectId": "node/27362257",
+      "sourceUrl": "https://www.openstreetmap.org/node/27362257",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Concorde (métro de Paris)"
+    },
+    {
+      "category": "transit",
+      "name": "Tuileries",
+      "latitude": 48.864519,
+      "longitude": 2.329631,
+      "osmObjectId": "node/27362258",
+      "sourceUrl": "https://www.openstreetmap.org/node/27362258",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Tuileries (métro de Paris)"
+    },
+    {
+      "category": "transit",
+      "name": "Châtelet",
+      "latitude": 48.858778,
+      "longitude": 2.347411,
+      "osmObjectId": "node/27371862",
+      "sourceUrl": "https://www.openstreetmap.org/node/27371862",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Châtelet (métro de Paris)"
+    },
+    {
+      "category": "transit",
+      "name": "Saint-Paul",
+      "latitude": 48.855384,
+      "longitude": 2.360407,
+      "osmObjectId": "node/27371867",
+      "sourceUrl": "https://www.openstreetmap.org/node/27371867",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Saint-Paul (métro de Paris)"
+    },
+    {
+      "category": "transit",
+      "name": "La Motte-Picquet - Grenelle",
+      "latitude": 48.849101,
+      "longitude": 2.298167,
+      "osmObjectId": "node/34909170",
+      "sourceUrl": "https://www.openstreetmap.org/node/34909170",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:La Motte-Picquet - Grenelle (métro de Paris)"
+    },
+    {
+      "category": "transit",
+      "name": "Cambronne",
+      "latitude": 48.847523,
+      "longitude": 2.302946,
+      "osmObjectId": "node/34909171",
+      "sourceUrl": "https://www.openstreetmap.org/node/34909171",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Cambronne (métro de Paris)"
+    },
+    {
+      "category": "transit",
+      "name": "Dupleix",
+      "latitude": 48.850409,
+      "longitude": 2.293661,
+      "osmObjectId": "node/34909187",
+      "sourceUrl": "https://www.openstreetmap.org/node/34909187",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Dupleix (métro de Paris)"
+    },
+    {
+      "category": "transit",
+      "name": "Cité Universitaire",
+      "latitude": 48.820484,
+      "longitude": 2.33804,
+      "osmObjectId": "node/34910259",
+      "sourceUrl": "https://www.openstreetmap.org/node/34910259",
+      "checkedAt": "2026-09-30T11:01:51Z"
+    },
+    {
+      "category": "transit",
+      "name": "Gare Montparnasse",
+      "latitude": 48.840062,
+      "longitude": 2.319109,
+      "osmObjectId": "node/65331500",
+      "sourceUrl": "https://www.openstreetmap.org/node/65331500",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Gare de Paris-Montparnasse"
+    },
+    {
+      "category": "transit",
+      "name": "Corentin Celton",
+      "latitude": 48.827064,
+      "longitude": 2.279363,
+      "osmObjectId": "node/134299013",
+      "sourceUrl": "https://www.openstreetmap.org/node/134299013",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Corentin Celton (métro de Paris)"
+    },
+    {
+      "category": "transit",
+      "name": "Convention",
+      "latitude": 48.837287,
+      "longitude": 2.296654,
+      "osmObjectId": "node/134305198",
+      "sourceUrl": "https://www.openstreetmap.org/node/134305198",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Convention (métro de Paris)"
+    },
+    {
+      "category": "transit",
+      "name": "Invalides",
+      "latitude": 48.862826,
+      "longitude": 2.313837,
+      "osmObjectId": "node/154788912",
+      "sourceUrl": "https://www.openstreetmap.org/node/154788912",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Gare des Invalides"
+    },
+    {
+      "category": "transit",
+      "name": "Porte d'Orléans",
+      "latitude": 48.823631,
+      "longitude": 2.325607,
+      "osmObjectId": "node/220289379",
+      "sourceUrl": "https://www.openstreetmap.org/node/220289379",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Porte d'Orléans (métro de Paris)"
+    },
+    {
+      "category": "transit",
+      "name": "Alésia",
+      "latitude": 48.828032,
+      "longitude": 2.327041,
+      "osmObjectId": "node/220289382",
+      "sourceUrl": "https://www.openstreetmap.org/node/220289382",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Alésia (métro de Paris)"
+    },
+    {
+      "category": "transit",
+      "name": "Mouton-Duvernet",
+      "latitude": 48.831279,
+      "longitude": 2.329866,
+      "osmObjectId": "node/220289385",
+      "sourceUrl": "https://www.openstreetmap.org/node/220289385",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Mouton-Duvernet (métro de Paris)"
+    },
+    {
+      "category": "transit",
+      "name": "Saint-Jacques",
+      "latitude": 48.832981,
+      "longitude": 2.33682,
+      "osmObjectId": "node/235369898",
+      "sourceUrl": "https://www.openstreetmap.org/node/235369898",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Saint-Jacques (métro de Paris)"
+    },
+    {
+      "category": "transit",
+      "name": "Glacière",
+      "latitude": 48.831145,
+      "longitude": 2.343492,
+      "osmObjectId": "node/235370184",
+      "sourceUrl": "https://www.openstreetmap.org/node/235370184",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Glacière (métro de Paris)"
+    },
+    {
+      "category": "transit",
+      "name": "Place d'Italie",
+      "latitude": 48.830945,
+      "longitude": 2.355893,
+      "osmObjectId": "node/235371392",
+      "sourceUrl": "https://www.openstreetmap.org/node/235371392",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Place d'Italie (métro de Paris)"
+    },
+    {
+      "category": "transit",
+      "name": "Nationale",
+      "latitude": 48.833199,
+      "longitude": 2.362827,
+      "osmObjectId": "node/235371394",
+      "sourceUrl": "https://www.openstreetmap.org/node/235371394",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Nationale (métro de Paris)"
+    },
+    {
+      "category": "transit",
+      "name": "Chevaleret",
+      "latitude": 48.83495,
+      "longitude": 2.368102,
+      "osmObjectId": "node/235371395",
+      "sourceUrl": "https://www.openstreetmap.org/node/235371395",
+      "checkedAt": "2026-09-30T11:01:51Z",
+      "wikipedia": "fr:Chevaleret (métro de Paris)"
+    }
+  ],
+  "attribution": "© OpenStreetMap contributors"
+}

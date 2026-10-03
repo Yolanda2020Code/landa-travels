@@ -1,0 +1,70 @@
+version: "3.1"
+stories:
+  - story: planning with correction and confirmation
+    steps:
+      - intent: plan_trip
+      - action: action_apply_guided_input
+      - action: trip_form
+      - active_loop: trip_form
+      - intent: correct_information
+      - action: action_apply_guided_input
+      - action: action_review_summary
+      - active_loop: null
+      - intent: choose_location_mode
+      - action: action_handle_location_consent
+      - intent: confirm_review
+      - action: action_apply_guided_input
+      - action: action_validate_review
+  - story: resume trip form after clarified fallback
+    steps:
+      - intent: plan_trip
+      - action: action_apply_guided_input
+      - action: trip_form
+      - active_loop: trip_form
+      - intent: nlu_fallback
+      - action: utter_clarify
+      - action: trip_form
+      - active_loop: trip_form
+      - intent: inform
+        entities:
+          - entity: destination
+            value: Springfield, Illinois
+      - slot_was_set:
+          - destination: Springfield, Illinois
+      - action: trip_form
+      - active_loop: trip_form
+  - story: explain estimates
+    steps:
+      - intent: request_recommendations
+      - action: action_find_sustainable_options
+      - intent: ask_carbon_method
+      - action: utter_carbon_method
+  - story: cancel during planning
+    steps:
+      - intent: plan_trip
+      - action: action_apply_guided_input
+      - action: trip_form
+      - active_loop: trip_form
+      - intent: cancel
+      - action: action_cancel_trip
+  - story: greeting starts a guided intake
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - action: action_apply_guided_input
+      - action: trip_form
+      - active_loop: trip_form
+  - story: structured guided turn advances the active form
+    steps:
+      - intent: plan_trip
+      - action: action_apply_guided_input
+      - action: trip_form
+      - active_loop: trip_form
+      - intent: guided_continue
+      - action: action_apply_guided_input
+      - action: trip_form
+      - active_loop: trip_form
+  - story: handover
+    steps:
+      - intent: request_handover
+      - action: action_human_handover

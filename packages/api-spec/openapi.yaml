@@ -1,0 +1,1418 @@
+openapi: 3.1.0
+info:
+  # Do not change the title, if the title changes, the import paths will be broken
+  title: Api
+  version: 0.1.0
+  description: Landa Travels conversational planning API
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: assistant
+    description: Conversational travel planning operations
+  - name: recommendations
+    description: Sustainable travel recommendations
+  - name: traveller
+    description: Authenticated traveller workspace
+  - name: contact
+    description: Public contact enquiries
+  - name: recruitment
+    description: Public contributor applications with private CV storage
+  - name: admin
+    description: Server-authorized chatbot quality analytics
+  - name: advisor
+    description: Authorized human-advisor inbox
+  - name: travel-context
+    description: Cached destination context and live reference provider results
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+  /travel-context:
+    get:
+      operationId: getTravelContext
+      tags: [travel-context]
+      summary: Get non-blocking context for a destination
+      description: Returns prebuilt OpenStreetMap context and independently fetched weather, English Wikipedia, EUR exchange-rate, and explicitly covered local-feed references. Optional location tailoring uses only an explicitly consented manual city or GPS coordinates rounded to at most two decimal places; coordinates are request-scoped and are not returned or persisted.
+      parameters:
+        - name: destination
+          in: query
+          required: true
+          schema: { type: string, minLength: 1, maxLength: 120 }
+        - name: currency
+          in: query
+          required: false
+          schema: { type: string, enum: [EUR, GBP, USD], default: GBP }
+        - name: travelDates
+          in: query
+          required: false
+          schema: { type: string, maxLength: 80 }
+        - name: locationMode
+          in: query
+          required: false
+          description: Defaults to skip. GPS is read only after a user action; skip does not request device location.
+          schema: { type: string, enum: [skip, manual, gps], default: skip }
+        - name: locationCity
+          in: query
+          required: false
+          description: Approximate city selected by the traveller in manual mode; never a home address.
+          schema: { type: string, minLength: 1, maxLength: 100 }
+        - name: locationLat
+          in: query
+          required: false
+          description: Consented GPS latitude rounded to at most two decimal places. Not stored or returned.
+          schema: { type: string, pattern: '^-?(?:\d{1,3})(?:\.\d{1,2})?$' }
+        - name: locationLon
+          in: query
+          required: false
+          description: Consented GPS longitude rounded to at most two decimal places. Not stored or returned.
+          schema: { type: string, pattern: '^-?(?:\d{1,3})(?:\.\d{1,2})?$' }
+      responses:
+        "200":
+          description: Destination context including explicit cache and provider statuses
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/TravelContextResponse" }
+        "400":
+          description: Invalid destination context query
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorResponse" }
+  /assistant/message:
+    post:
+      operationId: sendAssistantMessage
+      tags: [assistant]
+      summary: Send a message to the travel assistant
+      description: Processes a user message, updates planning slots, and returns assistant messages, quick replies, and recommendations.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AssistantMessageInput"
+      responses:
+        "200":
+          description: Assistant response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AssistantMessageResponse"
+        "400":
+          description: Invalid message
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /assistant/handover:
+    post:
+      operationId: requestAdvisorHandover
+      tags: [assistant]
+      security: [{ bearerAuth: [] }, {}]
+      summary: Request a human advisor handover
+      description: Asynchronous advisor request. Signed-in travellers use an owned saved trip; guests provide their active conversation ID, reply email and explicit consent. Guest context and transcript are read from the server.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/HandoverInput"
+      responses:
+        "200":
+          description: Handover request created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HandoverResponse"
+        "401": { description: Authentication required }
+        "404": { description: Owned saved trip not found }
+  /assistant/handover/status:
+    post:
+      operationId: getGuestHandoverStatus
+      tags: [assistant]
+      summary: Read guest request status using its private conversation capability
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/GuestHandoverStatusInput" }
+      responses:
+        "200":
+          description: Request status and any advisor reply; no contact email or transcript
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/AdvisorHandover" }
+        "404": { description: Request unavailable or conversation expired }
+  /me/handovers:
+    get:
+      operationId: listMyHandovers
+      tags: [traveller]
+      summary: List the current traveller's advisor handovers
+      security: [{ bearerAuth: [] }]
+      responses:
+        "200":
+          description: Privacy-minimised handovers
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/AdvisorHandover" }
+        "401": { description: Authentication required }
+  /me/handovers/{id}:
+    get:
+      operationId: getMyHandover
+      tags: [traveller]
+      summary: Get one of the current traveller's advisor handovers
+      security: [{ bearerAuth: [] }]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: Advisor handover
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/AdvisorHandover" }
+        "401": { description: Authentication required }
+        "404": { description: Handover not found }
+  /advisor/handovers:
+    get:
+      operationId: listAdvisorHandovers
+      tags: [advisor]
+      summary: List advisor handovers for authorized advisors
+      security: [{ bearerAuth: [] }]
+      responses:
+        "200":
+          description: Advisor inbox
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/AdvisorHandover" }
+        "401": { description: Authentication required }
+        "403": { description: Advisor access required }
+  /advisor/handovers/{id}:
+    get:
+      operationId: getAdvisorHandover
+      tags: [advisor]
+      summary: Get the transcript and privacy-minimised trip context for the assigned advisor
+      security: [{ bearerAuth: [] }]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: Assigned advisor handover detail
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/AdvisorHandoverDetail" }
+        "401": { description: Authentication required }
+        "403": { description: Advisor access required }
+        "404": { description: Handover not found or not assigned to this advisor }
+  /advisor/handovers/{id}/assign:
+    post:
+      operationId: assignAdvisorHandover
+      tags: [advisor]
+      summary: Assign a handover to the current advisor
+      security: [{ bearerAuth: [] }]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/AdvisorAssignmentInput" }
+      responses:
+        "200":
+          description: Assigned handover
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/AdvisorHandover" }
+        "401": { description: Authentication required }
+        "403": { description: Advisor access required }
+        "404": { description: Handover not found }
+        "409": { description: Invalid lifecycle transition or assignee conflict }
+  /advisor/handovers/{id}/reply:
+    post:
+      operationId: replyToAdvisorHandover
+      tags: [advisor]
+      summary: Reply to a traveller handover
+      security: [{ bearerAuth: [] }]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/AdvisorReplyInput" }
+      responses:
+        "200":
+          description: Replied handover
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/AdvisorHandover" }
+        "400": { description: Invalid reply }
+        "401": { description: Authentication required }
+        "403": { description: Advisor access required }
+        "404": { description: Handover not found }
+        "409": { description: Invalid lifecycle transition or assignee conflict }
+  /advisor/handovers/{id}/reply-email:
+    post:
+      operationId: resendAdvisorReplyEmail
+      tags: [advisor]
+      security: [{ bearerAuth: [] }]
+      summary: Retry emailing the assigned advisor's saved guest reply
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: Saved reply with email-provider acceptance status
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/AdvisorHandover" }
+        "404": { description: Guest reply not assigned to this advisor }
+  /advisor/handovers/{id}/close:
+    post:
+      operationId: closeAdvisorHandover
+      tags: [advisor]
+      summary: Close a handover
+      security: [{ bearerAuth: [] }]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: Closed handover
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/AdvisorHandover" }
+        "401": { description: Authentication required }
+        "403": { description: Advisor access required }
+        "404": { description: Handover not found }
+        "409": { description: Invalid lifecycle transition or assignee conflict }
+  /recommendations/featured:
+    get:
+      operationId: getFeaturedRecommendations
+      tags: [recommendations]
+      summary: Get featured sustainable travel options
+      description: Returns demo-safe recommendations for the first-load experience and offline fallback.
+      responses:
+        "200":
+          description: Featured recommendations
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Recommendation"
+  /me/profile:
+    get:
+      operationId: getCurrentProfile
+      tags: [traveller]
+      security: [{ bearerAuth: [] }]
+      summary: Get the current traveller profile
+      responses:
+        "200":
+          description: Current profile
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TravellerProfile"
+    patch:
+      operationId: updateCurrentProfile
+      tags: [traveller]
+      security: [{ bearerAuth: [] }]
+      summary: Update the current traveller profile
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ProfileUpdate"
+      responses:
+        "200":
+          description: Updated profile
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TravellerProfile"
+  /trips:
+    get:
+      operationId: listSavedTrips
+      tags: [traveller]
+      security: [{ bearerAuth: [] }]
+      summary: List saved trips for the current traveller
+      responses:
+        "200":
+          description: Saved trips
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/SavedTrip"
+    post:
+      operationId: createSavedTrip
+      tags: [traveller]
+      security: [{ bearerAuth: [] }]
+      summary: Save a trip plan
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SavedTripInput"
+      responses:
+        "201":
+          description: Saved trip
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SavedTrip"
+  /trips/{id}:
+    patch:
+      operationId: updateSavedTrip
+      tags: [traveller]
+      security: [{ bearerAuth: [] }]
+      summary: Update a saved trip
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SavedTripUpdate"
+      responses:
+        "200":
+          description: Updated trip
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SavedTrip"
+  /bookings:
+    get:
+      operationId: listBookings
+      tags: [traveller]
+      security: [{ bearerAuth: [] }]
+      summary: List requested or demo booking records
+      responses:
+        "200":
+          description: Booking records
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Booking"
+    post:
+      operationId: createBooking
+      tags: [traveller]
+      security: [{ bearerAuth: [] }]
+      summary: Create a booking request record
+      description: Creates a demo/requested record only. It never charges or confirms inventory.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BookingInput"
+      responses:
+        "201":
+          description: Booking request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Booking"
+  /rewards:
+    get:
+      operationId: getRewardSummary
+      tags: [traveller]
+      security: [{ bearerAuth: [] }]
+      summary: Get sustainability points and evidence
+      responses:
+        "200":
+          description: Reward summary
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RewardSummary"
+  /contact:
+    post:
+      operationId: submitContactRequest
+      tags: [contact]
+      summary: Submit a public contact request
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ContactInput"
+      responses:
+        "201":
+          description: Contact request accepted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactResponse"
+  /recruitment/uploads:
+    post:
+      operationId: requestRecruitmentUpload
+      tags: [recruitment]
+      summary: Request a short-lived private CV upload URL
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RecruitmentUploadInput"
+      responses:
+        "201":
+          description: Private upload URL created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RecruitmentUploadResponse"
+        "400":
+          description: Invalid file metadata
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "429":
+          description: Too many upload requests
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /recruitment/applications:
+    post:
+      operationId: submitRecruitmentApplication
+      tags: [recruitment]
+      summary: Submit a contributor application after the CV upload completes
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RecruitmentApplicationInput"
+      responses:
+        "201":
+          description: Application stored and notification attempted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RecruitmentApplicationResponse"
+        "400":
+          description: Invalid application or uploaded CV
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "409":
+          description: An application from this email already exists
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /admin/recruitment/applications:
+    get:
+      operationId: listRecruitmentApplications
+      tags: [recruitment]
+      summary: List private contributor applications for the authenticated founder
+      security: [{ bearerAuth: [] }]
+      responses:
+        "200":
+          description: Private recruitment applications with short-lived CV download links
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/PrivateRecruitmentApplication"
+        "401":
+          description: Authentication required
+        "403":
+          description: Recruitment owner access required
+  /admin/chatbot/overview:
+    get:
+      operationId: getAdminChatbotOverview
+      tags: [admin]
+      summary: Get live chatbot telemetry overview
+      security: [{ bearerAuth: [] }]
+      parameters:
+        - { $ref: "#/components/parameters/AdminFrom" }
+        - { $ref: "#/components/parameters/AdminTo" }
+      responses:
+        "200": { description: Overview, content: { application/json: { schema: { $ref: "#/components/schemas/AdminAnalyticsResponse" } } } }
+        "401": { description: Unauthenticated }
+        "403": { description: Non-admin }
+  /admin/chatbot/funnel:
+    get:
+      operationId: getAdminChatbotFunnel
+      tags: [admin]
+      summary: Get chatbot funnel and source breakdown
+      security: [{ bearerAuth: [] }]
+      parameters:
+        - { $ref: "#/components/parameters/AdminFrom" }
+        - { $ref: "#/components/parameters/AdminTo" }
+      responses:
+        "200": { description: Funnel, content: { application/json: { schema: { $ref: "#/components/schemas/AdminAnalyticsResponse" } } } }
+  /admin/chatbot/failures:
+    get:
+      operationId: listAdminChatbotFailures
+      tags: [admin]
+      summary: List supported chatbot failure cohorts
+      security: [{ bearerAuth: [] }]
+      parameters:
+        - { $ref: "#/components/parameters/AdminFrom" }
+        - { $ref: "#/components/parameters/AdminTo" }
+        - { $ref: "#/components/parameters/AdminFailureType" }
+        - { $ref: "#/components/parameters/AdminSource" }
+        - { $ref: "#/components/parameters/AdminOutcome" }
+      responses:
+        "200": { description: Failure cohorts, content: { application/json: { schema: { $ref: "#/components/schemas/AdminAnalyticsResponse" } } } }
+  /admin/chatbot/conversations:
+    get:
+      operationId: listAdminChatbotConversations
+      tags: [admin]
+      summary: List privacy-safe chatbot conversations
+      security: [{ bearerAuth: [] }]
+      parameters:
+        - { $ref: "#/components/parameters/AdminFrom" }
+        - { $ref: "#/components/parameters/AdminTo" }
+        - { $ref: "#/components/parameters/AdminSource" }
+        - { $ref: "#/components/parameters/AdminOutcome" }
+        - { $ref: "#/components/parameters/AdminConversationFailureClass" }
+        - { name: q, in: query, schema: { type: string } }
+        - { name: limit, in: query, schema: { type: integer, minimum: 1, maximum: 100 } }
+        - { name: offset, in: query, schema: { type: integer, minimum: 0 } }
+      responses:
+        "200": { description: Conversations, content: { application/json: { schema: { $ref: "#/components/schemas/AdminAnalyticsResponse" } } } }
+  /admin/chatbot/conversations/{sessionId}:
+    get:
+      operationId: getAdminChatbotConversation
+      tags: [admin]
+      summary: Get redacted chatbot transcript and events
+      security: [{ bearerAuth: [] }]
+      parameters: [{ name: sessionId, in: path, required: true, schema: { type: string } }]
+      responses:
+        "200": { description: Transcript, content: { application/json: { schema: { $ref: "#/components/schemas/AdminAnalyticsResponse" } } } }
+  /admin/chatbot/evaluations:
+    get:
+      operationId: listAdminChatbotEvaluations
+      tags: [admin]
+      summary: List labelled chatbot evaluation runs
+      security: [{ bearerAuth: [] }]
+      responses:
+        "200": { description: Evaluation runs, content: { application/json: { schema: { $ref: "#/components/schemas/AdminAnalyticsResponse" } } } }
+  /admin/chatbot/evaluations/{id}:
+    get:
+      operationId: getAdminChatbotEvaluation
+      tags: [admin]
+      summary: Get labelled evaluation predictions
+      security: [{ bearerAuth: [] }]
+      parameters: [{ name: id, in: path, required: true, schema: { type: integer } }]
+      responses:
+        "200": { description: Evaluation, content: { application/json: { schema: { $ref: "#/components/schemas/AdminAnalyticsResponse" } } } }
+  /admin/chatbot/evaluations/{id}/confusion-matrix:
+    get:
+      operationId: getAdminChatbotConfusionMatrix
+      tags: [admin]
+      summary: Get a labelled evaluation confusion matrix
+      security: [{ bearerAuth: [] }]
+      parameters: [{ name: id, in: path, required: true, schema: { type: integer } }]
+      responses:
+        "200": { description: Matrix, content: { application/json: { schema: { $ref: "#/components/schemas/AdminAnalyticsResponse" } } } }
+  /admin/chatbot/evaluations/{id}/export:
+    get:
+      operationId: exportAdminChatbotEvaluation
+      tags: [admin]
+      summary: Export labelled evaluation predictions
+      security: [{ bearerAuth: [] }]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+        - { name: format, in: query, schema: { type: string, enum: [json, csv] } }
+      responses:
+        "200": { description: Export }
+  /admin/chatbot/reviews:
+    post:
+      operationId: createAdminChatbotReview
+      tags: [admin]
+      summary: Add a human review label
+      security: [{ bearerAuth: [] }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AdminReviewInput"
+      responses:
+        "201": { description: Review created }
+components:
+  parameters:
+    AdminFrom:
+      name: from
+      in: query
+      description: Inclusive UTC date (YYYY-MM-DD)
+      schema: { type: string, format: date }
+    AdminTo:
+      name: to
+      in: query
+      description: Inclusive UTC date (YYYY-MM-DD)
+      schema: { type: string, format: date }
+    AdminFailureType:
+      name: type
+      in: query
+      schema:
+        type: string
+        enum: [high-fallback, repeated-prompt, abandoned-form, source-destination-confusion]
+    AdminSource:
+      name: source
+      in: query
+      schema: { type: string, enum: [demo, live] }
+    AdminOutcome:
+      name: outcome
+      in: query
+      schema: { type: string }
+    AdminConversationFailureClass:
+      name: failureClass
+      in: query
+      schema:
+        type: string
+        enum: [fallback, unresolved_intent, error]
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+    TravelContextResponse:
+      type: object
+      required: [destination, map, weather, exchange, transitFeed, culturalEvents, certifiedStays, nearbyContext, offsetProgrammes]
+      properties:
+        destination: { type: string }
+        map:
+          type: object
+          required: [status, checkedAt, attribution, wikipediaStatus, hotels, transit, attractions]
+          properties:
+            status: { type: string, enum: [ok, stale, cache-miss] }
+            checkedAt: { type: ["string", "null"], format: date-time }
+            attribution: { type: string }
+            wikipediaStatus: { type: string, enum: [available, no-english-tag, lookup-unavailable, no-map] }
+            hotels: { type: array, items: { $ref: "#/components/schemas/MapContextItem" } }
+            transit: { type: array, items: { $ref: "#/components/schemas/MapContextItem" } }
+            attractions: { type: array, items: { $ref: "#/components/schemas/MapAttraction" } }
+        weather:
+          type: object
+          required: [status, source, date, current, outlook, travelAdvice, travelDates, forecastAppliesToTravelDates, notice]
+          properties:
+            status: { type: string, enum: [available, unavailable] }
+            source: { type: string, enum: [Open-Meteo] }
+            date: { type: ["string", "null"], pattern: '^\d{4}-\d{2}-\d{2}$' }
+            current:
+              oneOf:
+                - { type: "null" }
+                - $ref: "#/components/schemas/WeatherCurrent"
+            outlook: { type: array, items: { $ref: "#/components/schemas/WeatherDay" } }
+            travelAdvice: { type: string }
+            travelDates: { type: ["string", "null"] }
+            forecastAppliesToTravelDates: { type: boolean, enum: [false] }
+            notice: { type: string }
+        exchange:
+          type: object
+          required: [status, base, target, rate, date, source]
+          properties:
+            status: { type: string, enum: [available, unavailable] }
+            base: { type: string, enum: [EUR] }
+            target: { type: string, enum: [EUR, GBP, USD] }
+            rate: { type: ["number", "null"], exclusiveMinimum: 0 }
+            date: { type: ["string", "null"], pattern: '^\d{4}-\d{2}-\d{2}$' }
+            source: { type: string }
+        transitFeed:
+          type: object
+          additionalProperties: false
+          required: [status, checkedAt, source, sourceUrl, attribution, departures, notice]
+          properties:
+            status: { type: string, enum: [available, unavailable, not-covered] }
+            checkedAt: { type: ["string", "null"], format: date-time }
+            source: { type: ["string", "null"] }
+            sourceUrl: { type: ["string", "null"], format: uri }
+            attribution: { type: ["string", "null"] }
+            departures: { type: array, items: { $ref: "#/components/schemas/TransitDeparture" } }
+            notice: { type: string }
+        culturalEvents:
+          type: object
+          additionalProperties: false
+          required: [status, checkedAt, source, sourceUrl, attribution, events, notice]
+          properties:
+            status: { type: string, enum: [available, unavailable, not-covered] }
+            checkedAt: { type: ["string", "null"], format: date-time }
+            source: { type: ["string", "null"] }
+            sourceUrl: { type: ["string", "null"], format: uri }
+            attribution: { type: ["string", "null"] }
+            events: { type: array, items: { $ref: "#/components/schemas/CulturalEvent" } }
+            notice: { type: string }
+        certifiedStays:
+          $ref: "#/components/schemas/CertifiedStaysFeed"
+        nearbyContext:
+          $ref: "#/components/schemas/NearbyMapContext"
+        offsetProgrammes:
+          $ref: "#/components/schemas/OffsetProgrammeContext"
+    NearbyMapItem:
+      type: object
+      additionalProperties: false
+      required: [name, objectId, sourceUrl, distanceKm]
+      properties:
+        name: { type: string }
+        objectId: { type: string }
+        sourceUrl: { type: string, format: uri }
+        distanceKm: { type: number, minimum: 0 }
+    NearbyMapContext:
+      type: object
+      additionalProperties: false
+      required: [status, mode, label, checkedAt, stale, attribution, hotels, transit, attractions, notice]
+      properties:
+        status: { type: string, enum: [available, unavailable, skipped] }
+        mode: { type: string, enum: [skip, manual, gps] }
+        label: { type: ["string", "null"] }
+        checkedAt: { type: ["string", "null"], format: date-time }
+        stale: { type: boolean }
+        attribution: { type: ["string", "null"] }
+        hotels: { type: array, items: { $ref: "#/components/schemas/NearbyMapItem" } }
+        transit: { type: array, items: { $ref: "#/components/schemas/NearbyMapItem" } }
+        attractions: { type: array, items: { $ref: "#/components/schemas/NearbyMapItem" } }
+        notice: { type: string }
+    OffsetProgrammeContext:
+      type: object
+      additionalProperties: false
+      required: [status, source, checkedAt, notice, programmes]
+      properties:
+        status: { type: string, enum: [curated-demo] }
+        source: { type: string }
+        checkedAt: { type: "null" }
+        notice: { type: string }
+        programmes:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            required: [id, name, organization, sourceUrl, evidenceType, checkedAt, limitations]
+            properties:
+              id: { type: string }
+              name: { type: string }
+              organization: { type: string }
+              sourceUrl: { type: string, format: uri }
+              evidenceType: { type: string, enum: [official programme directory] }
+              checkedAt: { type: "null" }
+              limitations: { type: string }
+    CertificationEvidence:
+      type: object
+      additionalProperties: false
+      required: [scheme, licenceNumber, validUntil, checkedAt, registryUrl, hotelUrl, address]
+      properties:
+        scheme: { type: string }
+        licenceNumber: { type: string }
+        validUntil: { type: string, format: date }
+        checkedAt: { type: string, format: date-time }
+        registryUrl: { type: string, format: uri }
+        hotelUrl: { type: ["string", "null"], format: uri }
+        address: { type: string }
+    CertifiedAccommodation:
+      type: object
+      additionalProperties: false
+      required: [id, name, city, country, address, certificationEvidence]
+      properties:
+        id: { type: string }
+        name: { type: string }
+        city: { type: string }
+        country: { type: string }
+        address: { type: string }
+        certificationEvidence: { $ref: "#/components/schemas/CertificationEvidence" }
+    CertifiedStaysFeed:
+      type: object
+      additionalProperties: false
+      required: [status, checkedAt, source, sourceUrl, attribution, notice, stays]
+      properties:
+        status: { type: string, enum: [available, unavailable, not-covered] }
+        checkedAt: { type: ["string", "null"], format: date-time }
+        source: { type: string }
+        sourceUrl: { type: string, format: uri }
+        attribution: { type: string }
+        notice: { type: string }
+        stays: { type: array, items: { $ref: "#/components/schemas/CertifiedAccommodation" } }
+    TransitDeparture:
+      type: object
+      additionalProperties: false
+      required: [stop, line, destination, departureAt, timing]
+      properties:
+        stop: { type: string }
+        line: { type: string }
+        destination: { type: string }
+        departureAt: { type: string, format: date-time }
+        timing: { type: string, enum: [scheduled, real-time] }
+    CulturalEvent:
+      type: object
+      additionalProperties: false
+      required: [title, startAt, venue, category, sourceUrl]
+      properties:
+        title: { type: string }
+        startAt: { type: string, format: date-time }
+        venue: { type: string }
+        category: { type: ["string", "null"] }
+        sourceUrl: { type: string, format: uri }
+    MapContextItem:
+      type: object
+      additionalProperties: false
+      required: [name, sourceUrl, objectId, latitude, longitude]
+      properties:
+        name: { type: string }
+        sourceUrl: { type: string, format: uri }
+        objectId: { type: string }
+        latitude: { type: number, minimum: -90, maximum: 90 }
+        longitude: { type: number, minimum: -180, maximum: 180 }
+    MapAttraction:
+      allOf:
+        - $ref: "#/components/schemas/MapContextItem"
+        - type: object
+          properties:
+            wikipedia:
+              type: object
+              required: [extract, articleUrl, attribution]
+              properties:
+                extract: { type: string }
+                articleUrl: { type: string, format: uri }
+                attribution: { type: string }
+    WeatherCurrent:
+      type: object
+      required: [temperatureC, precipitationMm, windSpeedKmh, weatherCode, time]
+      properties:
+        temperatureC: { type: number }
+        precipitationMm: { type: number }
+        windSpeedKmh: { type: number }
+        weatherCode: { type: number }
+        time: { type: string }
+    WeatherDay:
+      type: object
+      required: [date, temperatureMaxC, temperatureMinC, precipitationMm, weatherCode]
+      properties:
+        date: { type: string, pattern: '^\d{4}-\d{2}-\d{2}$' }
+        temperatureMaxC: { type: number }
+        temperatureMinC: { type: number }
+        precipitationMm: { type: number }
+        weatherCode: { type: number }
+    AssistantMessageInput:
+      type: object
+      properties:
+        sessionId:
+          type: string
+          minLength: 1
+        message:
+          type: string
+          minLength: 1
+          maxLength: 2000
+        payload:
+          type: string
+          minLength: 1
+          maxLength: 2000
+        context:
+          $ref: "#/components/schemas/TripContext"
+      required: [sessionId, message, context]
+    TripContext:
+      type: object
+      properties:
+        origin:
+          type: [string, "null"]
+        destination:
+          type: [string, "null"]
+        currentLocation:
+          type: [string, "null"]
+        stopovers:
+          type: array
+          items:
+            type: string
+        dateRange:
+          type: [string, "null"]
+        travellerCount:
+          type: [integer, "null"]
+        budget:
+          type: [string, "null"]
+        transportPreferences:
+          type: array
+          items:
+            type: string
+        accessibilityNeeds:
+          type: array
+          items:
+            type: string
+        sustainabilityPriority:
+          type: [string, "null"]
+        accommodationNeeds:
+          type: array
+          items:
+            type: string
+        activityPreferences:
+          type: array
+          items:
+            type: string
+        locationConsentMode:
+          type: [string, "null"]
+        reviewConfirmation:
+          type: [boolean, "null"]
+        handoverRequested:
+          type: boolean
+      required: [origin, destination, currentLocation, stopovers, dateRange, travellerCount, budget, transportPreferences, accessibilityNeeds, sustainabilityPriority, accommodationNeeds, locationConsentMode, reviewConfirmation, handoverRequested]
+    AssistantMessageResponse:
+      type: object
+      properties:
+        sessionId:
+          type: string
+        messages:
+          type: array
+          items:
+            type: string
+        quickReplies:
+          type: array
+          items:
+            $ref: "#/components/schemas/AssistantQuickReply"
+        context:
+          $ref: "#/components/schemas/TripContext"
+        recommendations:
+          type: array
+          items:
+            $ref: "#/components/schemas/Recommendation"
+          maxItems: 250
+        handoverRecommendation:
+          $ref: "#/components/schemas/HandoverRecommendation"
+        handover:
+          type: ["boolean", "null"]
+        source:
+          type: string
+          enum: [demo, live]
+        latencyMs:
+          type: integer
+      required: [sessionId, messages, quickReplies, context, recommendations, handoverRecommendation, handover, source, latencyMs]
+    HandoverRecommendation:
+      type: object
+      properties:
+        recommended:
+          type: boolean
+        reason:
+          type: [string, "null"]
+          enum: [multiple_stopovers, unmet_accessibility, required_inventory_unavailable, repeated_failed_clarification, null]
+        message:
+          type: [string, "null"]
+      required: [recommended, reason, message]
+    AssistantQuickReply:
+      type: object
+      properties:
+        title:
+          type: string
+          minLength: 1
+          maxLength: 200
+        payload:
+          type: string
+          minLength: 1
+          maxLength: 2000
+      required: [title, payload]
+    Recommendation:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum: [stay, transport, experience, offset]
+        name:
+          type: string
+        location:
+          type: string
+        description:
+          type: string
+        price:
+          type: string
+        carbonKg:
+          type: ["number", "null"]
+        carbonLabel:
+          type: ["string", "null"]
+          enum: [low, moderate, high]
+        certificationEvidence:
+          oneOf:
+            - { type: "null" }
+            - $ref: "#/components/schemas/CertificationEvidence"
+        score:
+          type: number
+        durationMinutes:
+          type: number
+          minimum: 0
+          description: Provider-supplied journey duration in minutes; absent when unknown. For return flight offers, sum of slice durations, not door-to-door time.
+        connectionCount:
+          type: integer
+          minimum: 0
+          description: Provider-supplied total connection count; absent when unknown.
+        rankingExplanation:
+          type: string
+          description: Comparative weighting, known constraints and missing convenience evidence.
+        certification:
+          type: [string, "null"]
+        source:
+          type: string
+        verifiedAt:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+      required: [id, type, name, location, description, price, carbonKg, carbonLabel, score, certification, source, verifiedAt, tags]
+    HandoverInput:
+      type: object
+      properties:
+        sessionId: { type: string, minLength: 8, maxLength: 100 }
+        contactEmail: { type: string, format: email, maxLength: 254 }
+        savedTripId:
+          type: integer
+          minimum: 1
+        shareTranscriptConsent:
+          type: boolean
+        transcript:
+          type: array
+          items:
+            $ref: "#/components/schemas/HandoverTranscriptTurn"
+          maxItems: 50
+        selectedRecommendationIds:
+          type: array
+          items: { type: string, minLength: 1, maxLength: 160 }
+          maxItems: 250
+      required: [shareTranscriptConsent, transcript]
+    GuestHandoverStatusInput:
+      type: object
+      required: [sessionId, handoverId]
+      properties:
+        sessionId: { type: string, minLength: 8, maxLength: 100 }
+        handoverId: { type: string, minLength: 1, maxLength: 40 }
+    HandoverTranscriptTurn:
+      type: object
+      required: [role, content]
+      properties:
+        role:
+          type: string
+          enum: [user, assistant]
+        content:
+          type: string
+          minLength: 1
+          maxLength: 4000
+    AdvisorHandoverContext:
+      type: object
+      required: [origin, destination, dateRange, travellerCount, budget, transportPreferences, accommodationNeeds, sustainabilityPriority, stopovers, accessibilityNeeds, locationConsentMode]
+      properties:
+        origin: { type: ["string", "null"] }
+        destination: { type: ["string", "null"] }
+        dateRange: { type: ["string", "null"] }
+        travellerCount: { type: ["integer", "null"] }
+        budget: { type: ["string", "null"] }
+        transportPreferences: { type: array, items: { type: string } }
+        accommodationNeeds: { type: array, items: { type: string } }
+        activityPreferences: { type: array, items: { type: string } }
+        sustainabilityPriority: { type: ["string", "null"] }
+        stopovers: { type: array, items: { type: string } }
+        accessibilityNeeds: { type: array, items: { type: string } }
+        locationConsentMode: { type: ["string", "null"] }
+        recommendationOptions:
+          type: array
+          items: { $ref: "#/components/schemas/Recommendation" }
+        selectedRecommendationIds:
+          type: array
+          items: { type: string }
+        recommendationSelectionStatus:
+          type: string
+          enum: [explicit_selection, no_explicit_selection]
+        recommendationSource:
+          type: ["string", "null"]
+          enum: [demo, live, null]
+        recommendationConfirmedAt:
+          type: ["string", "null"]
+          format: date-time
+        recommendationUnknowns:
+          type: array
+          items: { type: string }
+    AdvisorHandoverDetail:
+      type: object
+      required: [handover, context, transcript]
+      properties:
+        contactEmail: { type: ["string", "null"], description: Reply address, visible only to the assigned advisor. }
+        handover: { $ref: "#/components/schemas/AdvisorHandover" }
+        context: { $ref: "#/components/schemas/AdvisorHandoverContext" }
+        transcript:
+          type: array
+          items: { $ref: "#/components/schemas/HandoverTranscriptTurn" }
+    HandoverResponse:
+      type: object
+      properties:
+        handoverId:
+          type: string
+        status:
+          type: string
+          enum: [requested, assigned, replied, closed]
+        summary:
+          type: string
+        nextStep:
+          type: string
+        deliveryStatus:
+          type: string
+          enum: [accepted, pending, failed, not_configured]
+        slaMessage:
+          type: string
+      required: [handoverId, status, summary, nextStep, deliveryStatus, slaMessage]
+    AdvisorHandover:
+      type: object
+      required: [handoverId, savedTripId, status, summary, travellerReply, assignedAdvisorId, assignedAdvisorName, notificationStatus, createdAt, updatedAt]
+      properties:
+        handoverId: { type: string }
+        savedTripId: { type: ["integer", "null"] }
+        replyNotificationStatus:
+          type: string
+          enum: [not_requested, pending, accepted, failed, not_configured]
+        status:
+          type: string
+          enum: [requested, assigned, replied, closed]
+        summary: { type: string }
+        travellerReply: { type: ["string", "null"] }
+        assignedAdvisorId: { type: ["string", "null"] }
+        assignedAdvisorName: { type: ["string", "null"] }
+        notificationStatus:
+          type: string
+          enum: [accepted, pending, failed, not_configured]
+        createdAt: { type: string, format: date-time }
+        assignedAt: { type: ["string", "null"], format: date-time }
+        repliedAt: { type: ["string", "null"], format: date-time }
+        closedAt: { type: ["string", "null"], format: date-time }
+        updatedAt: { type: string, format: date-time }
+    AdvisorAssignmentInput:
+      type: object
+      properties:
+        advisorName: { type: ["string", "null"], maxLength: 120 }
+    AdvisorReplyInput:
+      type: object
+      required: [reply]
+      properties:
+        reply: { type: string, minLength: 1, maxLength: 4000 }
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+      required: [error]
+    TravellerProfile:
+      type: object
+      required: [id, userId, displayName, homeBase, bio, createdAt, updatedAt]
+      properties:
+        id: { type: integer }
+        userId: { type: string }
+        displayName: { type: string }
+        homeBase: { type: ["string", "null"] }
+        bio: { type: ["string", "null"] }
+        createdAt: { type: string, format: date-time }
+        updatedAt: { type: string, format: date-time }
+    ProfileUpdate:
+      type: object
+      properties:
+        displayName: { type: string, minLength: 1, maxLength: 80 }
+        homeBase: { type: ["string", "null"], maxLength: 120 }
+        bio: { type: ["string", "null"], maxLength: 500 }
+    SavedTrip:
+      type: object
+      required: [id, title, origin, destination, dateRange, travellerCount, budget, sustainabilityPriority, context, status, createdAt, updatedAt]
+      properties:
+        id: { type: integer }
+        title: { type: string }
+        origin: { type: ["string", "null"] }
+        destination: { type: ["string", "null"] }
+        dateRange: { type: ["string", "null"] }
+        travellerCount: { type: ["integer", "null"] }
+        budget: { type: ["string", "null"] }
+        sustainabilityPriority: { type: ["string", "null"] }
+        context: { type: object, additionalProperties: true }
+        status: { type: string, enum: [planning, ready, archived] }
+        createdAt: { type: string, format: date-time }
+        updatedAt: { type: string, format: date-time }
+    SavedTripInput:
+      type: object
+      required: [title]
+      properties:
+        title: { type: string, minLength: 1, maxLength: 120 }
+        origin: { type: ["string", "null"] }
+        destination: { type: ["string", "null"] }
+        dateRange: { type: ["string", "null"] }
+        travellerCount: { type: ["integer", "null"], minimum: 1, maximum: 20 }
+        budget: { type: ["string", "null"] }
+        sustainabilityPriority: { type: ["string", "null"] }
+        context: { type: object, additionalProperties: true }
+        status: { type: string, enum: [planning, ready, archived] }
+    SavedTripUpdate:
+      allOf:
+        - $ref: "#/components/schemas/SavedTripInput"
+    Booking:
+      type: object
+      required: [id, tripId, label, bookingType, providerReference, status, source, carbonKg, details, createdAt]
+      properties:
+        id: { type: integer }
+        tripId: { type: ["integer", "null"] }
+        label: { type: string }
+        bookingType: { type: string, enum: [transport, stay, experience] }
+        providerReference: { type: ["string", "null"] }
+        status: { type: string, enum: [requested, demo, confirmed, cancelled] }
+        source: { type: string, enum: [demo, live] }
+        carbonKg: { type: ["number", "null"] }
+        details: { type: object, additionalProperties: true }
+        createdAt: { type: string, format: date-time }
+    BookingInput:
+      type: object
+      required: [label, bookingType]
+      properties:
+        tripId: { type: ["integer", "null"] }
+        label: { type: string, minLength: 1, maxLength: 160 }
+        bookingType: { type: string, enum: [transport, stay, experience] }
+        providerReference: { type: ["string", "null"] }
+        carbonKg: { type: ["number", "null"], minimum: 0 }
+        details: { type: object, additionalProperties: true }
+    RewardEvent:
+      type: object
+      required: [id, points, reason, evidence, category, createdAt]
+      properties:
+        id: { type: integer }
+        points: { type: integer }
+        reason: { type: string }
+        evidence: { type: string }
+        category: { type: string }
+        createdAt: { type: string, format: date-time }
+    RewardSummary:
+      type: object
+      required: [totalPoints, level, nextLevelPoints, events]
+      properties:
+        totalPoints: { type: integer }
+        level: { type: string }
+        nextLevelPoints: { type: integer }
+        events:
+          type: array
+          items: { $ref: "#/components/schemas/RewardEvent" }
+    ContactInput:
+      type: object
+      required: [name, email, message, consent]
+      properties:
+        name: { type: string, minLength: 1, maxLength: 100 }
+        email: { type: string, format: email }
+        message: { type: string, minLength: 1, maxLength: 2000 }
+        topic: { type: ["string", "null"], maxLength: 80 }
+        consent: { type: boolean }
+    ContactResponse:
+      type: object
+      required: [id, status]
+      properties:
+        id: { type: integer }
+        status: { type: string, enum: [received] }
+    RecruitmentUploadInput:
+      type: object
+      required: [name, size, contentType]
+      properties:
+        name: { type: string, minLength: 1, maxLength: 180 }
+        size: { type: integer, minimum: 1, maximum: 5242880 }
+        contentType:
+          type: string
+          enum:
+            - application/pdf
+            - application/msword
+            - application/vnd.openxmlformats-officedocument.wordprocessingml.document
+    RecruitmentUploadResponse:
+      type: object
+      required: [uploadUrl, objectPath, expiresInSeconds]
+      properties:
+        uploadUrl: { type: string, format: uri }
+        objectPath: { type: string }
+        expiresInSeconds: { type: integer }
+    RecruitmentApplicationInput:
+      type: object
+      required: [name, email, details, consent, cvObjectPath, cvFileName, cvContentType, cvSize]
+      properties:
+        name: { type: string, minLength: 2, maxLength: 100 }
+        email: { type: string, format: email, maxLength: 254 }
+        details: { type: string, minLength: 20, maxLength: 3000 }
+        consent: { type: boolean }
+        cvObjectPath: { type: string, minLength: 1, maxLength: 500 }
+        cvFileName: { type: string, minLength: 1, maxLength: 180 }
+        cvContentType:
+          type: string
+          enum:
+            - application/pdf
+            - application/msword
+            - application/vnd.openxmlformats-officedocument.wordprocessingml.document
+        cvSize: { type: integer, minimum: 1, maximum: 5242880 }
+        website: { type: string, maxLength: 0 }
+    RecruitmentApplicationResponse:
+      type: object
+      required: [id, status]
+      properties:
+        id: { type: integer }
+        status:
+          type: string
+          enum: [received, received_notification_pending]
+    PrivateRecruitmentApplication:
+      type: object
+      required: [id, name, email, details, cvFileName, cvSize, createdAt, retentionExpiresAt, cvDownloadUrl]
+      properties:
+        id: { type: integer }
+        name: { type: string }
+        email: { type: string, format: email }
+        details: { type: string }
+        cvFileName: { type: string }
+        cvSize: { type: integer }
+        createdAt: { type: string, format: date-time }
+        retentionExpiresAt: { type: string, format: date-time }
+        cvDownloadUrl: { type: string, format: uri }
+    AdminAnalyticsResponse:
+      type: object
+      additionalProperties: true
+      description: Analytics response. Telemetry and labelled evaluation responses identify their data source explicitly.
+    AdminReviewInput:
+      type: object
+      required: [sessionId, label]
+      properties:
+        eventId: { type: string }
+        sessionId: { type: string }
+        label: { type: string, maxLength: 80 }
+        notes: { type: string, maxLength: 1000 }
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+

@@ -1,0 +1,30 @@
+version: "3.1"
+nlu:
+  - intent: inform
+    examples: |
+      - set off from [Bristol](origin) and finish in [Ghent](destination)
+      - I am departing [Valencia](origin) for [Ljubljana](destination)
+      - the trip should begin in [Tallinn](origin)
+      - make [Naples](destination) the final city
+      - could you route us from [Zagreb](origin) to [Seville](destination)
+      - start at [Krakow](origin), stop in [Salzburg](stopover), then continue to [Lyon](destination)
+      - between [Rotterdam](origin) and [Turin](destination), break the journey in [Dresden](stopover)
+      - I want [Nice](destination) with a connection through [Brussels](stopover)
+      - leave [Riga](origin), change in [Warsaw](stopover), and end up in [Porto](destination)
+      - please add [Helsinki](stopover) on the way
+      - I can travel [7-11 February 2027](travel_dates)
+      - the dates are [March 3rd through March 9th](travel_dates)
+      - book it for [the weekend after next](travel_dates)
+      - we are free [from 28 June until 2 July](travel_dates)
+      - departure can be [15/08/2027](travel_dates)
+      - keep the whole trip below [$1,450](budget)
+      - I have got [950 GBP](budget) to spend
+      - the ceiling is [two thousand euros](budget)
+      - aim for [roughly €675.50](budget)
+      - do not go over [CHF 1800](budget)
+      - it is just [one](travelers) passenger
+      - reserve seats for [five](travelers) adults
+      - our group has [8](travelers) travellers
+      - there will be [twelve](travelers) of us
+      - please plan for [15](travelers) people
+      - for [three adults and two children](travelers), travel from [Bilbao](origin) via [Andorra la Vella](stopover) to [Toulouse](destination) [during Easter week](travel_dates) with [no more than €3,200](budget)

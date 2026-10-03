@@ -1,0 +1,231 @@
+version: "3.1"
+stories:
+  - story: request human handover
+    steps:
+      - user: |
+          I need a person to review this
+        intent: request_handover
+      - action: action_human_handover
+  - story: methodology question
+    steps:
+      - user: |
+          how is the footprint calculated
+        intent: ask_carbon_method
+      - action: utter_carbon_method
+  - story: complete trip form submission
+    steps:
+      - intent: plan_trip
+      - action: action_apply_guided_input
+      - action: trip_form
+      - active_loop: trip_form
+      - intent: inform
+        entities:
+          - entity: origin
+            value: London
+          - entity: destination
+            value: Paris
+          - entity: travel_dates
+            value: 12 to 16 October
+          - entity: travelers
+            value: 2
+          - entity: budget
+            value: GBP 900
+          - entity: transport_preference
+            value: rail
+          - entity: accessibility_need
+            value: none
+          - entity: sustainability_level
+            value: climate-first
+          - entity: accommodation_need
+            value: hotel
+          - entity: activity_preference
+            value: cultural
+          - entity: location_mode
+            value: none
+      - slot_was_set:
+          - origin: London
+          - destination: Paris
+          - travel_dates: 12 to 16 October
+          - travelers: 2
+          - budget: GBP 900
+          - transport_preference: rail
+          - accessibility_need: none
+          - sustainability_level: climate-first
+          - accommodation_need: hotel
+          - activity_preferences:
+              - cultural
+          - location_mode: none
+      - action: trip_form
+      - active_loop: null
+      - action: action_review_summary
+  - story: first Rasa greeting opens the intake form
+    steps:
+      - user: |
+          hello
+        intent: greet
+      - action: utter_greet
+      - action: action_apply_guided_input
+      - action: trip_form
+      - active_loop: trip_form
+  - story: programmatic structured Continue keeps Core inside the trip form
+    steps:
+      - intent: plan_trip
+      - action: action_apply_guided_input
+      - action: trip_form
+      - active_loop: trip_form
+      - slot_was_set:
+          - origin: Berlin
+          - destination: Paris
+      - intent: guided_continue
+      - action: action_apply_guided_input
+      - action: trip_form
+      - active_loop: trip_form
+  - story: missing dates keeps trip form active
+    steps:
+      - intent: plan_trip
+      - action: action_apply_guided_input
+      - action: trip_form
+      - active_loop: trip_form
+      - intent: inform
+        entities:
+          - entity: origin
+            value: London
+          - entity: destination
+            value: Paris
+      - slot_was_set:
+          - origin: London
+          - destination: Paris
+      - action: trip_form
+      - active_loop: trip_form
+  - story: ambiguous destination fallback accepts a clarified place
+    steps:
+      - intent: plan_trip
+      - action: action_apply_guided_input
+      - action: trip_form
+      - active_loop: trip_form
+      - intent: nlu_fallback
+      - action: utter_clarify
+      - action: trip_form
+      - active_loop: trip_form
+      - intent: inform
+        entities:
+          - entity: destination
+            value: Springfield, Illinois
+      - slot_was_set:
+          - destination: Springfield, Illinois
+      - action: trip_form
+      - active_loop: trip_form
+      - intent: inform
+        entities:
+          - entity: origin
+            value: London
+          - entity: travel_dates
+            value: 12 to 16 October
+          - entity: travelers
+            value: 2
+          - entity: budget
+            value: GBP 900
+          - entity: transport_preference
+            value: rail
+          - entity: accessibility_need
+            value: none
+          - entity: sustainability_level
+            value: climate-first
+          - entity: accommodation_need
+            value: hotel
+          - entity: activity_preference
+            value: cultural
+          - entity: location_mode
+            value: none
+      - slot_was_set:
+          - origin: London
+          - travel_dates: 12 to 16 October
+          - travelers: 2
+          - budget: GBP 900
+          - transport_preference: rail
+          - accessibility_need: none
+          - sustainability_level: climate-first
+          - accommodation_need: hotel
+          - activity_preferences:
+              - cultural
+          - location_mode: none
+      - action: trip_form
+      - active_loop: null
+      - action: action_review_summary
+  - story: location consent requires review before search
+    steps:
+      - intent: plan_trip
+      - action: action_apply_guided_input
+      - action: trip_form
+      - active_loop: trip_form
+      - active_loop: null
+      - action: action_review_summary
+      - intent: choose_location_mode
+      - action: action_handle_location_consent
+      - intent: confirm_review
+      - action: action_apply_guided_input
+      - action: action_validate_review
+  - story: correction during form
+    steps:
+      - intent: plan_trip
+      - action: action_apply_guided_input
+      - action: trip_form
+      - active_loop: trip_form
+      - intent: correct_information
+      - action: action_apply_guided_input
+      - action: action_review_summary
+  - story: trip form resumes after methodology interruption
+    steps:
+      - intent: plan_trip
+      - action: action_apply_guided_input
+      - action: trip_form
+      - active_loop: trip_form
+      - intent: ask_carbon_method
+      - action: utter_carbon_method
+      - action: trip_form
+      - active_loop: trip_form
+  - story: cancellation during form
+    steps:
+      - intent: plan_trip
+      - action: action_apply_guided_input
+      - action: trip_form
+      - active_loop: trip_form
+      - intent: cancel
+      - action: action_cancel_trip
+  - story: safe boundaries
+    steps:
+      - intent: out_of_scope
+      - action: utter_out_of_scope
+      - intent: prompt_injection
+      - action: utter_prompt_injection
+      - intent: provider_outage
+      - action: utter_provider_outage
+  - story: consent branches and complete review
+    steps:
+      - intent: choose_location_mode
+      - action: action_handle_location_consent
+      - slot_was_set:
+          - location_mode: manual
+      - intent: inform
+        entities:
+          - entity: location
+            value: Berlin
+      - action: action_review_summary
+      - intent: confirm_review
+      - action: action_apply_guided_input
+      - action: action_validate_review
+  - story: current location asks for safe consent
+    steps:
+      - intent: current_location
+      - action: action_handle_location_consent
+  - story: deny then correction
+    steps:
+      - intent: deny
+      - action: action_review_denial
+      - intent: correct_information
+      - action: action_apply_guided_input
+      - action: action_review_summary
+  - story: remove stopover preserves route
+    steps:
+      - intent: remove_stopover
+      - action: action_remove_stopover

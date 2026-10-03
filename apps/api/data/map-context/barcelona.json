@@ -1,0 +1,553 @@
+{
+  "schemaVersion": 1,
+  "destination": {
+    "slug": "barcelona",
+    "label": "Barcelona, Barcelonès, Barcelona, Catalunya, España",
+    "latitude": 41.3825802,
+    "longitude": 2.177073,
+    "osmObjectId": "relation/347950",
+    "sourceUrl": "https://www.openstreetmap.org/relation/347950",
+    "checkedAt": "2026-09-30T11:06:02Z"
+  },
+  "checkedAt": "2026-09-30T11:06:02Z",
+  "records": [
+    {
+      "category": "hotel",
+      "name": "Hotel Millenni",
+      "latitude": 41.375951,
+      "longitude": 2.167054,
+      "osmObjectId": "node/192066541",
+      "sourceUrl": "https://www.openstreetmap.org/node/192066541",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Barcelona Universal",
+      "latitude": 41.375197,
+      "longitude": 2.168251,
+      "osmObjectId": "node/192067263",
+      "sourceUrl": "https://www.openstreetmap.org/node/192067263",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Paral·lel",
+      "latitude": 41.374776,
+      "longitude": 2.166197,
+      "osmObjectId": "node/199125462",
+      "sourceUrl": "https://www.openstreetmap.org/node/199125462",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Catalonia Diagonal Centro",
+      "latitude": 41.393907,
+      "longitude": 2.156863,
+      "osmObjectId": "node/364735661",
+      "sourceUrl": "https://www.openstreetmap.org/node/364735661",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Villa Emilia",
+      "latitude": 41.380216,
+      "longitude": 2.153951,
+      "osmObjectId": "node/367695151",
+      "sourceUrl": "https://www.openstreetmap.org/node/367695151",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hostal Barcelona",
+      "latitude": 41.372843,
+      "longitude": 2.166169,
+      "osmObjectId": "node/536686095",
+      "sourceUrl": "https://www.openstreetmap.org/node/536686095",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Pensión Las Flores",
+      "latitude": 41.381365,
+      "longitude": 2.172763,
+      "osmObjectId": "node/672090818",
+      "sourceUrl": "https://www.openstreetmap.org/node/672090818",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Royal",
+      "latitude": 41.384285,
+      "longitude": 2.170564,
+      "osmObjectId": "node/672398204",
+      "sourceUrl": "https://www.openstreetmap.org/node/672398204",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Glòries",
+      "latitude": 41.401122,
+      "longitude": 2.182956,
+      "osmObjectId": "node/672892910",
+      "sourceUrl": "https://www.openstreetmap.org/node/672892910",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Ayre Casp",
+      "latitude": 41.396063,
+      "longitude": 2.179467,
+      "osmObjectId": "node/673390239",
+      "sourceUrl": "https://www.openstreetmap.org/node/673390239",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hosteria Grau",
+      "latitude": 41.384625,
+      "longitude": 2.168161,
+      "osmObjectId": "node/673978997",
+      "sourceUrl": "https://www.openstreetmap.org/node/673978997",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Sir Victor",
+      "latitude": 41.396208,
+      "longitude": 2.160961,
+      "osmObjectId": "node/674096751",
+      "sourceUrl": "https://www.openstreetmap.org/node/674096751",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Suites Avenue",
+      "latitude": 41.394286,
+      "longitude": 2.16178,
+      "osmObjectId": "node/674141698",
+      "sourceUrl": "https://www.openstreetmap.org/node/674141698",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Eurostars Grand Marina",
+      "latitude": 41.371712,
+      "longitude": 2.180885,
+      "osmObjectId": "node/674650370",
+      "sourceUrl": "https://www.openstreetmap.org/node/674650370",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Attica 21",
+      "latitude": 41.405132,
+      "longitude": 2.211859,
+      "osmObjectId": "node/675181314",
+      "sourceUrl": "https://www.openstreetmap.org/node/675181314",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Continental",
+      "latitude": 41.385033,
+      "longitude": 2.170707,
+      "osmObjectId": "node/691591937",
+      "sourceUrl": "https://www.openstreetmap.org/node/691591937",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel sb Diagonal Zero",
+      "latitude": 41.412073,
+      "longitude": 2.219646,
+      "osmObjectId": "node/698062668",
+      "sourceUrl": "https://www.openstreetmap.org/node/698062668",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "hotel",
+      "name": "H10 Catalunya Plaza",
+      "latitude": 41.387,
+      "longitude": 2.168456,
+      "osmObjectId": "node/704049114",
+      "sourceUrl": "https://www.openstreetmap.org/node/704049114",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Club 29",
+      "latitude": 41.390806,
+      "longitude": 2.166069,
+      "osmObjectId": "node/704063685",
+      "sourceUrl": "https://www.openstreetmap.org/node/704063685",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Continental Palacete",
+      "latitude": 41.38971,
+      "longitude": 2.165573,
+      "osmObjectId": "node/704064994",
+      "sourceUrl": "https://www.openstreetmap.org/node/704064994",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Homenatge als castellers",
+      "latitude": 41.382033,
+      "longitude": 2.177009,
+      "osmObjectId": "node/438426043",
+      "sourceUrl": "https://www.openstreetmap.org/node/438426043",
+      "checkedAt": "2026-09-30T11:06:02Z",
+      "wikipedia": "ca:Homenatge als castellers"
+    },
+    {
+      "category": "attraction",
+      "name": "El Cul. A Santiago Roldan",
+      "latitude": 41.388947,
+      "longitude": 2.193827,
+      "osmObjectId": "node/506236262",
+      "sourceUrl": "https://www.openstreetmap.org/node/506236262",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Elogi de l'aigua",
+      "latitude": 41.418219,
+      "longitude": 2.145737,
+      "osmObjectId": "node/662868746",
+      "sourceUrl": "https://www.openstreetmap.org/node/662868746",
+      "checkedAt": "2026-09-30T11:06:02Z",
+      "wikipedia": "ca:Elogi de l'aigua"
+    },
+    {
+      "category": "attraction",
+      "name": "Pastelería Escribá Rambla De Les Flors",
+      "latitude": 41.381526,
+      "longitude": 2.172671,
+      "osmObjectId": "node/671914513",
+      "sourceUrl": "https://www.openstreetmap.org/node/671914513",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Museu de la Música",
+      "latitude": 41.398892,
+      "longitude": 2.185576,
+      "osmObjectId": "node/673264230",
+      "sourceUrl": "https://www.openstreetmap.org/node/673264230",
+      "checkedAt": "2026-09-30T11:06:02Z",
+      "wikipedia": "ca:Museu de la Música de Barcelona"
+    },
+    {
+      "category": "attraction",
+      "name": "Mirador de Miramar",
+      "latitude": 41.370541,
+      "longitude": 2.17237,
+      "osmObjectId": "node/898852798",
+      "sourceUrl": "https://www.openstreetmap.org/node/898852798",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Sala Güell",
+      "latitude": 41.384493,
+      "longitude": 2.174481,
+      "osmObjectId": "node/1072728133",
+      "sourceUrl": "https://www.openstreetmap.org/node/1072728133",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Park Güell",
+      "latitude": 41.413929,
+      "longitude": 2.152559,
+      "osmObjectId": "node/1371719212",
+      "sourceUrl": "https://www.openstreetmap.org/node/1371719212",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Pau Farinetes (Pau Piera)",
+      "latitude": 41.385483,
+      "longitude": 2.129713,
+      "osmObjectId": "node/1445665638",
+      "sourceUrl": "https://www.openstreetmap.org/node/1445665638",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Monument a Pius XII",
+      "latitude": 41.387445,
+      "longitude": 2.12258,
+      "osmObjectId": "node/1483868484",
+      "sourceUrl": "https://www.openstreetmap.org/node/1483868484",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Porta Gaudí de la Facultat de Farmàcia i Ciències de l'Alimentació",
+      "latitude": 41.385975,
+      "longitude": 2.122379,
+      "osmObjectId": "node/1483892443",
+      "sourceUrl": "https://www.openstreetmap.org/node/1483892443",
+      "checkedAt": "2026-09-30T11:06:02Z",
+      "wikipedia": "ca:Pavellons i portes de la Finca Güell"
+    },
+    {
+      "category": "attraction",
+      "name": "Museu d'Història de Barcelona",
+      "latitude": 41.383921,
+      "longitude": 2.177678,
+      "osmObjectId": "node/1643199193",
+      "sourceUrl": "https://www.openstreetmap.org/node/1643199193",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Museu de la Moto",
+      "latitude": 41.38334,
+      "longitude": 2.17453,
+      "osmObjectId": "node/1654108403",
+      "sourceUrl": "https://www.openstreetmap.org/node/1654108403",
+      "checkedAt": "2026-09-30T11:06:02Z",
+      "wikipedia": "ca:Museu de la Moto de Barcelona"
+    },
+    {
+      "category": "attraction",
+      "name": "Museu del Modernisme Català",
+      "latitude": 41.388854,
+      "longitude": 2.163397,
+      "osmObjectId": "node/1962720907",
+      "sourceUrl": "https://www.openstreetmap.org/node/1962720907",
+      "checkedAt": "2026-09-30T11:06:02Z",
+      "wikipedia": "ca:Museu del Modernisme Català"
+    },
+    {
+      "category": "transit",
+      "name": "Plaça del Centre (mar)",
+      "latitude": 41.381645,
+      "longitude": 2.135869,
+      "osmObjectId": "node/26636720",
+      "sourceUrl": "https://www.openstreetmap.org/node/26636720",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Mallorca / Marina",
+      "latitude": 41.40387,
+      "longitude": 2.175721,
+      "osmObjectId": "node/71709847",
+      "sourceUrl": "https://www.openstreetmap.org/node/71709847",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Plaça del Centre (muntanya)",
+      "latitude": 41.382088,
+      "longitude": 2.135569,
+      "osmObjectId": "node/191784425",
+      "sourceUrl": "https://www.openstreetmap.org/node/191784425",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Pl. Països Catalans / Numància / Ambulatori",
+      "latitude": 41.380926,
+      "longitude": 2.141684,
+      "osmObjectId": "node/191785584",
+      "sourceUrl": "https://www.openstreetmap.org/node/191785584",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Numància",
+      "latitude": 41.382409,
+      "longitude": 2.140159,
+      "osmObjectId": "node/191786230",
+      "sourceUrl": "https://www.openstreetmap.org/node/191786230",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Palau de Pedralbes",
+      "latitude": 41.386088,
+      "longitude": 2.11781,
+      "osmObjectId": "node/191801277",
+      "sourceUrl": "https://www.openstreetmap.org/node/191801277",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Ronda Sant Pau",
+      "latitude": 41.37509,
+      "longitude": 2.168155,
+      "osmObjectId": "node/194531874",
+      "sourceUrl": "https://www.openstreetmap.org/node/194531874",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Fontrodona",
+      "latitude": 41.374831,
+      "longitude": 2.167834,
+      "osmObjectId": "node/194531978",
+      "sourceUrl": "https://www.openstreetmap.org/node/194531978",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Pont de la Torrassa",
+      "latitude": 41.368449,
+      "longitude": 2.127821,
+      "osmObjectId": "node/257887479",
+      "sourceUrl": "https://www.openstreetmap.org/node/257887479",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Exposició",
+      "latitude": 41.374809,
+      "longitude": 2.150053,
+      "osmObjectId": "node/312682352",
+      "sourceUrl": "https://www.openstreetmap.org/node/312682352",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Avinguda Paral·lel",
+      "latitude": 41.375238,
+      "longitude": 2.150191,
+      "osmObjectId": "node/312682353",
+      "sourceUrl": "https://www.openstreetmap.org/node/312682353",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Pujades / Pere IV",
+      "latitude": 41.394889,
+      "longitude": 2.191559,
+      "osmObjectId": "node/312891593",
+      "sourceUrl": "https://www.openstreetmap.org/node/312891593",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Casp / Passeig de Sant Joan",
+      "latitude": 41.394313,
+      "longitude": 2.175418,
+      "osmObjectId": "node/319840468",
+      "sourceUrl": "https://www.openstreetmap.org/node/319840468",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Plaça de la Sagrada Família",
+      "latitude": 41.403429,
+      "longitude": 2.173411,
+      "osmObjectId": "node/320188472",
+      "sourceUrl": "https://www.openstreetmap.org/node/320188472",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Provença / Avinguda Gaudí",
+      "latitude": 41.404501,
+      "longitude": 2.174227,
+      "osmObjectId": "node/320188474",
+      "sourceUrl": "https://www.openstreetmap.org/node/320188474",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Pau Claris",
+      "latitude": 41.389727,
+      "longitude": 2.168864,
+      "osmObjectId": "node/336914627",
+      "sourceUrl": "https://www.openstreetmap.org/node/336914627",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Creu Coberta",
+      "latitude": 41.375271,
+      "longitude": 2.148302,
+      "osmObjectId": "node/341158187",
+      "sourceUrl": "https://www.openstreetmap.org/node/341158187",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Tarragona",
+      "latitude": 41.377921,
+      "longitude": 2.145698,
+      "osmObjectId": "node/346726238",
+      "sourceUrl": "https://www.openstreetmap.org/node/346726238",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Llacuna",
+      "latitude": 41.3992,
+      "longitude": 2.19719,
+      "osmObjectId": "node/371064282",
+      "sourceUrl": "https://www.openstreetmap.org/node/371064282",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Poblenou",
+      "latitude": 41.403504,
+      "longitude": 2.202873,
+      "osmObjectId": "node/371065161",
+      "sourceUrl": "https://www.openstreetmap.org/node/371065161",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Ramon Albó",
+      "latitude": 41.424476,
+      "longitude": 2.177158,
+      "osmObjectId": "node/371158314",
+      "sourceUrl": "https://www.openstreetmap.org/node/371158314",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Avinguda Meridiana",
+      "latitude": 41.401972,
+      "longitude": 2.187127,
+      "osmObjectId": "node/399887497",
+      "sourceUrl": "https://www.openstreetmap.org/node/399887497",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Fontana / Gran de Gràcia / Astúries",
+      "latitude": 41.402599,
+      "longitude": 2.152686,
+      "osmObjectId": "node/401881113",
+      "sourceUrl": "https://www.openstreetmap.org/node/401881113",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "Sibelius",
+      "latitude": 41.410183,
+      "longitude": 2.186339,
+      "osmObjectId": "node/401882325",
+      "sourceUrl": "https://www.openstreetmap.org/node/401882325",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    },
+    {
+      "category": "transit",
+      "name": "València",
+      "latitude": 41.410881,
+      "longitude": 2.187426,
+      "osmObjectId": "node/401882326",
+      "sourceUrl": "https://www.openstreetmap.org/node/401882326",
+      "checkedAt": "2026-09-30T11:06:02Z"
+    }
+  ],
+  "attribution": "© OpenStreetMap contributors"
+}

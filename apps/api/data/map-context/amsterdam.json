@@ -1,0 +1,586 @@
+{
+  "schemaVersion": 1,
+  "destination": {
+    "slug": "amsterdam",
+    "label": "Amsterdam, Noord-Holland, Nederland",
+    "latitude": 52.3730796,
+    "longitude": 4.8924534,
+    "osmObjectId": "relation/271110",
+    "sourceUrl": "https://www.openstreetmap.org/relation/271110",
+    "checkedAt": "2026-09-30T11:05:55Z"
+  },
+  "checkedAt": "2026-09-30T11:05:55Z",
+  "records": [
+    {
+      "category": "hotel",
+      "name": "Vondel Park Plaza",
+      "latitude": 52.354248,
+      "longitude": 4.866302,
+      "osmObjectId": "node/28836479",
+      "sourceUrl": "https://www.openstreetmap.org/node/28836479",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Clayton Hotel Amsterdam American",
+      "latitude": 52.363796,
+      "longitude": 4.88117,
+      "osmObjectId": "node/154798750",
+      "sourceUrl": "https://www.openstreetmap.org/node/154798750",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Sint Nicolaas",
+      "latitude": 52.377484,
+      "longitude": 4.895186,
+      "osmObjectId": "node/237892288",
+      "sourceUrl": "https://www.openstreetmap.org/node/237892288",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "hotel",
+      "name": "WestCord City Center",
+      "latitude": 52.376529,
+      "longitude": 4.893582,
+      "osmObjectId": "node/237898651",
+      "sourceUrl": "https://www.openstreetmap.org/node/237898651",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "hotel",
+      "name": "The Highlander",
+      "latitude": 52.37568,
+      "longitude": 4.892309,
+      "osmObjectId": "node/237904890",
+      "sourceUrl": "https://www.openstreetmap.org/node/237904890",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "hotel",
+      "name": "INK Hotel Amsterdam",
+      "latitude": 52.375506,
+      "longitude": 4.892925,
+      "osmObjectId": "node/237904893",
+      "sourceUrl": "https://www.openstreetmap.org/node/237904893",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Park Plaza Victoria Hotel",
+      "latitude": 52.37728,
+      "longitude": 4.897677,
+      "osmObjectId": "node/237912528",
+      "sourceUrl": "https://www.openstreetmap.org/node/237912528",
+      "checkedAt": "2026-09-30T11:05:55Z",
+      "wikipedia": "nl:Victoria Hotel"
+    },
+    {
+      "category": "hotel",
+      "name": "Kimpton De Witt Hotel",
+      "latitude": 52.377151,
+      "longitude": 4.895493,
+      "osmObjectId": "node/237912534",
+      "sourceUrl": "https://www.openstreetmap.org/node/237912534",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Avenue Hotel",
+      "latitude": 52.376638,
+      "longitude": 4.894639,
+      "osmObjectId": "node/237912539",
+      "sourceUrl": "https://www.openstreetmap.org/node/237912539",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "hotel",
+      "name": "De Pijp Boutique Hotel",
+      "latitude": 52.353632,
+      "longitude": 4.897654,
+      "osmObjectId": "node/249628970",
+      "sourceUrl": "https://www.openstreetmap.org/node/249628970",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "hotel",
+      "name": "NH Collection Amsterdam Barbizon Palace",
+      "latitude": 52.376432,
+      "longitude": 4.900363,
+      "osmObjectId": "node/251127911",
+      "sourceUrl": "https://www.openstreetmap.org/node/251127911",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "hotel",
+      "name": "De Oranje Tulp",
+      "latitude": 52.376083,
+      "longitude": 4.896547,
+      "osmObjectId": "node/251147173",
+      "sourceUrl": "https://www.openstreetmap.org/node/251147173",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Van Gelder",
+      "latitude": 52.376,
+      "longitude": 4.896463,
+      "osmObjectId": "node/251147174",
+      "sourceUrl": "https://www.openstreetmap.org/node/251147174",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Continental",
+      "latitude": 52.375814,
+      "longitude": 4.896144,
+      "osmObjectId": "node/251147177",
+      "sourceUrl": "https://www.openstreetmap.org/node/251147177",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Manofa",
+      "latitude": 52.375493,
+      "longitude": 4.895756,
+      "osmObjectId": "node/251147179",
+      "sourceUrl": "https://www.openstreetmap.org/node/251147179",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "hotel",
+      "name": "De Roode Leeuw",
+      "latitude": 52.373718,
+      "longitude": 4.893543,
+      "osmObjectId": "node/251149361",
+      "sourceUrl": "https://www.openstreetmap.org/node/251149361",
+      "checkedAt": "2026-09-30T11:05:55Z",
+      "wikipedia": "nl:De Roode Leeuw (Amsterdam)"
+    },
+    {
+      "category": "hotel",
+      "name": "Swissôtel",
+      "latitude": 52.373579,
+      "longitude": 4.893323,
+      "osmObjectId": "node/251149366",
+      "sourceUrl": "https://www.openstreetmap.org/node/251149366",
+      "checkedAt": "2026-09-30T11:05:55Z",
+      "wikipedia": "en:Swissôtel Amsterdam"
+    },
+    {
+      "category": "hotel",
+      "name": "Anantara Grand Hotel Krasnapolsky",
+      "latitude": 52.372729,
+      "longitude": 4.894385,
+      "osmObjectId": "node/251150450",
+      "sourceUrl": "https://www.openstreetmap.org/node/251150450",
+      "checkedAt": "2026-09-30T11:05:55Z",
+      "wikipedia": "nl:Grand Hotel Krasnapolsky"
+    },
+    {
+      "category": "hotel",
+      "name": "Torenzicht",
+      "latitude": 52.372526,
+      "longitude": 4.898208,
+      "osmObjectId": "node/251187547",
+      "sourceUrl": "https://www.openstreetmap.org/node/251187547",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Wereldmuseum Amsterdam",
+      "latitude": 52.362688,
+      "longitude": 4.92244,
+      "osmObjectId": "node/26611707",
+      "sourceUrl": "https://www.openstreetmap.org/node/26611707",
+      "checkedAt": "2026-09-30T11:05:55Z",
+      "wikipedia": "nl:Wereldmuseum Amsterdam"
+    },
+    {
+      "category": "attraction",
+      "name": "Willet-Holthuysen",
+      "latitude": 52.365603,
+      "longitude": 4.899015,
+      "osmObjectId": "node/34050744",
+      "sourceUrl": "https://www.openstreetmap.org/node/34050744",
+      "checkedAt": "2026-09-30T11:05:55Z",
+      "wikipedia": "nl:Huis Willet-Holthuysen"
+    },
+    {
+      "category": "attraction",
+      "name": "Museum Van Loon",
+      "latitude": 52.363464,
+      "longitude": 4.893378,
+      "osmObjectId": "node/34050759",
+      "sourceUrl": "https://www.openstreetmap.org/node/34050759",
+      "checkedAt": "2026-09-30T11:05:55Z",
+      "wikipedia": "nl:Museum Van Loon"
+    },
+    {
+      "category": "attraction",
+      "name": "Museum Suriname",
+      "latitude": 52.366153,
+      "longitude": 4.927969,
+      "osmObjectId": "node/34050776",
+      "sourceUrl": "https://www.openstreetmap.org/node/34050776",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Theo Thijssen Museum",
+      "latitude": 52.375521,
+      "longitude": 4.882688,
+      "osmObjectId": "node/34050787",
+      "sourceUrl": "https://www.openstreetmap.org/node/34050787",
+      "checkedAt": "2026-09-30T11:05:55Z",
+      "wikipedia": "nl:Theo Thijssen Museum"
+    },
+    {
+      "category": "attraction",
+      "name": "Amsterdam Museum",
+      "latitude": 52.370431,
+      "longitude": 4.890429,
+      "osmObjectId": "node/34050790",
+      "sourceUrl": "https://www.openstreetmap.org/node/34050790",
+      "checkedAt": "2026-09-30T11:05:55Z",
+      "wikipedia": "nl:Amsterdam Museum"
+    },
+    {
+      "category": "attraction",
+      "name": "Allard Pierson Museum",
+      "latitude": 52.368805,
+      "longitude": 4.893055,
+      "osmObjectId": "node/34050791",
+      "sourceUrl": "https://www.openstreetmap.org/node/34050791",
+      "checkedAt": "2026-09-30T11:05:55Z",
+      "wikipedia": "nl:Allard Pierson Museum"
+    },
+    {
+      "category": "attraction",
+      "name": "foam",
+      "latitude": 52.363988,
+      "longitude": 4.893263,
+      "osmObjectId": "node/250624672",
+      "sourceUrl": "https://www.openstreetmap.org/node/250624672",
+      "checkedAt": "2026-09-30T11:05:55Z",
+      "wikipedia": "nl:Foam Fotografiemuseum Amsterdam"
+    },
+    {
+      "category": "attraction",
+      "name": "Rembrandthuis",
+      "latitude": 52.369369,
+      "longitude": 4.90125,
+      "osmObjectId": "node/250624673",
+      "sourceUrl": "https://www.openstreetmap.org/node/250624673",
+      "checkedAt": "2026-09-30T11:05:55Z",
+      "wikipedia": "nl:Rembrandthuis"
+    },
+    {
+      "category": "attraction",
+      "name": "Venustempel Sexmuseum",
+      "latitude": 52.376582,
+      "longitude": 4.897275,
+      "osmObjectId": "node/251147170",
+      "sourceUrl": "https://www.openstreetmap.org/node/251147170",
+      "checkedAt": "2026-09-30T11:05:55Z",
+      "wikipedia": "nl:Sexmuseum"
+    },
+    {
+      "category": "attraction",
+      "name": "The Amsterdam Dungeon",
+      "latitude": 52.370198,
+      "longitude": 4.892168,
+      "osmObjectId": "node/251528292",
+      "sourceUrl": "https://www.openstreetmap.org/node/251528292",
+      "checkedAt": "2026-09-30T11:05:55Z",
+      "wikipedia": "nl:Amsterdam Dungeon"
+    },
+    {
+      "category": "attraction",
+      "name": "Olympiahuis",
+      "latitude": 52.344886,
+      "longitude": 4.856155,
+      "osmObjectId": "node/280067059",
+      "sourceUrl": "https://www.openstreetmap.org/node/280067059",
+      "checkedAt": "2026-09-30T11:05:55Z",
+      "wikipedia": "nl:Olympiahuisje"
+    },
+    {
+      "category": "attraction",
+      "name": "Hollandsche Schouwburg",
+      "latitude": 52.366439,
+      "longitude": 4.911154,
+      "osmObjectId": "node/432506873",
+      "sourceUrl": "https://www.openstreetmap.org/node/432506873",
+      "checkedAt": "2026-09-30T11:05:55Z",
+      "wikipedia": "nl:Hollandsche Schouwburg"
+    },
+    {
+      "category": "attraction",
+      "name": "Verzetsmuseum",
+      "latitude": 52.367808,
+      "longitude": 4.912728,
+      "osmObjectId": "node/440419242",
+      "sourceUrl": "https://www.openstreetmap.org/node/440419242",
+      "checkedAt": "2026-09-30T11:05:55Z",
+      "wikipedia": "nl:Verzetsmuseum Amsterdam"
+    },
+    {
+      "category": "attraction",
+      "name": "Museum Het Schip",
+      "latitude": 52.390488,
+      "longitude": 4.873726,
+      "osmObjectId": "node/441327444",
+      "sourceUrl": "https://www.openstreetmap.org/node/441327444",
+      "checkedAt": "2026-09-30T11:05:55Z",
+      "wikipedia": "nl:Museum Het Schip"
+    },
+    {
+      "category": "attraction",
+      "name": "Amsterdam Museum",
+      "latitude": 52.365366,
+      "longitude": 4.902387,
+      "osmObjectId": "node/855243398",
+      "sourceUrl": "https://www.openstreetmap.org/node/855243398",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Torture Museum",
+      "latitude": 52.367287,
+      "longitude": 4.890665,
+      "osmObjectId": "node/1135509041",
+      "sourceUrl": "https://www.openstreetmap.org/node/1135509041",
+      "checkedAt": "2026-09-30T11:05:55Z",
+      "wikipedia": "nl:Torture Museum Amsterdam"
+    },
+    {
+      "category": "attraction",
+      "name": "Huis Marseille",
+      "latitude": 52.367641,
+      "longitude": 4.884837,
+      "osmObjectId": "node/1237228907",
+      "sourceUrl": "https://www.openstreetmap.org/node/1237228907",
+      "checkedAt": "2026-09-30T11:05:55Z",
+      "wikipedia": "nl:Huis Marseille"
+    },
+    {
+      "category": "attraction",
+      "name": "Multatuli Museum",
+      "latitude": 52.377487,
+      "longitude": 4.891126,
+      "osmObjectId": "node/1293163366",
+      "sourceUrl": "https://www.openstreetmap.org/node/1293163366",
+      "checkedAt": "2026-09-30T11:05:55Z",
+      "wikipedia": "nl:Multatuli Museum"
+    },
+    {
+      "category": "transit",
+      "name": "Surinameplein",
+      "latitude": 52.358048,
+      "longitude": 4.852183,
+      "osmObjectId": "node/46326414",
+      "sourceUrl": "https://www.openstreetmap.org/node/46326414",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Alexanderplein",
+      "latitude": 52.363504,
+      "longitude": 4.919363,
+      "osmObjectId": "node/46350382",
+      "sourceUrl": "https://www.openstreetmap.org/node/46350382",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Meester Visserplein",
+      "latitude": 52.367961,
+      "longitude": 4.90536,
+      "osmObjectId": "node/46369643",
+      "sourceUrl": "https://www.openstreetmap.org/node/46369643",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Nassaukade",
+      "latitude": 52.381312,
+      "longitude": 4.879205,
+      "osmObjectId": "node/46432024",
+      "sourceUrl": "https://www.openstreetmap.org/node/46432024",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Zoutkeetsgracht",
+      "latitude": 52.388084,
+      "longitude": 4.885142,
+      "osmObjectId": "node/46462976",
+      "sourceUrl": "https://www.openstreetmap.org/node/46462976",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Ingang Nieuwe Herengracht",
+      "latitude": 52.366223,
+      "longitude": 4.904917,
+      "osmObjectId": "node/60893869",
+      "sourceUrl": "https://www.openstreetmap.org/node/60893869",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Van Limburg Stirumplein",
+      "latitude": 52.384419,
+      "longitude": 4.87492,
+      "osmObjectId": "node/148726445",
+      "sourceUrl": "https://www.openstreetmap.org/node/148726445",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Nieuwmarkt",
+      "latitude": 52.370531,
+      "longitude": 4.900338,
+      "osmObjectId": "node/154721379",
+      "sourceUrl": "https://www.openstreetmap.org/node/154721379",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Wibautstraat",
+      "latitude": 52.353127,
+      "longitude": 4.912525,
+      "osmObjectId": "node/237812186",
+      "sourceUrl": "https://www.openstreetmap.org/node/237812186",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Dam",
+      "latitude": 52.373533,
+      "longitude": 4.893644,
+      "osmObjectId": "node/237938749",
+      "sourceUrl": "https://www.openstreetmap.org/node/237938749",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Dapperstraat",
+      "latitude": 52.360931,
+      "longitude": 4.928942,
+      "osmObjectId": "node/237962650",
+      "sourceUrl": "https://www.openstreetmap.org/node/237962650",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Roelof Hartplein",
+      "latitude": 52.353122,
+      "longitude": 4.882087,
+      "osmObjectId": "node/237962735",
+      "sourceUrl": "https://www.openstreetmap.org/node/237962735",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Concertgebouw",
+      "latitude": 52.356695,
+      "longitude": 4.879638,
+      "osmObjectId": "node/237962753",
+      "sourceUrl": "https://www.openstreetmap.org/node/237962753",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Frederik Hendrikplantsoen",
+      "latitude": 52.378478,
+      "longitude": 4.875268,
+      "osmObjectId": "node/240316872",
+      "sourceUrl": "https://www.openstreetmap.org/node/240316872",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Hugo de Grootplein",
+      "latitude": 52.37501,
+      "longitude": 4.872955,
+      "osmObjectId": "node/240316873",
+      "sourceUrl": "https://www.openstreetmap.org/node/240316873",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Hugo de Grootplein",
+      "latitude": 52.374299,
+      "longitude": 4.872531,
+      "osmObjectId": "node/240316874",
+      "sourceUrl": "https://www.openstreetmap.org/node/240316874",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Wibautstraat",
+      "latitude": 52.354595,
+      "longitude": 4.912049,
+      "osmObjectId": "node/240489038",
+      "sourceUrl": "https://www.openstreetmap.org/node/240489038",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Wibautstraat",
+      "latitude": 52.353248,
+      "longitude": 4.913115,
+      "osmObjectId": "node/240489053",
+      "sourceUrl": "https://www.openstreetmap.org/node/240489053",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Wibautstraat",
+      "latitude": 52.355475,
+      "longitude": 4.911767,
+      "osmObjectId": "node/240489054",
+      "sourceUrl": "https://www.openstreetmap.org/node/240489054",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Mauritskade",
+      "latitude": 52.360925,
+      "longitude": 4.908541,
+      "osmObjectId": "node/240489059",
+      "sourceUrl": "https://www.openstreetmap.org/node/240489059",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Zeeburgerdijk",
+      "latitude": 52.365914,
+      "longitude": 4.932496,
+      "osmObjectId": "node/241392441",
+      "sourceUrl": "https://www.openstreetmap.org/node/241392441",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Pontanusstraat",
+      "latitude": 52.365916,
+      "longitude": 4.927204,
+      "osmObjectId": "node/241392462",
+      "sourceUrl": "https://www.openstreetmap.org/node/241392462",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    },
+    {
+      "category": "transit",
+      "name": "Waterlooplein",
+      "latitude": 52.366993,
+      "longitude": 4.901985,
+      "osmObjectId": "node/241772055",
+      "sourceUrl": "https://www.openstreetmap.org/node/241772055",
+      "checkedAt": "2026-09-30T11:05:55Z"
+    }
+  ],
+  "attribution": "© OpenStreetMap contributors"
+}

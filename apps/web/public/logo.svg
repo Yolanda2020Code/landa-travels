@@ -1,0 +1,7 @@
+<svg width="260" height="72" viewBox="0 0 260 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="72" height="72" rx="22" fill="#18C7E8"/>
+  <path d="M51.5 18.5C35 18.5 22.5 27.4 22.5 42.1C22.5 49.8 27.5 55.5 35.5 55.5C46.7 55.5 53.4 46.8 53.4 35.9C53.4 31.4 52.5 26.2 51.5 18.5Z" stroke="#071018" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M20 55C25.8 43.6 34.4 35.9 47.8 30.9" stroke="#071018" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="88" y="31" fill="#F5F8FA" font-family="Georgia, serif" font-size="24" font-weight="700">Landa Travels</text>
+  <text x="89" y="51" fill="#18C7E8" font-family="Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="1.8">RESPONSIBLE JOURNEYS</text>
+</svg>

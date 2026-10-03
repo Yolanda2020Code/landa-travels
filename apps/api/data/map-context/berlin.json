@@ -1,0 +1,590 @@
+{
+  "schemaVersion": 1,
+  "destination": {
+    "slug": "berlin",
+    "label": "Berlin, Deutschland",
+    "latitude": 52.5173885,
+    "longitude": 13.3951309,
+    "osmObjectId": "relation/62422",
+    "sourceUrl": "https://www.openstreetmap.org/relation/62422",
+    "checkedAt": "2026-09-30T11:01:41Z"
+  },
+  "checkedAt": "2026-09-30T11:01:41Z",
+  "records": [
+    {
+      "category": "hotel",
+      "name": "Park Plaza Wallstreet",
+      "latitude": 52.511465,
+      "longitude": 13.407803,
+      "osmObjectId": "node/58467591",
+      "sourceUrl": "https://www.openstreetmap.org/node/58467591",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Living Hotel Großer Kurfürst",
+      "latitude": 52.512249,
+      "longitude": 13.408788,
+      "osmObjectId": "node/60105926",
+      "sourceUrl": "https://www.openstreetmap.org/node/60105926",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "hotel",
+      "name": "art’otel Berlin Mitte",
+      "latitude": 52.512544,
+      "longitude": 13.410335,
+      "osmObjectId": "node/60105927",
+      "sourceUrl": "https://www.openstreetmap.org/node/60105927",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Living Hotel Berlin-Mitte",
+      "latitude": 52.512082,
+      "longitude": 13.40825,
+      "osmObjectId": "node/60105928",
+      "sourceUrl": "https://www.openstreetmap.org/node/60105928",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Radisson Collection Hotel Berlin",
+      "latitude": 52.519517,
+      "longitude": 13.40283,
+      "osmObjectId": "node/60240143",
+      "sourceUrl": "https://www.openstreetmap.org/node/60240143",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Novotel Berlin Mitte",
+      "latitude": 52.513167,
+      "longitude": 13.405193,
+      "osmObjectId": "node/60240155",
+      "sourceUrl": "https://www.openstreetmap.org/node/60240155",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Neuer Fritz Berlin",
+      "latitude": 52.5227,
+      "longitude": 13.388278,
+      "osmObjectId": "node/66917101",
+      "sourceUrl": "https://www.openstreetmap.org/node/66917101",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Meliá Berlin",
+      "latitude": 52.521343,
+      "longitude": 13.388468,
+      "osmObjectId": "node/66917107",
+      "sourceUrl": "https://www.openstreetmap.org/node/66917107",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "hotel",
+      "name": "NH Collection",
+      "latitude": 52.519576,
+      "longitude": 13.388896,
+      "osmObjectId": "node/66917193",
+      "sourceUrl": "https://www.openstreetmap.org/node/66917193",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Maritim proArte Hotel Berlin",
+      "latitude": 52.518228,
+      "longitude": 13.3875,
+      "osmObjectId": "node/66917205",
+      "sourceUrl": "https://www.openstreetmap.org/node/66917205",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "hotel",
+      "name": "NH Collection Berlin Mitte am Checkpoint Charlie",
+      "latitude": 52.51053,
+      "longitude": 13.388985,
+      "osmObjectId": "node/69226077",
+      "sourceUrl": "https://www.openstreetmap.org/node/69226077",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Grand Hyatt Berlin",
+      "latitude": 52.508197,
+      "longitude": 13.372484,
+      "osmObjectId": "node/69226092",
+      "sourceUrl": "https://www.openstreetmap.org/node/69226092",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:Grand Hyatt Berlin"
+    },
+    {
+      "category": "hotel",
+      "name": "Ibis Budget",
+      "latitude": 52.504841,
+      "longitude": 13.384595,
+      "osmObjectId": "node/84644772",
+      "sourceUrl": "https://www.openstreetmap.org/node/84644772",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Novotel Suites Berlin City Potsdamer Platz",
+      "latitude": 52.504586,
+      "longitude": 13.383343,
+      "osmObjectId": "node/84644779",
+      "sourceUrl": "https://www.openstreetmap.org/node/84644779",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "hotel",
+      "name": "The Westin Grand Berlin",
+      "latitude": 52.515877,
+      "longitude": 13.388604,
+      "osmObjectId": "node/86001788",
+      "sourceUrl": "https://www.openstreetmap.org/node/86001788",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:Westin Grand Berlin"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Gendarm",
+      "latitude": 52.511542,
+      "longitude": 13.391462,
+      "osmObjectId": "node/86001831",
+      "sourceUrl": "https://www.openstreetmap.org/node/86001831",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hilton Berlin",
+      "latitude": 52.512103,
+      "longitude": 13.392539,
+      "osmObjectId": "node/86001840",
+      "sourceUrl": "https://www.openstreetmap.org/node/86001840",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Bob W.",
+      "latitude": 52.511729,
+      "longitude": 13.413654,
+      "osmObjectId": "node/245287545",
+      "sourceUrl": "https://www.openstreetmap.org/node/245287545",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Dorint Kurfürstendamm",
+      "latitude": 52.502505,
+      "longitude": 13.331793,
+      "osmObjectId": "node/254307091",
+      "sourceUrl": "https://www.openstreetmap.org/node/254307091",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:Dorint Kurfürstendamm Berlin"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel ibis Berlin Mitte",
+      "latitude": 52.529058,
+      "longitude": 13.41811,
+      "osmObjectId": "node/266593733",
+      "sourceUrl": "https://www.openstreetmap.org/node/266593733",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Gedenkstätte Deutscher Widerstand",
+      "latitude": 52.507605,
+      "longitude": 13.362986,
+      "osmObjectId": "node/73696610",
+      "sourceUrl": "https://www.openstreetmap.org/node/73696610",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:Gedenkstätte Deutscher Widerstand"
+    },
+    {
+      "category": "attraction",
+      "name": "Dokumentationszentrum Flucht, Vertreibung, Versöhnung",
+      "latitude": 52.504871,
+      "longitude": 13.382214,
+      "osmObjectId": "node/84644782",
+      "sourceUrl": "https://www.openstreetmap.org/node/84644782",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:Stiftung Flucht, Vertreibung, Versöhnung"
+    },
+    {
+      "category": "attraction",
+      "name": "Nationaldenkmal für die Befreiungskriege",
+      "latitude": 52.487649,
+      "longitude": 13.381478,
+      "osmObjectId": "node/241490725",
+      "sourceUrl": "https://www.openstreetmap.org/node/241490725",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:Nationaldenkmal für die Befreiungskriege"
+    },
+    {
+      "category": "attraction",
+      "name": "Museum für Kommunikation",
+      "latitude": 52.509931,
+      "longitude": 13.387255,
+      "osmObjectId": "node/292738889",
+      "sourceUrl": "https://www.openstreetmap.org/node/292738889",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:Museum für Kommunikation Berlin"
+    },
+    {
+      "category": "attraction",
+      "name": "Deutschlandmuseum",
+      "latitude": 52.508788,
+      "longitude": 13.378434,
+      "osmObjectId": "node/340388625",
+      "sourceUrl": "https://www.openstreetmap.org/node/340388625",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:Deutschlandmuseum"
+    },
+    {
+      "category": "attraction",
+      "name": "Anti-Kriegs-Museum",
+      "latitude": 52.546021,
+      "longitude": 13.347955,
+      "osmObjectId": "node/369037135",
+      "sourceUrl": "https://www.openstreetmap.org/node/369037135",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:Anti-Kriegs-Museum"
+    },
+    {
+      "category": "attraction",
+      "name": "Luisenbad",
+      "latitude": 52.553281,
+      "longitude": 13.378632,
+      "osmObjectId": "node/384790168",
+      "sourceUrl": "https://www.openstreetmap.org/node/384790168",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Checkpoint Charlie",
+      "latitude": 52.507432,
+      "longitude": 13.390381,
+      "osmObjectId": "node/417346627",
+      "sourceUrl": "https://www.openstreetmap.org/node/417346627",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:Checkpoint Charlie"
+    },
+    {
+      "category": "attraction",
+      "name": "Mori-Ôgai-Gedenkstätte",
+      "latitude": 52.521918,
+      "longitude": 13.379998,
+      "osmObjectId": "node/429739550",
+      "sourceUrl": "https://www.openstreetmap.org/node/429739550",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:Mori-Ōgai-Gedenkstätte"
+    },
+    {
+      "category": "attraction",
+      "name": "Die Mauer | The Wall",
+      "latitude": 52.509366,
+      "longitude": 13.379771,
+      "osmObjectId": "node/453378190",
+      "sourceUrl": "https://www.openstreetmap.org/node/453378190",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Berliner Unterwelten-Museum",
+      "latitude": 52.547812,
+      "longitude": 13.389246,
+      "osmObjectId": "node/498822384",
+      "sourceUrl": "https://www.openstreetmap.org/node/498822384",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Museum für Naturkunde",
+      "latitude": 52.53049,
+      "longitude": 13.379115,
+      "osmObjectId": "node/538692583",
+      "sourceUrl": "https://www.openstreetmap.org/node/538692583",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:Museum für Naturkunde (Berlin)"
+    },
+    {
+      "category": "attraction",
+      "name": "Galgenhaus Stadtmuseum Berlin",
+      "latitude": 52.514373,
+      "longitude": 13.402486,
+      "osmObjectId": "node/540613216",
+      "sourceUrl": "https://www.openstreetmap.org/node/540613216",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Hugenottenmuseum Berlin",
+      "latitude": 52.514289,
+      "longitude": 13.392429,
+      "osmObjectId": "node/545060231",
+      "sourceUrl": "https://www.openstreetmap.org/node/545060231",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Parlamentshistorische Ausstellung des Deutschen Bundestages",
+      "latitude": 52.512676,
+      "longitude": 13.392727,
+      "osmObjectId": "node/545074057",
+      "sourceUrl": "https://www.openstreetmap.org/node/545074057",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Jugend[widerstands]museum",
+      "latitude": 52.517796,
+      "longitude": 13.456325,
+      "osmObjectId": "node/577577509",
+      "sourceUrl": "https://www.openstreetmap.org/node/577577509",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "transit",
+      "name": "Tiergarten",
+      "latitude": 52.514375,
+      "longitude": 13.33645,
+      "osmObjectId": "node/21302157",
+      "sourceUrl": "https://www.openstreetmap.org/node/21302157",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:Bahnhof Berlin-Tiergarten"
+    },
+    {
+      "category": "transit",
+      "name": "Storkower Straße",
+      "latitude": 52.523743,
+      "longitude": 13.464889,
+      "osmObjectId": "node/21385751",
+      "sourceUrl": "https://www.openstreetmap.org/node/21385751",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:Bahnhof Berlin Storkower Straße"
+    },
+    {
+      "category": "transit",
+      "name": "Jannowitzbrücke",
+      "latitude": 52.514215,
+      "longitude": 13.419493,
+      "osmObjectId": "node/21487225",
+      "sourceUrl": "https://www.openstreetmap.org/node/21487225",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:Bahnhof Berlin Jannowitzbrücke"
+    },
+    {
+      "category": "transit",
+      "name": "Bellevue",
+      "latitude": 52.519985,
+      "longitude": 13.34807,
+      "osmObjectId": "node/27528155",
+      "sourceUrl": "https://www.openstreetmap.org/node/27528155",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:Bahnhof Berlin Bellevue"
+    },
+    {
+      "category": "transit",
+      "name": "Berlin Zoologischer Garten",
+      "latitude": 52.507434,
+      "longitude": 13.332561,
+      "osmObjectId": "node/27556933",
+      "sourceUrl": "https://www.openstreetmap.org/node/27556933",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:Bahnhof Berlin Zoologischer Garten"
+    },
+    {
+      "category": "transit",
+      "name": "Amrumer Straße",
+      "latitude": 52.542333,
+      "longitude": 13.350155,
+      "osmObjectId": "node/29045595",
+      "sourceUrl": "https://www.openstreetmap.org/node/29045595",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:U-Bahnhof Amrumer Straße"
+    },
+    {
+      "category": "transit",
+      "name": "Zoologischer Garten",
+      "latitude": 52.505867,
+      "longitude": 13.333024,
+      "osmObjectId": "node/29046450",
+      "sourceUrl": "https://www.openstreetmap.org/node/29046450",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "transit",
+      "name": "Kurfürstendamm",
+      "latitude": 52.503822,
+      "longitude": 13.331437,
+      "osmObjectId": "node/29046970",
+      "sourceUrl": "https://www.openstreetmap.org/node/29046970",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:U-Bahnhof Kurfürstendamm"
+    },
+    {
+      "category": "transit",
+      "name": "U Französische Straße",
+      "latitude": 52.514825,
+      "longitude": 13.389171,
+      "osmObjectId": "node/29058259",
+      "sourceUrl": "https://www.openstreetmap.org/node/29058259",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:U-Bahnhof Französische Straße"
+    },
+    {
+      "category": "transit",
+      "name": "Beusselstraße",
+      "latitude": 52.534408,
+      "longitude": 13.329387,
+      "osmObjectId": "node/29070457",
+      "sourceUrl": "https://www.openstreetmap.org/node/29070457",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:Bahnhof Berlin Beusselstraße"
+    },
+    {
+      "category": "transit",
+      "name": "Ernst-Reuter-Platz",
+      "latitude": 52.511885,
+      "longitude": 13.322161,
+      "osmObjectId": "node/29123764",
+      "sourceUrl": "https://www.openstreetmap.org/node/29123764",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:U-Bahnhof Ernst-Reuter-Platz"
+    },
+    {
+      "category": "transit",
+      "name": "Jannowitzbrücke",
+      "latitude": 52.515355,
+      "longitude": 13.418173,
+      "osmObjectId": "node/29494301",
+      "sourceUrl": "https://www.openstreetmap.org/node/29494301",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:Bahnhof Berlin Jannowitzbrücke"
+    },
+    {
+      "category": "transit",
+      "name": "Bayerischer Platz",
+      "latitude": 52.488576,
+      "longitude": 13.340544,
+      "osmObjectId": "node/29833469",
+      "sourceUrl": "https://www.openstreetmap.org/node/29833469",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:U-Bahnhof Bayerischer Platz"
+    },
+    {
+      "category": "transit",
+      "name": "Berlin Alexanderplatz",
+      "latitude": 52.521457,
+      "longitude": 13.411079,
+      "osmObjectId": "node/30217208",
+      "sourceUrl": "https://www.openstreetmap.org/node/30217208",
+      "checkedAt": "2026-09-30T11:01:41Z",
+      "wikipedia": "de:Bahnhof Berlin Alexanderplatz"
+    },
+    {
+      "category": "transit",
+      "name": "Seestraße/Amrumer Straße",
+      "latitude": 52.546712,
+      "longitude": 13.344898,
+      "osmObjectId": "node/30302050",
+      "sourceUrl": "https://www.openstreetmap.org/node/30302050",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "transit",
+      "name": "Schönhauser Allee/Bornholmer Straße",
+      "latitude": 52.55377,
+      "longitude": 13.41389,
+      "osmObjectId": "node/30303888",
+      "sourceUrl": "https://www.openstreetmap.org/node/30303888",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "transit",
+      "name": "Björnsonstraße",
+      "latitude": 52.555299,
+      "longitude": 13.402641,
+      "osmObjectId": "node/30303894",
+      "sourceUrl": "https://www.openstreetmap.org/node/30303894",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "transit",
+      "name": "Schönhauser Allee/Bornholmer Straße",
+      "latitude": 52.554202,
+      "longitude": 13.414493,
+      "osmObjectId": "node/30303950",
+      "sourceUrl": "https://www.openstreetmap.org/node/30303950",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "transit",
+      "name": "Stahlheimer Straße/Wisbyer Straße",
+      "latitude": 52.552721,
+      "longitude": 13.423802,
+      "osmObjectId": "node/30303956",
+      "sourceUrl": "https://www.openstreetmap.org/node/30303956",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "transit",
+      "name": "Prenzlauer Allee/Ostseestraße",
+      "latitude": 52.551411,
+      "longitude": 13.429512,
+      "osmObjectId": "node/30304940",
+      "sourceUrl": "https://www.openstreetmap.org/node/30304940",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "transit",
+      "name": "Prenzlauer Allee/Ostseestraße",
+      "latitude": 52.55078,
+      "longitude": 13.430024,
+      "osmObjectId": "node/30304944",
+      "sourceUrl": "https://www.openstreetmap.org/node/30304944",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "transit",
+      "name": "Prenzlauer Promenade/Am Steinberg",
+      "latitude": 52.55668,
+      "longitude": 13.429976,
+      "osmObjectId": "node/30304965",
+      "sourceUrl": "https://www.openstreetmap.org/node/30304965",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "transit",
+      "name": "S Prenzlauer Allee",
+      "latitude": 52.545236,
+      "longitude": 13.427613,
+      "osmObjectId": "node/30305102",
+      "sourceUrl": "https://www.openstreetmap.org/node/30305102",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "transit",
+      "name": "Prenzlauer Allee/Danziger Straße",
+      "latitude": 52.539653,
+      "longitude": 13.424475,
+      "osmObjectId": "node/30305106",
+      "sourceUrl": "https://www.openstreetmap.org/node/30305106",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    },
+    {
+      "category": "transit",
+      "name": "Prenzlauer Allee/Danziger Straße",
+      "latitude": 52.538753,
+      "longitude": 13.42399,
+      "osmObjectId": "node/30305107",
+      "sourceUrl": "https://www.openstreetmap.org/node/30305107",
+      "checkedAt": "2026-09-30T11:01:41Z"
+    }
+  ],
+  "attribution": "© OpenStreetMap contributors"
+}

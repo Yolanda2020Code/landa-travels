@@ -1,0 +1,54 @@
+version: "3.1"
+nlu:
+  - intent: travel_request
+    examples: |
+      - Could you look for a route from [Lisbon](origin) to [Osaka](destination) around [May 8 to May 17](travel_dates) for [2](travelers) people, keeping it below [$1,250](budget)?
+      - I need to get from [new delhi](origin) to [Reykjavik](destination), stopping in [Copenhagen](stopover), sometime [in the second half of October](travel_dates).
+      - Find me a way to travel [Vancouver](origin)–[Mexico City](destination) with a connection in [Phoenix](stopover) on [August 14](travel_dates); [£680](budget) is my ceiling.
+      - We would like to leave [Marrakech](origin) for [Seoul](destination) [between March 2 and March 12](travel_dates), with [three](travelers) seats.
+      - What options are there from [Buenos Aires](origin) to [Cape Town](destination), going through [São Paulo](stopover), for [€940](budget) or less?
+      - Please arrange travel from [Bristol](origin) to [Kraków](destination) on [November 6](travel_dates) for [one](travelers) adult.
+      - I’m comparing trips leaving [San José](origin) and arriving in [Auckland](destination), with a stop in [Honolulu](stopover), during [January 10–January 24](travel_dates).
+      - Can [four](travelers) of us fly from [Accra](origin) to [Hanoi](destination) for no more than [1,400 Canadian dollars](budget)?
+      - Take me from [the Hague](origin) to [Tbilisi](destination) via [Istanbul](stopover); I’m aiming for [April 18 through April 27](travel_dates).
+      - We’re hoping to travel [Edinburgh](origin) to [Lima](destination) around [July 9](travel_dates), and our group is [two adults and one child](travelers).
+      - Book a journey starting in [Nairobi](origin) and ending in [Tallinn](destination), connecting through [Frankfurt](stopover), with a budget of [¥110,000](budget).
+      - Is there a route from [Auckland](origin) to [Queenstown](destination) for [5](travelers) people on [December 3](travel_dates)?
+      - I’m looking to go from [porto](origin) to [Milan](destination) sometime [from September 21 to September 29](travel_dates).
+      - Could you plan a trip from [Detroit](origin) to [Reykjavík](destination), changing planes in [Amsterdam](stopover), for around [$820](budget)?
+      - We need tickets from [Kigali](origin) to [Mumbai](destination) for [six](travelers) travelers, leaving [February 4](travel_dates).
+      - How can I get from [Quebec City](origin) to [Mérida](destination) through [Houston](stopover) on [June 16–June 23](travel_dates)?
+      - Find an itinerary [Seville](origin) to [Taipei](destination), preferably [in early December](travel_dates), for [€1,050](budget).
+      - I want to fly out of [Dakar](origin) and into [Prague](destination) with [Rome](stopover) as a stop, [May 19 to May 26](travel_dates).
+      - Can you find seats from [Wellington](origin) to [Perth](destination) for [a couple](travelers) in [October 2](travel_dates)?
+      - Please search for a flight from [Colombo](origin) to [Stockholm](destination), via [Doha](stopover), with [US$1,300](budget) available.
+      - We’re traveling from [Belfast](origin) to [Tirana](destination) on [March 30](travel_dates); there will be [7](travelers) of us.
+      - Find a trip from [San Diego](origin) to [Manila](destination) connecting in [Tokyo](stopover), [between November 11 and November 20](travel_dates).
+      - I’d like to get from [Casablanca](origin) to [Oslo](destination) in [late August](travel_dates), ideally spending no more than [950 euros](budget).
+      - How much would it cost for [three people](travelers) to go [Tunis](origin) to [Brisbane](destination), changing in [Singapore](stopover), on [April 7](travel_dates)?
+      - We need a route from [Chiang Mai](origin) to [Lyon](destination) for [one adult and two children](travelers), sometime [June 1 to June 14](travel_dates).
+      - Can I travel from [Halifax](origin) to [Medellín](destination) via [Miami](stopover) for under [C$760](budget)?
+      - Set up a trip from [Kathmandu](origin) to [Helsinki](destination) on [January 28](travel_dates) for [2](travelers).
+      - We’re hoping for [Glasgow](origin) to [San Francisco](destination), passing through [Denver](stopover), [between July 12 and July 22](travel_dates), with [£1,100](budget) to spend.
+      - Please look up travel from [Lagos](origin) to [Budapest](destination) in [the first week of May](travel_dates).
+      - I need fares for [five](travelers) from [Rabat](origin) to [Melbourne](destination), leaving [October 13](travel_dates), budget capped at [A$2,000](budget).
+      - What’s the best way to go [Bordeaux](origin) to [Ho Chi Minh City](destination), changing planes in [Bangkok](stopover), from [September 5 to September 16](travel_dates)?
+      - Find a ticket from [San Juan](origin) to [Zurich](destination) for [one](travelers) traveler, departing [February 15](travel_dates).
+      - Could we fly from [Nashville](origin) to [Amman](destination) via [London](stopover) for around [$1,500](budget)?
+      - I’m planning to leave [dar es salaam](origin) for [Vancouver](destination) [on or around June 20](travel_dates), with [four](travelers) passengers.
+      - Look for a journey from [Gothenburg](origin) to [La Paz](destination), stopping at [Bogotá](stopover), [December 9 through December 18](travel_dates).
+      - Can you get [two adults and one infant](travelers) from [Fukuoka](origin) to [Athens](destination) on [April 2](travel_dates)?
+      - We want to fly [Córdoba](origin) to [Edmonton](destination) during [March 11–March 19](travel_dates), and can spend [1,250 Swiss francs](budget).
+      - Please compare routes from [Luxembourg City](origin) to [Surabaya](destination) through [Kuala Lumpur](stopover) for [€890](budget).
+      - I need to travel from [Palermo](origin) to [Lusaka](destination) [in mid-July](travel_dates) with [3](travelers) seats.
+      - Find a journey leaving [Cairns](origin) and arriving in [Belgrade](destination), connecting through [Doha](stopover), for [September 7 to September 15](travel_dates).
+  - intent: control_no_entities
+    examples: |
+      - I enjoy reading about how aircraft engines are designed.
+      - Could you explain why some trains use overhead power lines?
+      - I prefer affordable holidays, but I have not settled on any plans.
+      - The airport café serves surprisingly good coffee.
+      - My family likes watching documentaries about ancient sailing ships.
+      - Please tell me what makes a hotel lobby feel welcoming.
+      - I’m learning how to pack a suitcase efficiently.
+      - The weather is pleasant for a walk this afternoon.

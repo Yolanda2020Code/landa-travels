@@ -1,0 +1,21 @@
+{
+  "name": "landa-travels",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "packageManager": "pnpm@10.26.1",
+  "scripts": {
+    "codegen": "pnpm --filter @workspace/api-spec run codegen",
+    "typecheck:libs": "tsc --build",
+    "typecheck": "tsc --build && pnpm --filter @workspace/api run typecheck && pnpm --filter @workspace/web run typecheck",
+    "build": "pnpm run codegen && pnpm run typecheck && pnpm --filter @workspace/api run build && pnpm --filter @workspace/web run build",
+    "test": "pnpm --filter @workspace/api test && pnpm --filter @workspace/web test",
+    "dev:web": "pnpm --filter @workspace/web run dev",
+    "dev:api": "PORT=5001 pnpm --filter @workspace/api run dev",
+    "db:push": "pnpm --filter @workspace/db run push"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6",
+    "typescript": "~5.9.3"
+  }
+}

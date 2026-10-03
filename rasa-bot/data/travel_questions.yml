@@ -1,0 +1,131 @@
+version: "3.1"
+nlu:
+  - intent: plan_trip
+    examples: |
+      - heyy i wanna go somwhere eco friendlyy
+      - hey i want to go somewhere eco friendly
+      - i wana plan an eco frendly trip
+      - can u help me with a green holiday
+      - heyy can we plan greener travl
+      - wanna go on an eco holiday
+      - i wanna go somwhere sustainable
+      - hlp me plan a responsable trip
+      - I want to travel from [London](origin) to [Costa Rica](destination) [next week](travel_dates) with [my dog]{"entity":"accommodation_need","value":"pet-friendly"}
+      - Plan a trip from [Paris](origin) to [Berlin](destination) with [my cat]{"entity":"accommodation_need","value":"pet-friendly"}
+      - I want to travel with [a dog]{"entity":"accommodation_need","value":"pet-friendly"}
+      - Plan a [pet-friendly](accommodation_need) trip
+      - I need [pet-friendly](accommodation_need) accommodation on a trip to [Norway](destination)
+      - travel from [London](origin) to [Iceland](destination) with [my dog]{"entity":"accommodation_need","value":"pet-friendly"}
+  - intent: inform
+    examples: |
+      - [Bali](destination)
+      - [Costa Rica](destination)
+      - [Norway](destination)
+      - [Iceland](destination)
+      - [Thailand](destination)
+      - [next week](travel_dates) with [my dog]{"entity":"accommodation_need","value":"pet-friendly"}
+      - [pet-friendly](accommodation_need) accommodation please
+  - intent: correct_information
+    examples: |
+      - actually make it [Norway](destination)
+      - actually make it [Iceland](destination)
+      - actually make it [Bali](destination) instead
+      - make it [France](destination)
+      - switch it to [Costa Rica](destination)
+      - change it to [Thailand](destination)
+      - no, actually make it [Paris](destination)
+      - actually change my destination to [Berlin](destination)
+      - make it [Lisbon](destination) instead please
+  - intent: ask_clarification
+    examples: |
+      - what do you mean?
+      - what does that mean
+      - can you explain the question
+      - I don't understand what you are asking
+      - explain this please
+      - clarify that question
+      - what budget do you mean
+      - is that budget for the whole trip
+      - what counts as my budget
+      - do you mean per person or total
+      - what should I enter here
+      - what are you asking me for
+      - please explain this option
+      - I'm confused about this question
+  - intent: ask_guided_help
+    examples: |
+      - How does guided input work?
+      - what is guided planning
+      - what is guided input
+      - how does guided planning work
+      - explain guided input
+      - how do the guided questions work
+      - how can I use this planner
+      - can I type instead of clicking the choices
+      - how do I answer the guided question
+  - intent: ask_eco_travel
+    examples: |
+      - what is eco travel
+      - what does sustainable travel mean
+      - tell me about responsible travel
+      - define environmentally responsible tourism
+      - why should I choose lower carbon travel
+      - what is green travel
+      - explain eco tourism
+      - does an eco hotel make my trip carbon neutral
+  - intent: ask_destination_ideas
+    examples: |
+      - I have [$500](budget), where can I go sustainably?
+      - where can I travel sustainably for [EUR 600](budget)
+      - suggest affordable eco destinations
+      - help me choose a low carbon destination
+      - where should I go on a small budget
+      - I have [GBP 400](budget) and no destination yet
+      - where can I go from [London](origin) with [USD 500](budget)
+      - what sustainable places can I visit
+      - recommend somewhere reachable by train
+      - which nearby destinations are lower impact
+      - suggest a green break from [Berlin](origin)
+      - destination ideas for [EUR 1000](budget)
+  - intent: ask_transport_comparison
+    examples: |
+      - Is it better to take train or plane to [Paris](destination) from [London](origin)?
+      - compare rail and flight from [London](origin) to [Paris](destination)
+      - should I fly or take the train
+      - which is greener train or plane
+      - train versus plane to [Berlin](destination)
+      - compare the carbon of flying and rail
+      - is a coach or a flight better for emissions
+      - what is the lower carbon transport option
+      - which transport has less impact
+      - is rail better than flying between [Lisbon](origin) and [Paris](destination)
+      - compare modes for [London](origin) to [Amsterdam](destination)
+      - rail or flight, which is more sustainable
+  - intent: ask_vegan_hotels
+    examples: |
+      - Find me vegan hotels
+      - I need a hotel with vegan meals
+      - can you find vegan accommodation
+      - are there vegan friendly hotels
+      - find vegan stays in [Paris](destination)
+      - I want a vegan hotel in [Bali](destination)
+      - recommend a hotel that caters for vegans
+      - which eco hotels have vegan food
+      - vegetarian or vegan accommodation please
+      - can you verify vegan menus at hotels
+      - a vegan friendly guesthouse
+      - I need plant based food at my hotel
+  - intent: ask_carbon_footprint
+    examples: |
+      - What's the carbon footprint of flying to [Thailand](destination)?
+      - how much CO2 does flying to [Bali](destination) produce
+      - estimate the footprint of a flight
+      - calculate flight emissions from [London](origin) to [Paris](destination)
+      - what is the carbon footprint of this journey
+      - how many kilograms of CO2 for my flight
+      - emissions for flying to [Costa Rica](destination)
+      - flight footprint to [Bangkok](destination) from [Berlin](origin)
+      - what carbon emissions would my return flight have
+      - calculate carbon for a trip to [Iceland](destination)
+      - how much carbon will I emit by flying
+      - a carbon estimate for [London](origin) to [Amsterdam](destination)

@@ -1,0 +1,584 @@
+{
+  "schemaVersion": 1,
+  "destination": {
+    "slug": "san-jose",
+    "label": "San José, Área Metropolitana de San José, San José, Costa Rica",
+    "latitude": 9.9357556,
+    "longitude": -84.0920196,
+    "osmObjectId": "relation/4069041",
+    "sourceUrl": "https://www.openstreetmap.org/relation/4069041",
+    "checkedAt": "2026-09-30T11:06:31Z"
+  },
+  "checkedAt": "2026-09-30T11:06:31Z",
+  "records": [
+    {
+      "category": "hotel",
+      "name": "Colours Oasis Resort Hotel",
+      "latitude": 9.947673,
+      "longitude": -84.130456,
+      "osmObjectId": "node/962570226",
+      "sourceUrl": "https://www.openstreetmap.org/node/962570226",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hemingway Inn",
+      "latitude": 9.937672,
+      "longitude": -84.074056,
+      "osmObjectId": "node/2107649538",
+      "sourceUrl": "https://www.openstreetmap.org/node/2107649538",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "hotel",
+      "name": "El Maragato",
+      "latitude": 9.934114,
+      "longitude": -84.077671,
+      "osmObjectId": "node/2267861186",
+      "sourceUrl": "https://www.openstreetmap.org/node/2267861186",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Colonial",
+      "latitude": 9.931465,
+      "longitude": -84.07394,
+      "osmObjectId": "node/2581801474",
+      "sourceUrl": "https://www.openstreetmap.org/node/2581801474",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Nest Hotel",
+      "latitude": 9.921905,
+      "longitude": -84.129011,
+      "osmObjectId": "node/3940613254",
+      "sourceUrl": "https://www.openstreetmap.org/node/3940613254",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Angels",
+      "latitude": 9.931732,
+      "longitude": -84.068042,
+      "osmObjectId": "node/3980089674",
+      "sourceUrl": "https://www.openstreetmap.org/node/3980089674",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Abril Hostel",
+      "latitude": 9.932993,
+      "longitude": -84.065503,
+      "osmObjectId": "node/3982520158",
+      "sourceUrl": "https://www.openstreetmap.org/node/3982520158",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Aldea Hostel",
+      "latitude": 9.934589,
+      "longitude": -84.091978,
+      "osmObjectId": "node/3982520175",
+      "sourceUrl": "https://www.openstreetmap.org/node/3982520175",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "hotel",
+      "name": "America Hotel",
+      "latitude": 9.937694,
+      "longitude": -84.080372,
+      "osmObjectId": "node/3982520187",
+      "sourceUrl": "https://www.openstreetmap.org/node/3982520187",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Ara Macao Inn",
+      "latitude": 9.931985,
+      "longitude": -84.067389,
+      "osmObjectId": "node/3982520210",
+      "sourceUrl": "https://www.openstreetmap.org/node/3982520210",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Ave Del Paraiso",
+      "latitude": 9.937826,
+      "longitude": -84.053964,
+      "osmObjectId": "node/3982520249",
+      "sourceUrl": "https://www.openstreetmap.org/node/3982520249",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Casa 69",
+      "latitude": 9.93168,
+      "longitude": -84.067627,
+      "osmObjectId": "node/3982522235",
+      "sourceUrl": "https://www.openstreetmap.org/node/3982522235",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Casa Cambranes Lodge",
+      "latitude": 9.930193,
+      "longitude": -84.05703,
+      "osmObjectId": "node/3982522248",
+      "sourceUrl": "https://www.openstreetmap.org/node/3982522248",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel y Apartamentos Casa Conde",
+      "latitude": 9.910225,
+      "longitude": -84.071885,
+      "osmObjectId": "node/3982522256",
+      "sourceUrl": "https://www.openstreetmap.org/node/3982522256",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Casa De Las Tías",
+      "latitude": 9.927704,
+      "longitude": -84.132957,
+      "osmObjectId": "node/3982522762",
+      "sourceUrl": "https://www.openstreetmap.org/node/3982522762",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Casa Roland",
+      "latitude": 9.948185,
+      "longitude": -84.132911,
+      "osmObjectId": "node/3982522784",
+      "sourceUrl": "https://www.openstreetmap.org/node/3982522784",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Classic Hotel",
+      "latitude": 9.936425,
+      "longitude": -84.087186,
+      "osmObjectId": "node/3982522836",
+      "sourceUrl": "https://www.openstreetmap.org/node/3982522836",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Costa Rica",
+      "latitude": 9.930993,
+      "longitude": -84.082783,
+      "osmObjectId": "node/3982523076",
+      "sourceUrl": "https://www.openstreetmap.org/node/3982523076",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "hotel",
+      "name": "In The Wind Hostel",
+      "latitude": 9.93093,
+      "longitude": -84.05375,
+      "osmObjectId": "node/3982523086",
+      "sourceUrl": "https://www.openstreetmap.org/node/3982523086",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Doral Hotel",
+      "latitude": 9.932864,
+      "longitude": -84.082163,
+      "osmObjectId": "node/3982523111",
+      "sourceUrl": "https://www.openstreetmap.org/node/3982523111",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Museo del Oro Precolombino",
+      "latitude": 9.933499,
+      "longitude": -84.07668,
+      "osmObjectId": "node/459837504",
+      "sourceUrl": "https://www.openstreetmap.org/node/459837504",
+      "checkedAt": "2026-09-30T11:06:31Z",
+      "wikipedia": "es:Museo del Oro Precolombino"
+    },
+    {
+      "category": "attraction",
+      "name": "Monumento a la Bandera",
+      "latitude": 9.939354,
+      "longitude": -84.05494,
+      "osmObjectId": "node/2089462527",
+      "sourceUrl": "https://www.openstreetmap.org/node/2089462527",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Las Garantías Sociales",
+      "latitude": 9.921297,
+      "longitude": -84.059725,
+      "osmObjectId": "node/2090310803",
+      "sourceUrl": "https://www.openstreetmap.org/node/2090310803",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Museo de Insectos",
+      "latitude": 9.937546,
+      "longitude": -84.04808,
+      "osmObjectId": "node/2273202467",
+      "sourceUrl": "https://www.openstreetmap.org/node/2273202467",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Sección del Muro de Berlín",
+      "latitude": 9.937119,
+      "longitude": -84.072662,
+      "osmObjectId": "node/3252780461",
+      "sourceUrl": "https://www.openstreetmap.org/node/3252780461",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Lic. Cleto González Víquez",
+      "latitude": 9.925574,
+      "longitude": -84.074489,
+      "osmObjectId": "node/3299099661",
+      "sourceUrl": "https://www.openstreetmap.org/node/3299099661",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Monumento a Luis Cruz Meza",
+      "latitude": 9.93939,
+      "longitude": -84.053098,
+      "osmObjectId": "node/3313155938",
+      "sourceUrl": "https://www.openstreetmap.org/node/3313155938",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "attraction",
+      "name": "José María Morelos y Pavón",
+      "latitude": 9.941578,
+      "longitude": -84.085344,
+      "osmObjectId": "node/3335237919",
+      "sourceUrl": "https://www.openstreetmap.org/node/3335237919",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Miguel Hidalgo y Costilla",
+      "latitude": 9.934772,
+      "longitude": -84.069907,
+      "osmObjectId": "node/3335240793",
+      "sourceUrl": "https://www.openstreetmap.org/node/3335240793",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Cacique Garabito",
+      "latitude": 9.933838,
+      "longitude": -84.095665,
+      "osmObjectId": "node/3335260679",
+      "sourceUrl": "https://www.openstreetmap.org/node/3335260679",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Libertador Simón Bolívar",
+      "latitude": 9.935511,
+      "longitude": -84.074862,
+      "osmObjectId": "node/3335261996",
+      "sourceUrl": "https://www.openstreetmap.org/node/3335261996",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Gral. José de San Martín",
+      "latitude": 9.929173,
+      "longitude": -84.071236,
+      "osmObjectId": "node/3335262008",
+      "sourceUrl": "https://www.openstreetmap.org/node/3335262008",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Licenciado Julio Acosta García",
+      "latitude": 9.935339,
+      "longitude": -84.075697,
+      "osmObjectId": "node/3335264005",
+      "sourceUrl": "https://www.openstreetmap.org/node/3335264005",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "attraction",
+      "name": "A los Presentes",
+      "latitude": 9.934561,
+      "longitude": -84.080561,
+      "osmObjectId": "node/3335265197",
+      "sourceUrl": "https://www.openstreetmap.org/node/3335265197",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Dr. José María Castro Madriz",
+      "latitude": 9.934382,
+      "longitude": -84.080908,
+      "osmObjectId": "node/3335265665",
+      "sourceUrl": "https://www.openstreetmap.org/node/3335265665",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Monumento a la Destrucción de Las Armas",
+      "latitude": 9.914987,
+      "longitude": -84.073231,
+      "osmObjectId": "node/3335265678",
+      "sourceUrl": "https://www.openstreetmap.org/node/3335265678",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Gral José María Cañas",
+      "latitude": 9.92601,
+      "longitude": -84.080794,
+      "osmObjectId": "node/3335268810",
+      "sourceUrl": "https://www.openstreetmap.org/node/3335268810",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Juan Rafael Mora Porras",
+      "latitude": 9.935362,
+      "longitude": -84.079696,
+      "osmObjectId": "node/3335270598",
+      "sourceUrl": "https://www.openstreetmap.org/node/3335270598",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Monumento a Los Bomberos de Costa Rica",
+      "latitude": 9.926192,
+      "longitude": -84.080674,
+      "osmObjectId": "node/3335272190",
+      "sourceUrl": "https://www.openstreetmap.org/node/3335272190",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "attraction",
+      "name": "La Chola",
+      "latitude": 9.934149,
+      "longitude": -84.080145,
+      "osmObjectId": "node/3335289961",
+      "sourceUrl": "https://www.openstreetmap.org/node/3335289961",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "Contraloría",
+      "latitude": 9.932657,
+      "longitude": -84.101419,
+      "osmObjectId": "node/278449879",
+      "sourceUrl": "https://www.openstreetmap.org/node/278449879",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "La Salle",
+      "latitude": 9.93349,
+      "longitude": -84.109915,
+      "osmObjectId": "node/289555266",
+      "sourceUrl": "https://www.openstreetmap.org/node/289555266",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "Terminal Puerto Viejo",
+      "latitude": 9.939056,
+      "longitude": -84.08382,
+      "osmObjectId": "node/332230261",
+      "sourceUrl": "https://www.openstreetmap.org/node/332230261",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "Panaline",
+      "latitude": 9.937057,
+      "longitude": -84.085119,
+      "osmObjectId": "node/332232192",
+      "sourceUrl": "https://www.openstreetmap.org/node/332232192",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "Terminal Acosta y San Gabriel",
+      "latitude": 9.928854,
+      "longitude": -84.076289,
+      "osmObjectId": "node/2196002896",
+      "sourceUrl": "https://www.openstreetmap.org/node/2196002896",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "Ambos Mares",
+      "latitude": 9.932331,
+      "longitude": -84.062668,
+      "osmObjectId": "node/3332923235",
+      "sourceUrl": "https://www.openstreetmap.org/node/3332923235",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "Bus",
+      "latitude": 9.911661,
+      "longitude": -84.060191,
+      "osmObjectId": "node/3480692203",
+      "sourceUrl": "https://www.openstreetmap.org/node/3480692203",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "Terminal Palmares",
+      "latitude": 9.936117,
+      "longitude": -84.085578,
+      "osmObjectId": "node/3841341870",
+      "sourceUrl": "https://www.openstreetmap.org/node/3841341870",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "Bus Barrio Luján y Quesada Durán",
+      "latitude": 9.933633,
+      "longitude": -84.083566,
+      "osmObjectId": "node/3980265885",
+      "sourceUrl": "https://www.openstreetmap.org/node/3980265885",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "Terminal de San Joaquín de Flores",
+      "latitude": 9.933659,
+      "longitude": -84.083847,
+      "osmObjectId": "node/3980265886",
+      "sourceUrl": "https://www.openstreetmap.org/node/3980265886",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "Parada de Bus, León 13",
+      "latitude": 9.935927,
+      "longitude": -84.081578,
+      "osmObjectId": "node/4033087445",
+      "sourceUrl": "https://www.openstreetmap.org/node/4033087445",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "Terminal Piedades",
+      "latitude": 9.936885,
+      "longitude": -84.085384,
+      "osmObjectId": "node/4384701092",
+      "sourceUrl": "https://www.openstreetmap.org/node/4384701092",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "Santa Rosa",
+      "latitude": 9.972057,
+      "longitude": -84.09811,
+      "osmObjectId": "node/4628887533",
+      "sourceUrl": "https://www.openstreetmap.org/node/4628887533",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "Atlántico",
+      "latitude": 9.934862,
+      "longitude": -84.068944,
+      "osmObjectId": "node/4628999924",
+      "sourceUrl": "https://www.openstreetmap.org/node/4628999924",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "Colima",
+      "latitude": 9.955473,
+      "longitude": -84.086611,
+      "osmObjectId": "node/4629001928",
+      "sourceUrl": "https://www.openstreetmap.org/node/4629001928",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "UCR (San Pedro)",
+      "latitude": 9.934218,
+      "longitude": -84.052973,
+      "osmObjectId": "node/4629031206",
+      "sourceUrl": "https://www.openstreetmap.org/node/4629031206",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "La Corte",
+      "latitude": 9.931319,
+      "longitude": -84.07248,
+      "osmObjectId": "node/4636012378",
+      "sourceUrl": "https://www.openstreetmap.org/node/4636012378",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "Plaza Cleto González Víquez",
+      "latitude": 9.925025,
+      "longitude": -84.074327,
+      "osmObjectId": "node/4636012379",
+      "sourceUrl": "https://www.openstreetmap.org/node/4636012379",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "Pacífico",
+      "latitude": 9.925477,
+      "longitude": -84.081061,
+      "osmObjectId": "node/4636012380",
+      "sourceUrl": "https://www.openstreetmap.org/node/4636012380",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "Cuba",
+      "latitude": 9.926946,
+      "longitude": -84.09179,
+      "osmObjectId": "node/4636012381",
+      "sourceUrl": "https://www.openstreetmap.org/node/4636012381",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "Tubo Tico (AyA)",
+      "latitude": 9.937967,
+      "longitude": -84.11948,
+      "osmObjectId": "node/4636012384",
+      "sourceUrl": "https://www.openstreetmap.org/node/4636012384",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "Jacks",
+      "latitude": 9.94029,
+      "longitude": -84.123714,
+      "osmObjectId": "node/4636012385",
+      "sourceUrl": "https://www.openstreetmap.org/node/4636012385",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    },
+    {
+      "category": "transit",
+      "name": "Pavas",
+      "latitude": 9.939976,
+      "longitude": -84.133533,
+      "osmObjectId": "node/4636012386",
+      "sourceUrl": "https://www.openstreetmap.org/node/4636012386",
+      "checkedAt": "2026-09-30T11:06:31Z"
+    }
+  ],
+  "attribution": "© OpenStreetMap contributors"
+}

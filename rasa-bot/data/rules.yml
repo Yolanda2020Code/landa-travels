@@ -1,0 +1,157 @@
+version: "3.1"
+rules:
+  - rule: acknowledge goodbye without changing the trip
+    steps:
+      - intent: goodbye
+      - action: action_apply_guided_input
+      - action: utter_goodbye
+  - rule: greet
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - action: action_apply_guided_input
+      - action: trip_form
+      - active_loop: trip_form
+  - rule: welcome a restored trip without resetting it
+    steps:
+      - intent: resume_trip
+      - action: action_apply_guided_input
+      - action: utter_resume_trip
+  - rule: start trip form
+    steps:
+      - intent: plan_trip
+      - action: action_apply_guided_input
+      - action: trip_form
+      - active_loop: trip_form
+  - rule: submit trip form
+    condition:
+      - active_loop: trip_form
+    steps:
+      - action: trip_form
+      - active_loop: null
+      - action: action_review_summary
+  - rule: continue trip form after structured guided input
+    condition:
+      - active_loop: trip_form
+    steps:
+      - intent: guided_continue
+      - action: action_apply_guided_input
+      - action: trip_form
+      - active_loop: trip_form
+  - rule: start or resume form after structured guided input
+    steps:
+      - intent: guided_continue
+      - action: action_apply_guided_input
+      - action: trip_form
+      - active_loop: trip_form
+  - rule: location consent then review
+    steps:
+      - intent: choose_location_mode
+      - action: action_handle_location_consent
+  - rule: current location requires consent
+    steps:
+      - intent: current_location
+      - action: action_handle_location_consent
+  - rule: review after approximate location
+    condition:
+      - slot_was_set:
+          - location: true
+    steps:
+      - action: action_review_summary
+  - rule: manual location completes review
+    condition:
+      - slot_was_set:
+          - location_mode: manual
+    steps:
+      - intent: inform
+      - action: action_review_summary
+  - rule: review correction
+    steps:
+      - intent: correct_information
+      - action: action_apply_guided_input
+      - action: action_review_summary
+  - rule: deny review safely
+    steps:
+      - intent: deny
+      - action: action_review_denial
+  - rule: remove only stopover
+    steps:
+      - intent: remove_stopover
+      - action: action_remove_stopover
+  - rule: confirmed review then search
+    steps:
+      - intent: confirm_review
+      - action: action_apply_guided_input
+      - action: action_validate_review
+  - rule: cancel safely
+    steps:
+      - intent: cancel
+      - action: action_cancel_trip
+  - rule: restart safely
+    steps:
+      - intent: restart_trip
+      - action: action_restart_trip
+  - rule: carbon methodology
+    steps:
+      - intent: ask_carbon_method
+      - action: utter_carbon_method
+  - rule: explain guided input
+    steps:
+      - intent: ask_guided_help
+      - action: action_answer_travel_question
+  - rule: explain responsible travel
+    steps:
+      - intent: ask_eco_travel
+      - action: action_answer_travel_question
+  - rule: clarify the current question
+    steps:
+      - intent: ask_clarification
+      - action: action_answer_travel_question
+  - rule: sustainable destination ideas
+    steps:
+      - intent: ask_destination_ideas
+      - action: action_answer_travel_question
+  - rule: compare transport modes
+    steps:
+      - intent: ask_transport_comparison
+      - action: action_answer_travel_question
+  - rule: vegan accommodation limitations
+    steps:
+      - intent: ask_vegan_hotels
+      - action: action_answer_travel_question
+  - rule: route carbon question
+    steps:
+      - intent: ask_carbon_footprint
+      - action: action_answer_travel_question
+  - rule: human advisor
+    steps:
+      - intent: request_handover
+      - action: action_human_handover
+  - rule: out of scope
+    steps:
+      - intent: out_of_scope
+      - action: utter_out_of_scope
+  - rule: prompt injection
+    steps:
+      - intent: prompt_injection
+      - action: utter_prompt_injection
+  - rule: nonsense
+    steps:
+      - intent: nonsense
+      - action: utter_nonsense
+  - rule: provider outage
+    steps:
+      - intent: provider_outage
+      - action: utter_provider_outage
+  - rule: fallback during trip form
+    condition:
+      - active_loop: trip_form
+    steps:
+      - intent: nlu_fallback
+      - action: utter_clarify
+      - action: trip_form
+      - active_loop: trip_form
+  - rule: fallback outside trip form
+    steps:
+      - intent: nlu_fallback
+      - action: action_two_stage_fallback

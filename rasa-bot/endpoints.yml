@@ -1,0 +1,6 @@
+action_endpoint:
+  url: "http://localhost:5055/webhook"
+
+# Development deliberately has no tracker_store: Rasa uses its in-memory
+# tracker and starts without database environment variables. Use
+# endpoints.production.yml for deployed PostgreSQL.

@@ -1,0 +1,580 @@
+{
+  "schemaVersion": 1,
+  "destination": {
+    "slug": "edinburgh",
+    "label": "City of Edinburgh, Alba / Scotland, United Kingdom",
+    "latitude": 55.9533456,
+    "longitude": -3.1883749,
+    "osmObjectId": "relation/1920901",
+    "sourceUrl": "https://www.openstreetmap.org/relation/1920901",
+    "checkedAt": "2026-09-30T11:01:25Z"
+  },
+  "checkedAt": "2026-09-30T11:01:25Z",
+  "records": [
+    {
+      "category": "hotel",
+      "name": "Bruntsfield Hotel",
+      "latitude": 55.938156,
+      "longitude": -3.205929,
+      "osmObjectId": "node/49333949",
+      "sourceUrl": "https://www.openstreetmap.org/node/49333949",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Braid Hills Hotel",
+      "latitude": 55.917054,
+      "longitude": -3.212645,
+      "osmObjectId": "node/49334495",
+      "sourceUrl": "https://www.openstreetmap.org/node/49334495",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Britannia Hotel Edinburgh",
+      "latitude": 55.950574,
+      "longitude": -3.222342,
+      "osmObjectId": "node/248480014",
+      "sourceUrl": "https://www.openstreetmap.org/node/248480014",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "hotel",
+      "name": "The Inn On The Mile",
+      "latitude": 55.950041,
+      "longitude": -3.187301,
+      "osmObjectId": "node/249967014",
+      "sourceUrl": "https://www.openstreetmap.org/node/249967014",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Peffermill House",
+      "latitude": 55.932602,
+      "longitude": -3.148733,
+      "osmObjectId": "node/319980717",
+      "sourceUrl": "https://www.openstreetmap.org/node/319980717",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Prestonfield House",
+      "latitude": 55.936642,
+      "longitude": -3.157087,
+      "osmObjectId": "node/331289907",
+      "sourceUrl": "https://www.openstreetmap.org/node/331289907",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Premier Inn Leith Waterfront",
+      "latitude": 55.982828,
+      "longitude": -3.195675,
+      "osmObjectId": "node/348599554",
+      "sourceUrl": "https://www.openstreetmap.org/node/348599554",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Grove House Hotel",
+      "latitude": 55.943224,
+      "longitude": -3.211403,
+      "osmObjectId": "node/433719424",
+      "sourceUrl": "https://www.openstreetmap.org/node/433719424",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Holiday Inn Express Edinburgh-Waterfront",
+      "latitude": 55.978801,
+      "longitude": -3.179468,
+      "osmObjectId": "node/462614212",
+      "sourceUrl": "https://www.openstreetmap.org/node/462614212",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Ardmillan Hotel",
+      "latitude": 55.938298,
+      "longitude": -3.226123,
+      "osmObjectId": "node/482352333",
+      "sourceUrl": "https://www.openstreetmap.org/node/482352333",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Black Ivy",
+      "latitude": 55.937466,
+      "longitude": -3.202696,
+      "osmObjectId": "node/499994547",
+      "sourceUrl": "https://www.openstreetmap.org/node/499994547",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Apex Edinburgh International",
+      "latitude": 55.946948,
+      "longitude": -3.196517,
+      "osmObjectId": "node/511213007",
+      "sourceUrl": "https://www.openstreetmap.org/node/511213007",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Apex Edinburgh City",
+      "latitude": 55.947381,
+      "longitude": -3.195373,
+      "osmObjectId": "node/511213016",
+      "sourceUrl": "https://www.openstreetmap.org/node/511213016",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Holiday Inn Express Edinburgh City Centre",
+      "latitude": 55.957152,
+      "longitude": -3.186284,
+      "osmObjectId": "node/558161188",
+      "sourceUrl": "https://www.openstreetmap.org/node/558161188",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Malmaison",
+      "latitude": 55.977842,
+      "longitude": -3.168572,
+      "osmObjectId": "node/574812212",
+      "sourceUrl": "https://www.openstreetmap.org/node/574812212",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Le Monde",
+      "latitude": 55.953497,
+      "longitude": -3.196094,
+      "osmObjectId": "node/581870354",
+      "sourceUrl": "https://www.openstreetmap.org/node/581870354",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "hotel",
+      "name": "DoubleTree by Hilton Hotel Edinburgh City Centre",
+      "latitude": 55.945706,
+      "longitude": -3.203491,
+      "osmObjectId": "node/634807886",
+      "sourceUrl": "https://www.openstreetmap.org/node/634807886",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Premier Inn",
+      "latitude": 55.944978,
+      "longitude": -3.20017,
+      "osmObjectId": "node/634830273",
+      "sourceUrl": "https://www.openstreetmap.org/node/634830273",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Novotel",
+      "latitude": 55.945101,
+      "longitude": -3.199661,
+      "osmObjectId": "node/634830274",
+      "sourceUrl": "https://www.openstreetmap.org/node/634830274",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Ten Hill Place",
+      "latitude": 55.946368,
+      "longitude": -3.18361,
+      "osmObjectId": "node/709317023",
+      "sourceUrl": "https://www.openstreetmap.org/node/709317023",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Robert Viscount Melville",
+      "latitude": 55.949658,
+      "longitude": -3.21394,
+      "osmObjectId": "node/36581493",
+      "sourceUrl": "https://www.openstreetmap.org/node/36581493",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "attraction",
+      "name": "South Viewpoint",
+      "latitude": 55.954119,
+      "longitude": -3.180849,
+      "osmObjectId": "node/259860021",
+      "sourceUrl": "https://www.openstreetmap.org/node/259860021",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Camera Obscura & World of Illusions",
+      "latitude": 55.949029,
+      "longitude": -3.195604,
+      "osmObjectId": "node/268408103",
+      "sourceUrl": "https://www.openstreetmap.org/node/268408103",
+      "checkedAt": "2026-09-30T11:01:25Z",
+      "wikipedia": "en:Camera Obscura, Edinburgh"
+    },
+    {
+      "category": "attraction",
+      "name": "Rest and Be Thankful",
+      "latitude": 55.947711,
+      "longitude": -3.263952,
+      "osmObjectId": "node/283456724",
+      "sourceUrl": "https://www.openstreetmap.org/node/283456724",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Talbot Rice Gallery",
+      "latitude": 55.947067,
+      "longitude": -3.187772,
+      "osmObjectId": "node/291214494",
+      "sourceUrl": "https://www.openstreetmap.org/node/291214494",
+      "checkedAt": "2026-09-30T11:01:25Z",
+      "wikipedia": "en:Talbot Rice Gallery"
+    },
+    {
+      "category": "attraction",
+      "name": "The Tower",
+      "latitude": 55.955493,
+      "longitude": -3.112744,
+      "osmObjectId": "node/364446028",
+      "sourceUrl": "https://www.openstreetmap.org/node/364446028",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Brassfounders Column",
+      "latitude": 55.946024,
+      "longitude": -3.185398,
+      "osmObjectId": "node/442615638",
+      "sourceUrl": "https://www.openstreetmap.org/node/442615638",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "attraction",
+      "name": "The Buckstane",
+      "latitude": 55.910149,
+      "longitude": -3.209312,
+      "osmObjectId": "node/503110214",
+      "sourceUrl": "https://www.openstreetmap.org/node/503110214",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Mons Meg",
+      "latitude": 55.948788,
+      "longitude": -3.200157,
+      "osmObjectId": "node/505014478",
+      "sourceUrl": "https://www.openstreetmap.org/node/505014478",
+      "checkedAt": "2026-09-30T11:01:25Z",
+      "wikipedia": "en:Mons Meg"
+    },
+    {
+      "category": "attraction",
+      "name": "One O'Clock Gun",
+      "latitude": 55.949163,
+      "longitude": -3.200822,
+      "osmObjectId": "node/505014479",
+      "sourceUrl": "https://www.openstreetmap.org/node/505014479",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Democracy Cairn",
+      "latitude": 55.954411,
+      "longitude": -3.179661,
+      "osmObjectId": "node/519288713",
+      "sourceUrl": "https://www.openstreetmap.org/node/519288713",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "attraction",
+      "name": "West Bow Well",
+      "latitude": 55.947988,
+      "longitude": -3.194474,
+      "osmObjectId": "node/538531426",
+      "sourceUrl": "https://www.openstreetmap.org/node/538531426",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Edinburgh Farmers' Market",
+      "latitude": 55.947763,
+      "longitude": -3.203553,
+      "osmObjectId": "node/574304142",
+      "sourceUrl": "https://www.openstreetmap.org/node/574304142",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Martyrs' Monument",
+      "latitude": 55.947511,
+      "longitude": -3.192742,
+      "osmObjectId": "node/760111516",
+      "sourceUrl": "https://www.openstreetmap.org/node/760111516",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Edinburgh Meat Market Archway",
+      "latitude": 55.943927,
+      "longitude": -3.207217,
+      "osmObjectId": "node/760111520",
+      "sourceUrl": "https://www.openstreetmap.org/node/760111520",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "attraction",
+      "name": "The Quarry",
+      "latitude": 55.926625,
+      "longitude": -3.144735,
+      "osmObjectId": "node/765918706",
+      "sourceUrl": "https://www.openstreetmap.org/node/765918706",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Grévy's Zebra",
+      "latitude": 55.947797,
+      "longitude": -3.265167,
+      "osmObjectId": "node/801775668",
+      "sourceUrl": "https://www.openstreetmap.org/node/801775668",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "Balgreen",
+      "latitude": 55.93815,
+      "longitude": -3.252223,
+      "osmObjectId": "node/1882457646",
+      "sourceUrl": "https://www.openstreetmap.org/node/1882457646",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "Princes Street",
+      "latitude": 55.951829,
+      "longitude": -3.197825,
+      "osmObjectId": "node/1882457672",
+      "sourceUrl": "https://www.openstreetmap.org/node/1882457672",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "Murrayfield Stadium",
+      "latitude": 55.942013,
+      "longitude": -3.237326,
+      "osmObjectId": "node/2191556900",
+      "sourceUrl": "https://www.openstreetmap.org/node/2191556900",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "St Andrew Square",
+      "latitude": 55.954664,
+      "longitude": -3.192436,
+      "osmObjectId": "node/2319609566",
+      "sourceUrl": "https://www.openstreetmap.org/node/2319609566",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "Murrayfield Stadium",
+      "latitude": 55.942031,
+      "longitude": -3.237366,
+      "osmObjectId": "node/2525456072",
+      "sourceUrl": "https://www.openstreetmap.org/node/2525456072",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "Haymarket",
+      "latitude": 55.945761,
+      "longitude": -3.219601,
+      "osmObjectId": "node/2669194227",
+      "sourceUrl": "https://www.openstreetmap.org/node/2669194227",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "Haymarket",
+      "latitude": 55.945802,
+      "longitude": -3.219598,
+      "osmObjectId": "node/2669194228",
+      "sourceUrl": "https://www.openstreetmap.org/node/2669194228",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "Balgreen",
+      "latitude": 55.938117,
+      "longitude": -3.252195,
+      "osmObjectId": "node/2693088927",
+      "sourceUrl": "https://www.openstreetmap.org/node/2693088927",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "Princes Street",
+      "latitude": 55.951776,
+      "longitude": -3.197799,
+      "osmObjectId": "node/2693088951",
+      "sourceUrl": "https://www.openstreetmap.org/node/2693088951",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "St Andrew Square",
+      "latitude": 55.95442,
+      "longitude": -3.192187,
+      "osmObjectId": "node/2693088956",
+      "sourceUrl": "https://www.openstreetmap.org/node/2693088956",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "West End",
+      "latitude": 55.948661,
+      "longitude": -3.21166,
+      "osmObjectId": "node/2892442824",
+      "sourceUrl": "https://www.openstreetmap.org/node/2892442824",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "Slateford",
+      "latitude": 55.926616,
+      "longitude": -3.243746,
+      "osmObjectId": "node/4305266450",
+      "sourceUrl": "https://www.openstreetmap.org/node/4305266450",
+      "checkedAt": "2026-09-30T11:01:25Z",
+      "wikipedia": "en:Slateford railway station"
+    },
+    {
+      "category": "transit",
+      "name": "Haymarket",
+      "latitude": 55.945184,
+      "longitude": -3.219374,
+      "osmObjectId": "node/6451802275",
+      "sourceUrl": "https://www.openstreetmap.org/node/6451802275",
+      "checkedAt": "2026-09-30T11:01:25Z",
+      "wikipedia": "en:Haymarket railway station"
+    },
+    {
+      "category": "transit",
+      "name": "Edinburgh Waverley",
+      "latitude": 55.951902,
+      "longitude": -3.19042,
+      "osmObjectId": "node/7149998196",
+      "sourceUrl": "https://www.openstreetmap.org/node/7149998196",
+      "checkedAt": "2026-09-30T11:01:25Z",
+      "wikipedia": "en:Edinburgh Waverley railway station"
+    },
+    {
+      "category": "transit",
+      "name": "Picardy Place",
+      "latitude": 55.956696,
+      "longitude": -3.187146,
+      "osmObjectId": "node/8071098686",
+      "sourceUrl": "https://www.openstreetmap.org/node/8071098686",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "Picardy Place",
+      "latitude": 55.956868,
+      "longitude": -3.186417,
+      "osmObjectId": "node/8071098687",
+      "sourceUrl": "https://www.openstreetmap.org/node/8071098687",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "Balfour Street",
+      "latitude": 55.965258,
+      "longitude": -3.176309,
+      "osmObjectId": "node/8071098688",
+      "sourceUrl": "https://www.openstreetmap.org/node/8071098688",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "Balfour Street",
+      "latitude": 55.965497,
+      "longitude": -3.176176,
+      "osmObjectId": "node/8071098689",
+      "sourceUrl": "https://www.openstreetmap.org/node/8071098689",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "The Shore",
+      "latitude": 55.975155,
+      "longitude": -3.166824,
+      "osmObjectId": "node/8071098690",
+      "sourceUrl": "https://www.openstreetmap.org/node/8071098690",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "The Shore",
+      "latitude": 55.974807,
+      "longitude": -3.166978,
+      "osmObjectId": "node/8071098691",
+      "sourceUrl": "https://www.openstreetmap.org/node/8071098691",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "Foot of the Walk",
+      "latitude": 55.970724,
+      "longitude": -3.17119,
+      "osmObjectId": "node/8071098692",
+      "sourceUrl": "https://www.openstreetmap.org/node/8071098692",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "Foot of the Walk",
+      "latitude": 55.97103,
+      "longitude": -3.170781,
+      "osmObjectId": "node/8071098693",
+      "sourceUrl": "https://www.openstreetmap.org/node/8071098693",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "Port of Leith",
+      "latitude": 55.978177,
+      "longitude": -3.166634,
+      "osmObjectId": "node/8071098694",
+      "sourceUrl": "https://www.openstreetmap.org/node/8071098694",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "Port of Leith",
+      "latitude": 55.97799,
+      "longitude": -3.165906,
+      "osmObjectId": "node/8071098695",
+      "sourceUrl": "https://www.openstreetmap.org/node/8071098695",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    },
+    {
+      "category": "transit",
+      "name": "Ocean Terminal",
+      "latitude": 55.980163,
+      "longitude": -3.17765,
+      "osmObjectId": "node/8071098696",
+      "sourceUrl": "https://www.openstreetmap.org/node/8071098696",
+      "checkedAt": "2026-09-30T11:01:25Z"
+    }
+  ],
+  "attribution": "© OpenStreetMap contributors"
+}

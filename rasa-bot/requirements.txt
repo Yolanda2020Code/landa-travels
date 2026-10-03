@@ -1,0 +1,4 @@
+rasa==3.6.21
+rasa-sdk==3.6.2
+requests==2.32.5
+spacy==3.7.5

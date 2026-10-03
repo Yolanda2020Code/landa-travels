@@ -1,0 +1,536 @@
+{
+  "schemaVersion": 1,
+  "destination": {
+    "slug": "oslo",
+    "label": "Oslo, Norge",
+    "latitude": 59.9133301,
+    "longitude": 10.7389701,
+    "osmObjectId": "relation/406091",
+    "sourceUrl": "https://www.openstreetmap.org/relation/406091",
+    "checkedAt": "2026-09-30T11:06:17Z"
+  },
+  "checkedAt": "2026-09-30T11:06:17Z",
+  "records": [
+    {
+      "category": "hotel",
+      "name": "Scandic St. Olavs plass",
+      "latitude": 59.918222,
+      "longitude": 10.739712,
+      "osmObjectId": "node/25715271",
+      "sourceUrl": "https://www.openstreetmap.org/node/25715271",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Radisson Blu Scandinavia Hotel, Oslo",
+      "latitude": 59.918446,
+      "longitude": 10.734108,
+      "osmObjectId": "node/33730394",
+      "sourceUrl": "https://www.openstreetmap.org/node/33730394",
+      "checkedAt": "2026-09-30T11:06:17Z",
+      "wikipedia": "en:Radisson Blu Scandinavia Hotel, Oslo"
+    },
+    {
+      "category": "hotel",
+      "name": "MediInn Hotel Oslo",
+      "latitude": 59.917,
+      "longitude": 10.742075,
+      "osmObjectId": "node/60753744",
+      "sourceUrl": "https://www.openstreetmap.org/node/60753744",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Scandic Holberg",
+      "latitude": 59.919641,
+      "longitude": 10.734408,
+      "osmObjectId": "node/294016047",
+      "sourceUrl": "https://www.openstreetmap.org/node/294016047",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Thon Hotel Europa",
+      "latitude": 59.917907,
+      "longitude": 10.734939,
+      "osmObjectId": "node/307504199",
+      "sourceUrl": "https://www.openstreetmap.org/node/307504199",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Grand Hotel",
+      "latitude": 59.913733,
+      "longitude": 10.739478,
+      "osmObjectId": "node/307505492",
+      "sourceUrl": "https://www.openstreetmap.org/node/307505492",
+      "checkedAt": "2026-09-30T11:06:17Z",
+      "wikipedia": "no:Grand Hotel (Oslo)"
+    },
+    {
+      "category": "hotel",
+      "name": "Att Kvadraturen",
+      "latitude": 59.909467,
+      "longitude": 10.740858,
+      "osmObjectId": "node/311268459",
+      "sourceUrl": "https://www.openstreetmap.org/node/311268459",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Scandic Helsfyr",
+      "latitude": 59.915606,
+      "longitude": 10.804986,
+      "osmObjectId": "node/356345433",
+      "sourceUrl": "https://www.openstreetmap.org/node/356345433",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Thon Hotel Rosenkrantz",
+      "latitude": 59.915673,
+      "longitude": 10.7405,
+      "osmObjectId": "node/376571925",
+      "sourceUrl": "https://www.openstreetmap.org/node/376571925",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Scandic Oslo City",
+      "latitude": 59.911937,
+      "longitude": 10.749214,
+      "osmObjectId": "node/376577902",
+      "sourceUrl": "https://www.openstreetmap.org/node/376577902",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Thon Hotel Vika Atrium",
+      "latitude": 59.91116,
+      "longitude": 10.724113,
+      "osmObjectId": "node/392058686",
+      "sourceUrl": "https://www.openstreetmap.org/node/392058686",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Scandic Sjølyst",
+      "latitude": 59.920194,
+      "longitude": 10.682835,
+      "osmObjectId": "node/417226389",
+      "sourceUrl": "https://www.openstreetmap.org/node/417226389",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Christiania Teater",
+      "latitude": 59.913542,
+      "longitude": 10.735917,
+      "osmObjectId": "node/441543677",
+      "sourceUrl": "https://www.openstreetmap.org/node/441543677",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Thon Hotel Cecil",
+      "latitude": 59.912837,
+      "longitude": 10.737375,
+      "osmObjectId": "node/441543679",
+      "sourceUrl": "https://www.openstreetmap.org/node/441543679",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Anker Hotel",
+      "latitude": 59.917593,
+      "longitude": 10.758035,
+      "osmObjectId": "node/475861368",
+      "sourceUrl": "https://www.openstreetmap.org/node/475861368",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Radisson Blu Hotel Nydalen",
+      "latitude": 59.948991,
+      "longitude": 10.766054,
+      "osmObjectId": "node/615960458",
+      "sourceUrl": "https://www.openstreetmap.org/node/615960458",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Quality Hotel 33",
+      "latitude": 59.928902,
+      "longitude": 10.81867,
+      "osmObjectId": "node/619018831",
+      "sourceUrl": "https://www.openstreetmap.org/node/619018831",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Radisson RED Oslo City Centre, A Verified Net Zero Hotel",
+      "latitude": 59.911148,
+      "longitude": 10.740709,
+      "osmObjectId": "node/667383136",
+      "sourceUrl": "https://www.openstreetmap.org/node/667383136",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Citybox Oslo",
+      "latitude": 59.910347,
+      "longitude": 10.747243,
+      "osmObjectId": "node/667447334",
+      "sourceUrl": "https://www.openstreetmap.org/node/667447334",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Thon Hotel Terminus",
+      "latitude": 59.913363,
+      "longitude": 10.752801,
+      "osmObjectId": "node/679406857",
+      "sourceUrl": "https://www.openstreetmap.org/node/679406857",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Det internasjonale barnekunstmuseet",
+      "latitude": 59.935755,
+      "longitude": 10.711526,
+      "osmObjectId": "node/30310859",
+      "sourceUrl": "https://www.openstreetmap.org/node/30310859",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Tordenskiold",
+      "latitude": 59.91057,
+      "longitude": 10.73434,
+      "osmObjectId": "node/270312302",
+      "sourceUrl": "https://www.openstreetmap.org/node/270312302",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Franklin D Roosevelt",
+      "latitude": 59.91029,
+      "longitude": 10.734908,
+      "osmObjectId": "node/270312304",
+      "sourceUrl": "https://www.openstreetmap.org/node/270312304",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Norges hjemmefrontmuseum",
+      "latitude": 59.907803,
+      "longitude": 10.735762,
+      "osmObjectId": "node/270315261",
+      "sourceUrl": "https://www.openstreetmap.org/node/270315261",
+      "checkedAt": "2026-09-30T11:06:17Z",
+      "wikipedia": "en:Norway's Resistance Museum"
+    },
+    {
+      "category": "attraction",
+      "name": "Sporveismuseet",
+      "latitude": 59.931273,
+      "longitude": 10.716363,
+      "osmObjectId": "node/305913819",
+      "sourceUrl": "https://www.openstreetmap.org/node/305913819",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Bymuseet",
+      "latitude": 59.923918,
+      "longitude": 10.703014,
+      "osmObjectId": "node/330082033",
+      "sourceUrl": "https://www.openstreetmap.org/node/330082033",
+      "checkedAt": "2026-09-30T11:06:17Z",
+      "wikipedia": "en:Oslo City Museum"
+    },
+    {
+      "category": "attraction",
+      "name": "Johan Sverdrup",
+      "latitude": 59.912452,
+      "longitude": 10.740101,
+      "osmObjectId": "node/441543692",
+      "sourceUrl": "https://www.openstreetmap.org/node/441543692",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Kirsten Flagstad",
+      "latitude": 59.908536,
+      "longitude": 10.751321,
+      "osmObjectId": "node/441543699",
+      "sourceUrl": "https://www.openstreetmap.org/node/441543699",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Nasjonalmuseet - Arkitektur",
+      "latitude": 59.908759,
+      "longitude": 10.740227,
+      "osmObjectId": "node/855363455",
+      "sourceUrl": "https://www.openstreetmap.org/node/855363455",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Norsk Maritimt Museum",
+      "latitude": 59.902833,
+      "longitude": 10.698662,
+      "osmObjectId": "node/973793392",
+      "sourceUrl": "https://www.openstreetmap.org/node/973793392",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Christian August-monumentet",
+      "latitude": 59.901987,
+      "longitude": 10.666818,
+      "osmObjectId": "node/1551042842",
+      "sourceUrl": "https://www.openstreetmap.org/node/1551042842",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Niels Henrik Abel",
+      "latitude": 59.915564,
+      "longitude": 10.731216,
+      "osmObjectId": "node/1664967162",
+      "sourceUrl": "https://www.openstreetmap.org/node/1664967162",
+      "checkedAt": "2026-09-30T11:06:17Z",
+      "wikipedia": "no:Abelmonumentet"
+    },
+    {
+      "category": "attraction",
+      "name": "Popsenteret",
+      "latitude": 59.919777,
+      "longitude": 10.761033,
+      "osmObjectId": "node/1728456802",
+      "sourceUrl": "https://www.openstreetmap.org/node/1728456802",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Krohgstøtten",
+      "latitude": 59.91729,
+      "longitude": 10.759289,
+      "osmObjectId": "node/1749083452",
+      "sourceUrl": "https://www.openstreetmap.org/node/1749083452",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Astrup Fearnley Museet",
+      "latitude": 59.906925,
+      "longitude": 10.721938,
+      "osmObjectId": "node/1931359713",
+      "sourceUrl": "https://www.openstreetmap.org/node/1931359713",
+      "checkedAt": "2026-09-30T11:06:17Z",
+      "wikipedia": "no:Astrup Fearnley Museet"
+    },
+    {
+      "category": "transit",
+      "name": "Oslo S",
+      "latitude": 59.911025,
+      "longitude": 10.753138,
+      "osmObjectId": "node/660921",
+      "sourceUrl": "https://www.openstreetmap.org/node/660921",
+      "checkedAt": "2026-09-30T11:06:17Z",
+      "wikipedia": "no:Oslo Sentralstasjon"
+    },
+    {
+      "category": "transit",
+      "name": "Kontraskjæret",
+      "latitude": 59.910861,
+      "longitude": 10.735847,
+      "osmObjectId": "node/25417713",
+      "sourceUrl": "https://www.openstreetmap.org/node/25417713",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "transit",
+      "name": "Nationaltheatret",
+      "latitude": 59.914852,
+      "longitude": 10.730217,
+      "osmObjectId": "node/26681684",
+      "sourceUrl": "https://www.openstreetmap.org/node/26681684",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "transit",
+      "name": "Adamstuen",
+      "latitude": 59.932712,
+      "longitude": 10.734785,
+      "osmObjectId": "node/30391448",
+      "sourceUrl": "https://www.openstreetmap.org/node/30391448",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "transit",
+      "name": "Sinsenkrysset (H)",
+      "latitude": 59.939108,
+      "longitude": 10.783363,
+      "osmObjectId": "node/30391593",
+      "sourceUrl": "https://www.openstreetmap.org/node/30391593",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "transit",
+      "name": "Frogner plass",
+      "latitude": 59.92255,
+      "longitude": 10.704914,
+      "osmObjectId": "node/30560564",
+      "sourceUrl": "https://www.openstreetmap.org/node/30560564",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "transit",
+      "name": "Ekebergparken",
+      "latitude": 59.897836,
+      "longitude": 10.759447,
+      "osmObjectId": "node/30999345",
+      "sourceUrl": "https://www.openstreetmap.org/node/30999345",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "transit",
+      "name": "Sportsplassen",
+      "latitude": 59.886003,
+      "longitude": 10.774537,
+      "osmObjectId": "node/30999359",
+      "sourceUrl": "https://www.openstreetmap.org/node/30999359",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "transit",
+      "name": "Holtet",
+      "latitude": 59.882385,
+      "longitude": 10.783146,
+      "osmObjectId": "node/30999368",
+      "sourceUrl": "https://www.openstreetmap.org/node/30999368",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "transit",
+      "name": "Makrellbekken",
+      "latitude": 59.941761,
+      "longitude": 10.673868,
+      "osmObjectId": "node/33765679",
+      "sourceUrl": "https://www.openstreetmap.org/node/33765679",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "transit",
+      "name": "Skøyen",
+      "latitude": 59.922429,
+      "longitude": 10.678499,
+      "osmObjectId": "node/240488929",
+      "sourceUrl": "https://www.openstreetmap.org/node/240488929",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "transit",
+      "name": "Carl Berners plass",
+      "latitude": 59.926917,
+      "longitude": 10.776796,
+      "osmObjectId": "node/288234143",
+      "sourceUrl": "https://www.openstreetmap.org/node/288234143",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "transit",
+      "name": "Birkelunden",
+      "latitude": 59.927094,
+      "longitude": 10.760108,
+      "osmObjectId": "node/289161450",
+      "sourceUrl": "https://www.openstreetmap.org/node/289161450",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "transit",
+      "name": "Kiel - Oslo - Kiel",
+      "latitude": 59.909828,
+      "longitude": 10.708791,
+      "osmObjectId": "node/289394625",
+      "sourceUrl": "https://www.openstreetmap.org/node/289394625",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "transit",
+      "name": "Oslo Ferry Terminal",
+      "latitude": 59.902474,
+      "longitude": 10.743621,
+      "osmObjectId": "node/292129984",
+      "sourceUrl": "https://www.openstreetmap.org/node/292129984",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "transit",
+      "name": "Bygdøynes",
+      "latitude": 59.90427,
+      "longitude": 10.701072,
+      "osmObjectId": "node/296477797",
+      "sourceUrl": "https://www.openstreetmap.org/node/296477797",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "transit",
+      "name": "Dronningen",
+      "latitude": 59.907378,
+      "longitude": 10.696375,
+      "osmObjectId": "node/296478063",
+      "sourceUrl": "https://www.openstreetmap.org/node/296478063",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "transit",
+      "name": "Vigelandsparken",
+      "latitude": 59.924744,
+      "longitude": 10.708438,
+      "osmObjectId": "node/332324291",
+      "sourceUrl": "https://www.openstreetmap.org/node/332324291",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "transit",
+      "name": "Frogner stadion",
+      "latitude": 59.927343,
+      "longitude": 10.712931,
+      "osmObjectId": "node/332324381",
+      "sourceUrl": "https://www.openstreetmap.org/node/332324381",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "transit",
+      "name": "Elisenberg",
+      "latitude": 59.919526,
+      "longitude": 10.708712,
+      "osmObjectId": "node/335964683",
+      "sourceUrl": "https://www.openstreetmap.org/node/335964683",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "transit",
+      "name": "Briskeby",
+      "latitude": 59.920008,
+      "longitude": 10.718034,
+      "osmObjectId": "node/338424208",
+      "sourceUrl": "https://www.openstreetmap.org/node/338424208",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    },
+    {
+      "category": "transit",
+      "name": "Solli",
+      "latitude": 59.914839,
+      "longitude": 10.719015,
+      "osmObjectId": "node/338425780",
+      "sourceUrl": "https://www.openstreetmap.org/node/338425780",
+      "checkedAt": "2026-09-30T11:06:17Z"
+    }
+  ],
+  "attribution": "© OpenStreetMap contributors"
+}

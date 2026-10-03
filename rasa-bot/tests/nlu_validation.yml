@@ -1,0 +1,40 @@
+version: "3.1"
+nlu:
+  - intent: inform
+    examples: |
+      - leave from [Bristol](origin) and go to [Bath](destination)
+      - my budget is [around £650](budget)
+      - there will be [five](travelers) people
+  - intent: ask_carbon_method
+    examples: |
+      - what method produced the overall emissions amount
+      - which data is used for the emissions comparison
+      - does this footprint cover every leg
+  - intent: provider_outage
+    examples: |
+      - the fare supplier is temporarily offline
+      - accommodation availability cannot be loaded
+      - the booking connection keeps timing out
+  - intent: nonsense
+    examples: |
+      - frabble 773 zoot splink
+      - upside teacup nineteen cloud
+      - mmm zzz plonk 551
+  - intent: out_of_scope
+    examples: |
+      - compose a limerick about penguins
+      - tell me how to repair a bicycle
+      - find the score from last night's game
+  - intent: plan_trip
+    examples: |
+      - help arrange an environmentally friendly weekend away
+      - I want to begin planning a lower emission holiday
+  - intent: request_recommendations
+    examples: |
+      - suggest the best travel choices
+      - give me some itinerary options
+  - intent: nlu_fallback
+    examples: |
+      - something maybe somewhere
+      - I cannot explain what I mean
+      - do the thing with the stuff

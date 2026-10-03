@@ -1,0 +1,14 @@
+.git
+node_modules
+**/node_modules
+**/dist
+.venv
+**/__pycache__
+**/.pytest_cache
+**/.rasa
+**/*.pyc
+**/*.tsbuildinfo
+.env
+.env.*
+!.env.example
+**/*.log

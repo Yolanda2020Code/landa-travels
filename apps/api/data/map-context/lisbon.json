@@ -1,0 +1,517 @@
+{
+  "schemaVersion": 1,
+  "destination": {
+    "slug": "lisbon",
+    "label": "Lisboa, Portugal",
+    "latitude": 38.7077507,
+    "longitude": -9.1365919,
+    "osmObjectId": "relation/5400890",
+    "sourceUrl": "https://www.openstreetmap.org/relation/5400890",
+    "checkedAt": "2026-09-30T11:01:32Z"
+  },
+  "checkedAt": "2026-09-30T11:01:32Z",
+  "records": [
+    {
+      "category": "hotel",
+      "name": "Hotel Jorge V",
+      "latitude": 38.721309,
+      "longitude": -9.1494,
+      "osmObjectId": "node/298176965",
+      "sourceUrl": "https://www.openstreetmap.org/node/298176965",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Turim Lisboa Hotel",
+      "latitude": 38.732274,
+      "longitude": -9.149236,
+      "osmObjectId": "node/308119709",
+      "sourceUrl": "https://www.openstreetmap.org/node/308119709",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "hotel",
+      "name": "SANA Malhoa Hotel",
+      "latitude": 38.737069,
+      "longitude": -9.162349,
+      "osmObjectId": "node/379573891",
+      "sourceUrl": "https://www.openstreetmap.org/node/379573891",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Ibis Lisboa José Malhoa",
+      "latitude": 38.737179,
+      "longitude": -9.1628,
+      "osmObjectId": "node/379573899",
+      "sourceUrl": "https://www.openstreetmap.org/node/379573899",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel A.S. Lisboa",
+      "latitude": 38.737702,
+      "longitude": -9.133558,
+      "osmObjectId": "node/454406210",
+      "sourceUrl": "https://www.openstreetmap.org/node/454406210",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Real Residência",
+      "latitude": 38.735577,
+      "longitude": -9.157021,
+      "osmObjectId": "node/538021965",
+      "sourceUrl": "https://www.openstreetmap.org/node/538021965",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Eurostars Lisboa Parque",
+      "latitude": 38.728287,
+      "longitude": -9.147606,
+      "osmObjectId": "node/1155373582",
+      "sourceUrl": "https://www.openstreetmap.org/node/1155373582",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "hotel",
+      "name": "VIP Executive Saldanha Hotel",
+      "latitude": 38.732235,
+      "longitude": -9.144677,
+      "osmObjectId": "node/1586066478",
+      "sourceUrl": "https://www.openstreetmap.org/node/1586066478",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Legendary Lisboa Suites",
+      "latitude": 38.722545,
+      "longitude": -9.152695,
+      "osmObjectId": "node/1586355563",
+      "sourceUrl": "https://www.openstreetmap.org/node/1586355563",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Turim Alameda",
+      "latitude": 38.735431,
+      "longitude": -9.137584,
+      "osmObjectId": "node/1640337456",
+      "sourceUrl": "https://www.openstreetmap.org/node/1640337456",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Imperador",
+      "latitude": 38.735557,
+      "longitude": -9.147623,
+      "osmObjectId": "node/1682454471",
+      "sourceUrl": "https://www.openstreetmap.org/node/1682454471",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Alicante",
+      "latitude": 38.728739,
+      "longitude": -9.144544,
+      "osmObjectId": "node/1682540584",
+      "sourceUrl": "https://www.openstreetmap.org/node/1682540584",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Pensão Residencial Portuense",
+      "latitude": 38.71736,
+      "longitude": -9.141591,
+      "osmObjectId": "node/1728849102",
+      "sourceUrl": "https://www.openstreetmap.org/node/1728849102",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Sana Excelsior",
+      "latitude": 38.736893,
+      "longitude": -9.150364,
+      "osmObjectId": "node/1943485287",
+      "sourceUrl": "https://www.openstreetmap.org/node/1943485287",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Borges Chiado",
+      "latitude": 38.710707,
+      "longitude": -9.14187,
+      "osmObjectId": "node/2357964143",
+      "sourceUrl": "https://www.openstreetmap.org/node/2357964143",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Turim Restauradores Hotel",
+      "latitude": 38.716006,
+      "longitude": -9.143164,
+      "osmObjectId": "node/2472105828",
+      "sourceUrl": "https://www.openstreetmap.org/node/2472105828",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Altis Grand Hotel",
+      "latitude": 38.720849,
+      "longitude": -9.150049,
+      "osmObjectId": "node/2508131094",
+      "sourceUrl": "https://www.openstreetmap.org/node/2508131094",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "hotel",
+      "name": "NH Campo Grande",
+      "latitude": 38.748715,
+      "longitude": -9.14953,
+      "osmObjectId": "node/2509303877",
+      "sourceUrl": "https://www.openstreetmap.org/node/2509303877",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Amazónia Lisboa Hotel",
+      "latitude": 38.722931,
+      "longitude": -9.154927,
+      "osmObjectId": "node/2573439559",
+      "sourceUrl": "https://www.openstreetmap.org/node/2573439559",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "hotel",
+      "name": "Hotel Duas Nações",
+      "latitude": 38.710945,
+      "longitude": -9.137588,
+      "osmObjectId": "node/2600899063",
+      "sourceUrl": "https://www.openstreetmap.org/node/2600899063",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Miradouro de São Pedro de Alcântara",
+      "latitude": 38.715458,
+      "longitude": -9.144037,
+      "osmObjectId": "node/419313189",
+      "sourceUrl": "https://www.openstreetmap.org/node/419313189",
+      "checkedAt": "2026-09-30T11:01:32Z",
+      "wikipedia": "pt:Jardim de São Pedro de Alcântara"
+    },
+    {
+      "category": "attraction",
+      "name": "Comboio do Zoo",
+      "latitude": 38.743235,
+      "longitude": -9.170712,
+      "osmObjectId": "node/887113336",
+      "sourceUrl": "https://www.openstreetmap.org/node/887113336",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Torre de São Lourenço",
+      "latitude": 38.714596,
+      "longitude": -9.134261,
+      "osmObjectId": "node/970768059",
+      "sourceUrl": "https://www.openstreetmap.org/node/970768059",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Pelourinho de Lisboa",
+      "latitude": 38.708036,
+      "longitude": -9.139196,
+      "osmObjectId": "node/1120633222",
+      "sourceUrl": "https://www.openstreetmap.org/node/1120633222",
+      "checkedAt": "2026-09-30T11:01:32Z",
+      "wikipedia": "en:Pillory of Lisbon"
+    },
+    {
+      "category": "attraction",
+      "name": "Museu Geológico",
+      "latitude": 38.713107,
+      "longitude": -9.149755,
+      "osmObjectId": "node/1623055925",
+      "sourceUrl": "https://www.openstreetmap.org/node/1623055925",
+      "checkedAt": "2026-09-30T11:01:32Z",
+      "wikipedia": "pt:Museu Geológico de Lisboa"
+    },
+    {
+      "category": "attraction",
+      "name": "Alto da Serafina",
+      "latitude": 38.733391,
+      "longitude": -9.175688,
+      "osmObjectId": "node/1668354051",
+      "sourceUrl": "https://www.openstreetmap.org/node/1668354051",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Miradouro do Castelo de São Jorge",
+      "latitude": 38.712116,
+      "longitude": -9.133735,
+      "osmObjectId": "node/1801653047",
+      "sourceUrl": "https://www.openstreetmap.org/node/1801653047",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Casa da Achada",
+      "latitude": 38.713434,
+      "longitude": -9.135265,
+      "osmObjectId": "node/1802199762",
+      "sourceUrl": "https://www.openstreetmap.org/node/1802199762",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Miradouro da Casa da Cerca",
+      "latitude": 38.684325,
+      "longitude": -9.158891,
+      "osmObjectId": "node/2146523275",
+      "sourceUrl": "https://www.openstreetmap.org/node/2146523275",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "attraction",
+      "name": "Os Perseguídos",
+      "latitude": 38.680221,
+      "longitude": -9.155816,
+      "osmObjectId": "node/2228801394",
+      "sourceUrl": "https://www.openstreetmap.org/node/2228801394",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Baixa-Chiado",
+      "latitude": 38.710662,
+      "longitude": -9.139087,
+      "osmObjectId": "node/33360557",
+      "sourceUrl": "https://www.openstreetmap.org/node/33360557",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Sapadores",
+      "latitude": 38.721341,
+      "longitude": -9.129915,
+      "osmObjectId": "node/69404070",
+      "sourceUrl": "https://www.openstreetmap.org/node/69404070",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Rua dos Lagares",
+      "latitude": 38.715488,
+      "longitude": -9.132073,
+      "osmObjectId": "node/69481534",
+      "sourceUrl": "https://www.openstreetmap.org/node/69481534",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Calçada de São Vicente",
+      "latitude": 38.713488,
+      "longitude": -9.12869,
+      "osmObjectId": "node/256063257",
+      "sourceUrl": "https://www.openstreetmap.org/node/256063257",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Estrela (Basílica)",
+      "latitude": 38.713648,
+      "longitude": -9.160038,
+      "osmObjectId": "node/256065636",
+      "sourceUrl": "https://www.openstreetmap.org/node/256065636",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Largo Vitorino Damásio",
+      "latitude": 38.707854,
+      "longitude": -9.153443,
+      "osmObjectId": "node/256065888",
+      "sourceUrl": "https://www.openstreetmap.org/node/256065888",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Rua dos Poiais de São Bento",
+      "latitude": 38.710732,
+      "longitude": -9.151809,
+      "osmObjectId": "node/256328846",
+      "sourceUrl": "https://www.openstreetmap.org/node/256328846",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Praça de Espanha",
+      "latitude": 38.737684,
+      "longitude": -9.159247,
+      "osmObjectId": "node/256976574",
+      "sourceUrl": "https://www.openstreetmap.org/node/256976574",
+      "checkedAt": "2026-09-30T11:01:32Z",
+      "wikipedia": "pt:Estação Praça de Espanha"
+    },
+    {
+      "category": "transit",
+      "name": "Jardim Zoológico",
+      "latitude": 38.742088,
+      "longitude": -9.168913,
+      "osmObjectId": "node/256978160",
+      "sourceUrl": "https://www.openstreetmap.org/node/256978160",
+      "checkedAt": "2026-09-30T11:01:32Z",
+      "wikipedia": "pt:Estação Jardim Zoológico"
+    },
+    {
+      "category": "transit",
+      "name": "Praça da Figueira",
+      "latitude": 38.713099,
+      "longitude": -9.137735,
+      "osmObjectId": "node/262253942",
+      "sourceUrl": "https://www.openstreetmap.org/node/262253942",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Baixa-Chiado",
+      "latitude": 38.710568,
+      "longitude": -9.142065,
+      "osmObjectId": "node/265290986",
+      "sourceUrl": "https://www.openstreetmap.org/node/265290986",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Lavra - Rua Câmara Pestana",
+      "latitude": 38.71864,
+      "longitude": -9.140161,
+      "osmObjectId": "node/364000708",
+      "sourceUrl": "https://www.openstreetmap.org/node/364000708",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Praça de Espanha",
+      "latitude": 38.738015,
+      "longitude": -9.160194,
+      "osmObjectId": "node/376031049",
+      "sourceUrl": "https://www.openstreetmap.org/node/376031049",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Restauradores",
+      "latitude": 38.71538,
+      "longitude": -9.140991,
+      "osmObjectId": "node/376811849",
+      "sourceUrl": "https://www.openstreetmap.org/node/376811849",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Restauradores",
+      "latitude": 38.715108,
+      "longitude": -9.141544,
+      "osmObjectId": "node/376811870",
+      "sourceUrl": "https://www.openstreetmap.org/node/376811870",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Largo da Academia Nacional das Belas Artes",
+      "latitude": 38.708022,
+      "longitude": -9.140453,
+      "osmObjectId": "node/377067810",
+      "sourceUrl": "https://www.openstreetmap.org/node/377067810",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Corpo Santo",
+      "latitude": 38.707292,
+      "longitude": -9.141989,
+      "osmObjectId": "node/489763351",
+      "sourceUrl": "https://www.openstreetmap.org/node/489763351",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Jardim Zoológico",
+      "latitude": 38.742176,
+      "longitude": -9.168696,
+      "osmObjectId": "node/494451977",
+      "sourceUrl": "https://www.openstreetmap.org/node/494451977",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Jardim Zoológico",
+      "latitude": 38.742408,
+      "longitude": -9.168311,
+      "osmObjectId": "node/494451978",
+      "sourceUrl": "https://www.openstreetmap.org/node/494451978",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Socorro",
+      "latitude": 38.716741,
+      "longitude": -9.135147,
+      "osmObjectId": "node/970773008",
+      "sourceUrl": "https://www.openstreetmap.org/node/970773008",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Rua de São Paulo (Bica)",
+      "latitude": 38.708465,
+      "longitude": -9.147051,
+      "osmObjectId": "node/1106603473",
+      "sourceUrl": "https://www.openstreetmap.org/node/1106603473",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Terreiro do Paço",
+      "latitude": 38.706668,
+      "longitude": -9.134883,
+      "osmObjectId": "node/1118902552",
+      "sourceUrl": "https://www.openstreetmap.org/node/1118902552",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Terreiro do Paço",
+      "latitude": 38.707455,
+      "longitude": -9.13544,
+      "osmObjectId": "node/1118902554",
+      "sourceUrl": "https://www.openstreetmap.org/node/1118902554",
+      "checkedAt": "2026-09-30T11:01:32Z",
+      "wikipedia": "pt:Praça do Comércio"
+    },
+    {
+      "category": "transit",
+      "name": "Santa Apolónia",
+      "latitude": 38.713519,
+      "longitude": -9.122347,
+      "osmObjectId": "node/1118902561",
+      "sourceUrl": "https://www.openstreetmap.org/node/1118902561",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    },
+    {
+      "category": "transit",
+      "name": "Santa Apolónia",
+      "latitude": 38.713645,
+      "longitude": -9.122208,
+      "osmObjectId": "node/1118902564",
+      "sourceUrl": "https://www.openstreetmap.org/node/1118902564",
+      "checkedAt": "2026-09-30T11:01:32Z"
+    }
+  ],
+  "attribution": "© OpenStreetMap contributors"
+}

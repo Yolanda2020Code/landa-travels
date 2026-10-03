@@ -1,0 +1,14 @@
+action_endpoint:
+  url: "${RASA_ACTION_SERVER_URL}"
+tracker_store:
+  type: SQL
+  dialect: postgresql
+  url: "${RASA_TRACKER_DB_URL}"
+  login_db: "${RASA_TRACKER_DB_NAME}"
+  username: "${RASA_TRACKER_DB_USER}"
+  password: "${RASA_TRACKER_DB_PASSWORD}"
+  host: "${RASA_TRACKER_DB_HOST}"
+  port: "${RASA_TRACKER_DB_PORT}"
+  db: "${RASA_TRACKER_DB_NAME}"
+  pool_size: 5
+  max_overflow: 10
