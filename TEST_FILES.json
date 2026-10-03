@@ -21,6 +21,7 @@
   "apps/api/src/services/travel-context-providers.test.ts",
   "apps/api/src/services/trip-ranking.test.ts",
   "apps/web/src/lib/auth-cache.test.ts",
+  "apps/web/src/lib/auth-navigation.test.ts",
   "apps/web/src/lib/certification-evidence.test.ts",
   "apps/web/src/lib/clerk-key.test.ts",
   "apps/web/src/lib/planner-startup.test.ts",
