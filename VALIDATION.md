@@ -22,10 +22,48 @@ The supplied Rasa archive is unchanged; its SHA-256 is in
 `release-manifest.json`. These packaging checks are not a new NLU evaluation,
 model retraining, hosted browser test or supplier fulfilment test.
 
-The Docker image has **not** been built or run as part of this validation.
-The Hugging Face Space has **not** been published or tested. The supplied CI
-workflow performs a Docker build on GitHub. Hosted startup and browser flows
-must then be checked using the configured assessment database and credentials.
+## Hosted validation — 3 October 2026
+
+Hugging Face built the Docker image successfully, including checksum-verified
+assembly of the supplied Rasa model. The public Docker Space is available at:
+
+https://huggingface.co/spaces/yolandankala/landa-travels
+
+Application URL reported by the hosting API:
+
+https://yolandankala-landa-travels.hf.space
+
+A separate, empty external PostgreSQL database was inspected before applying
+the schema. All 15 application tables were verified, and the connection was
+configured privately as the Space's DATABASE_URL secret. No private workspace
+records were copied.
+
+The Space reached RUNNING. Its startup checks confirmed the action server,
+Rasa, database connectivity, API readiness, and synthetic Rasa warm-up before
+opening the public web port.
+
+The repository's deployment/smoke-huggingface.py passed all four public checks:
+
+| Check | Result |
+| --- | --- |
+| Website | HTTP 200 |
+| API health | HTTP 200, status ok |
+| Direct private Rasa webhook | HTTP 404, correctly inaccessible |
+| Anonymous assistant greeting | HTTP 200, nonempty assistant messages |
+
+A browser screenshot also confirmed the public homepage renders, with its
+anonymous-planning controls and explicit sign-in-unavailable notice.
+
+This is a hosted startup and anonymous greeting smoke check, not a complete
+guided-trip browser test, authenticated save/resume test, new NLU evaluation,
+provider fulfilment test, or private-upload test. Account authentication,
+provider credentials, and an external private-upload signing service are not
+configured on this Space. The native Rasa tracker remains in memory.
+
+Runtime logs include dependency deprecation and global-config permission
+warnings; they did not prevent readiness or the smoke checks. This is not a
+warning-free deployment. The GitHub workflow definitions remain inactive
+templates until separately installed; these hosted results are not GitHub CI.
 
 Dependency installation reports peer-version warnings for authentication UI
 packages and the API logging build plugin. They did not prevent the source
