@@ -83,8 +83,4 @@ reports/       Final report and evaluation evidence
 
 For installation, secrets configuration, reproduction commands and hosting guidance, see [Setup and deployment](docs/SETUP.md).
 
-## About the author
-
-**Yolanda N. Nkala** is a Data Scientist, AI Practitioner and entrepreneur pursuing a Master's in Artificial Intelligence. Her interests connect behavioural analytics, recommendation systems and human-centred technology, with a focus on practical products and sustainable innovation.
-
 [GitHub profile](https://github.com/Yolanda2020Code) · [Hugging Face profile](https://huggingface.co/yolandankala)
