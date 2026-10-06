@@ -1,82 +1,48 @@
-# Landa Travels — report evaluation tools
+# Landa Travels — evaluation evidence
 
-These tools are offline evidence utilities, not application startup commands.
-They do not replace the deployed Rasa model or change traveller data.
+These utilities reproduce offline NLU evaluation. They do not replace the deployed Rasa model or change traveller data.
 
 ## Evaluation source
 
-The report evaluation uses immutable GitHub revision
-`bbe39be9be5a50cd8ab48c2976201ff3b8d73806`, not whichever revision happens to be
-checked out later. Minimal source copies and SHA-256 provenance are retained
-under `reports/five-fold-cross-validation/`.
+The recorded evaluation uses immutable GitHub revision
+`bbe39be9be5a50cd8ab48c2976201ff3b8d73806`. Source copies, checksums, metrics and raw evidence are retained under `reports/five-fold-cross-validation/`.
 
-The actual Rasa loader merges repeated YAML intent blocks: this corpus has
-496 examples across 21 intents. All classes meet the five-fold minimum.
-Do not count only the last YAML block for each intent.
+The Rasa loader merges repeated YAML intent blocks: the corpus contains **496 examples across 21 intents**, all eligible for five-fold evaluation.
 
-## Commands (repository root, Linux / Python 3.10 / Rasa 3.6.21)
+## Reproduction
 
-Evaluation uses the application's existing Rasa/spaCy/scikit-learn stack.
-Report utilities additionally require `python-docx` and `Pillow`; optional PDF
-rendering/layout verification uses LibreOffice and PyMuPDF. They are offline
-authoring dependencies, not new application runtime requirements.
+Use Linux, Python 3.10 and Rasa 3.6.21 with the existing Rasa/spaCy/scikit-learn environment.
 
 ```sh
-# Original native attempt: downloads pinned source, then invokes the requested
-# command. This attempt was stopped by the memory guard in the assessment run.
+# Original single-process attempt; stopped by the memory guard.
 python reports/run_five_fold_cv.py
 
-# Alternative: native Rasa stratified splits and five separate train/test
-# process pairs; split seed 42 and unchanged training configuration.
+# Completed alternative: five separate native Rasa train/test process pairs.
+# Stratified splits, seed 42, unchanged training configuration.
 python reports/run_isolated_five_fold_cv.py
 
-# Refuses to package incomplete evaluation as completed evidence.
+# Package only completed evaluation evidence.
 python reports/package_five_fold_cv.py
-
-# Blank volunteer protocol/forms; no participant responses are generated.
-python reports/build_user_testing_pack.py
-
-# Requires completed CV evidence and the author's own input Word file.
-python reports/build_final_submission.py --source /path/to/original-report.docx
 ```
 
-Archive existing evaluation output before another run. Otherwise these
-assessment runners write to the same paths; do not overwrite retained evidence.
-Run offline grading away from live user testing. It can consume several GB of
-memory and take substantial time; memory guards stop only evaluation children.
-The native single-process command and alternative procedure are different
-attempts and must be labelled separately.
+Archive existing outputs before another run. These commands reuse evaluation paths and can consume several GB of memory; run them separately from live application use.
 
-## Metrics and limitations
+## Results and interpretation
 
-`isolated-results/summary.json` pools one held-out prediction per eligible
-example. It reports both pooled and mean-fold intent metrics. The population
-standard deviation over five fold scores is not a confidence interval.
+The pooled out-of-fold results are **66.53% intent accuracy**, **0.658 weighted F1** and **0.636 macro F1**, based on one held-out prediction per example.
 
-Entity JSON outputs are native per-extractor evaluations. They are not the
-deployed-model merged exact-span F1 measurements and must not replace those.
-Native Rasa reverses FallbackClassifier selection for classifier-intent
-evaluation; this is not a measurement of fallback-dialogue recovery.
-No exact text crosses a fold's train/test split in this manifest, but related
-templates can occur across folds; this is not grouped paraphrase-independent
-evaluation. Training remains stochastic beyond the recorded split seed.
+- Mean-fold and pooled metrics are distinct; fold-score standard deviation is not a confidence interval.
+- Native per-extractor entity scores are not the deployed model's merged exact-span entity scores.
+- Native Rasa classifier-intent evaluation reverses FallbackClassifier selection; it does not measure fallback-dialogue recovery.
+- Exact texts do not cross fold boundaries, but related templates can; this is not paraphrase-group-independent evaluation.
+- Training remains stochastic beyond the recorded split seed.
 
-The original single-process run's raw log and failure record are retained.
-Temporary fold model archives are deliberately not uploaded to either source
-repository. The deployed full-data archive remains unchanged.
+The failed single-process attempt and its raw log are retained. Temporary fold models are not published; the evaluated deployed model is unchanged.
 
-## Human-study integrity and privacy
+## Evidence integrity and privacy
 
-Real think-aloud and Likert results require actual consenting participants.
-The study documents are protocols, not completed studies. Automated proxy
-evaluations remain labelled as proxy evaluations.
+Do not present automated or proxy evaluations as human participant studies. Real think-aloud or survey findings require actual consenting participants. Keep participant identities, recordings, private responses and credentials out of public repositories.
 
-Do not publish participant identities, recordings, private responses, secrets,
-or the author's private assignment file to GitHub or Hugging Face. Only these
-tools and non-personal evaluation evidence are intended for repository sync.
+The final report is published separately at the author's request: [Landa Travels final report](Landa-Travels-Final-Report-2026.pdf).
 
-## API excerpt
-
-The report's short `_request_json` excerpt is already implemented in
-`rasa-bot/actions/actions.py`: bounded request timeout, HTTP/JSON failure
-handling, warning and `None` return. It is not a new production-code change.
+For application setup and test commands, see [Setup and deployment](../docs/SETUP.md).
